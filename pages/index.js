@@ -5,7 +5,7 @@ function HomePage() {
 	return (
 		<>
 			<Head>
-				<title>My page title</title>
+				<title>Nicoly Dandara</title>
 				<meta
 					name="viewport"
 					content="width=device-width, initial-scale=1.0"

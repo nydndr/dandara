@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Head from "next/head";
 
 import ReactMarkdown from "react-markdown/with-html";
 import { getSortedPosts } from "../utils/posts";
@@ -6,6 +7,13 @@ import { getSortedPosts } from "../utils/posts";
 export default function WorkJournal({ posts }) {
 	return (
 		<>
+			<Head>
+				<title>Dandara's Journal</title>
+				<meta
+					name="viewport"
+					content="width=device-width, initial-scale=1.0"
+				/>
+			</Head>
 			<nav>
 				<div className="hover:text-primary">
 					<Link href="/">
