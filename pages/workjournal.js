@@ -9,7 +9,7 @@ export default function WorkJournal({ posts }) {
 			<nav>
 				<div className="hover:text-primary">
 					<Link href="/">
-						<a className="hand back"></a>
+						<a className="hand back transition"></a>
 					</Link>
 				</div>
 			</nav>
@@ -17,7 +17,7 @@ export default function WorkJournal({ posts }) {
 				Work Journal
 			</h1>
 
-			<section className="w-2/3 m-auto space-y-12">
+			<section className="w-4/5 lg:w-2/3 m-auto space-y-12">
 				{posts.map(({ frontmatter: { title }, content }) => (
 					<article>
 						<header>

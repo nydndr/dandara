@@ -24,3 +24,8 @@
 nav div:hover .hand::before {
 	margin-right: 1rem;
 }
+
+.back:hover {
+	margin-left: -2%;
+	transition: 200ms all ease;
+}

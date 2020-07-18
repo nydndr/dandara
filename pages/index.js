@@ -11,7 +11,20 @@ function HomePage() {
 					content="width=device-width, initial-scale=1.0"
 				/>
 			</Head>
-			<section>
+			<div className="text-center mt-24 lg:mt-0 space-y-12 lg:space-y-4">
+				<h2 className="uppercase font-condensed font-bold text-5xl lg:text-8xl">
+					EXTRA EXTRA: THIS PAGE HASN'T BEEN BUILD YET!
+				</h2>
+				<h3 className="font-sans text-xl">
+					Go remind Nicoly that she has pages to build on
+					{/* prettier-ignore */}
+					<a href="https://twitter.com/nydcosa" className="text-secondary"> Twitter </a>
+					and enjoy her{" "}
+					<Link href="/workjournal"> Work Journal </Link>
+					while you wait.
+				</h3>
+			</div>
+			{/* <section>
 				<div className="flex items-center">
 					<div className="w-auto px-10 h-full flex flex-col font-condensed border-solid border border-tertiary text-tertiary">
 						<button className="hover:text-primary text-3xl">
@@ -86,7 +99,7 @@ function HomePage() {
 					<a className=" hover:bg-primary py-2">LinkedIn</a>
 					<a className=" hover:bg-primary py-2">Email</a>
 				</div>
-			</div>
+			</div> */}
 		</>
 	);
 }
