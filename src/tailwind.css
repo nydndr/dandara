@@ -1,0 +1,26 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto+Condensed:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Vast+Shadow&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+
+.hand::before {
+	background-image: url("../public/vintage-hand.png");
+	background-size: 2rem 1rem;
+	width: 2rem;
+	height: 1rem;
+	margin-right: 0.5rem;
+	display: inline-block;
+	transition: 200ms all ease;
+	content: "";
+}
+
+.back::before {
+	background-image: url("../public/vintage-hand-back.png");
+}
+
+nav div:hover .hand::before {
+	margin-right: 1rem;
+}

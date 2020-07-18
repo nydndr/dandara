@@ -1,0 +1,30 @@
+{
+	"name": "nydndr",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "next",
+		"build": "next build",
+		"build:tailwind": "tailwind build src/tailwind.css -o src/tailwind.output.css",
+		"prestart": "npm run build:tailwind",
+		"prebuild": "npm run build:tailwind",
+		"start": "next start"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"@mdx-js/loader": "^1.6.9",
+		"@next/mdx": "^9.4.4",
+		"@tailwindcss/typography": "^0.2.0",
+		"gray-matter": "^4.0.2",
+		"next": "^9.4.4",
+		"react": "^16.13.1",
+		"react-dom": "^16.13.1",
+		"react-markdown": "^4.3.1",
+		"snarkdown": "^1.2.2",
+		"tailwindcss": "^1.4.6"
+	},
+	"devDependencies": {}
+}
