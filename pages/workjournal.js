@@ -25,7 +25,7 @@ export default function WorkJournal({ posts }) {
 				Work Journal
 			</h1>
 
-			<section className="w-4/5 lg:w-2/3 m-auto space-y-12">
+			<section className="w-full lg:w-2/3 m-auto space-y-12">
 				{posts.map(({ frontmatter: { title }, content }) => (
 					<article>
 						<header>
