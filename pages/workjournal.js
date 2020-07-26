@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Head from "next/head";
 
 import Nav from "../components/Nav";
@@ -33,10 +32,6 @@ export default function WorkJournal({ posts }) {
 					</article>
 				))}
 			</section>
-
-			<footer className="my-10 text-center">
-				<p className="text-tertiary italic">You're up to date!</p>
-			</footer>
 		</>
 	);
 }

@@ -1,6 +1,4 @@
-import Head from "next/head";
 import Link from "next/link";
-import Nav from "../components/nav.js";
 
 function HomePage() {
 	return (
@@ -11,7 +9,10 @@ function HomePage() {
 					this page yet :/
 				</h1>
 				<h2 className="text-3xl text-primary">
-					Go to <Link href="/workjournal">Work Journal -></Link>
+					Go to{" "}
+					<Link href="/workjournal">
+						<a>Work Journal -></a>
+					</Link>
 				</h2>
 			</section>
 		</>
