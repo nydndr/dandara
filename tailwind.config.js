@@ -11,14 +11,14 @@ module.exports = {
 		extend: {
 			colors: {
 				cover: "#FCFCFC",
-				primary: "#212121",
-				secondary: "#6F6F6F",
-				tertiary: "#C4C4C4",
+				primary: "#92014A",
+				secondary: "#FFC703",
+				tertiary: "#92FF4F",
+				codegray: "#151515",
 			},
 			fontFamily: {
+				coda: ['"Fira Code"', "monospaced"],
 				condensed: ['"Roboto Condensed"', "sans-serif"],
-				fatface: ['"Abril Fatface"', "cursive"],
-				vast: ['"Vast Shadow"', "cursive"],
 			},
 			fontSize: {
 				// prettier-ignore

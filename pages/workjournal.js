@@ -1,6 +1,9 @@
 import Link from "next/link";
 import Head from "next/head";
 
+import Nav from "../components/Nav";
+import Code from "../components/Code";
+
 import ReactMarkdown from "react-markdown/with-html";
 import { getSortedPosts } from "../utils/posts";
 
@@ -14,25 +17,13 @@ export default function WorkJournal({ posts }) {
 					content="width=device-width, initial-scale=1.0"
 				/>
 			</Head>
-			<nav>
-				<div className="hover:text-primary">
-					<Link href="/">
-						<a className="hand back transition"></a>
-					</Link>
-				</div>
-			</nav>
-			<h1 className="uppercase font-condensed text-5xl text-primary text-center my-12">
-				Work Journal
-			</h1>
 
-			<section className="w-full lg:w-2/3 m-auto space-y-12">
-				{posts.map(({ frontmatter: { title }, content }) => (
+			<Nav page={"workjournal"} />
+
+			<section className="w-10/12 lg:w-7/12 m-auto lg:mt-16 mt-4 space-y-16">
+				{posts.map(({ frontmatter: { title, language }, content }) => (
 					<article>
-						<header>
-							<h2 className="font-mono uppercase border-secondary border-b border-t py-1 my-8">
-								{title}
-							</h2>
-						</header>
+						<Code postTitle={title} postLanguage={language} />
 						<section className="prose m-auto">
 							<ReactMarkdown
 								escapeHtml={false}

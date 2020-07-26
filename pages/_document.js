@@ -6,7 +6,7 @@ class CustomDocument extends Document {
 		return (
 			<html>
 				<Head></Head>
-				<body className="bg-cover py-3 px-10 lg:px-40">
+				<body className="">
 					<Main />
 					<NextScript />
 				</body>
