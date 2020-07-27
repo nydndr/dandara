@@ -1,4 +1,4 @@
-import Link from "next/Link";
+import Link from "next/link";
 
 export default function Nav({ page }) {
 	const existingPages = ["homepage", "projects", "workjournal"];

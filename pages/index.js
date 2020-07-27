@@ -11,7 +11,7 @@ function HomePage() {
 				<h2 className="text-3xl text-primary">
 					Go to{" "}
 					<Link href="/workjournal">
-						<a>Work Journal -></a>
+						<a>Work Journal</a>
 					</Link>
 				</h2>
 			</section>
