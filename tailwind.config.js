@@ -26,5 +26,8 @@ module.exports = {
 				"8xl": "8rem",
 			},
 		},
+		variants: {
+			animation: ["responsive", "hover", "focus"],
+		},
 	},
 };

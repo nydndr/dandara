@@ -2,11 +2,15 @@ import Head from "next/head";
 
 import Nav from "../components/Nav";
 import Code from "../components/Code";
+import Footer from "../components/Footer";
 
 import ReactMarkdown from "react-markdown/with-html";
 import { getSortedPosts } from "../utils/posts";
 
 export default function WorkJournal({ posts }) {
+	const linkstorender = ["github", "twitter"];
+	console.log(linkstorender);
+
 	return (
 		<>
 			<Head>
@@ -32,6 +36,12 @@ export default function WorkJournal({ posts }) {
 					</article>
 				))}
 			</section>
+
+			<Footer
+				leadText={"wow, did you really read all this?"}
+				callToAction={"here’s what i’m doing daily then:"}
+				arrayLinks={linkstorender}
+			/>
 		</>
 	);
 }
