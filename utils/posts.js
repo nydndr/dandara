@@ -1,8 +1,7 @@
 import matter from "gray-matter";
+// Library thar handles metadata on markdown files
 import fs from "fs";
-import path from "path";
 
-// Get day in format: Month day, Year. e.g. April 19, 2020
 function getFormattedDate(date) {
 	const options = { year: "numeric", month: "long", day: "numeric" };
 	const formattedDate = date.toLocaleDateString("en-US", options);
@@ -13,6 +12,7 @@ function getFormattedDate(date) {
 export function getSortedPosts() {
 	// Get all posts located in `content/posts`
 	const files = fs.readdirSync(`${process.cwd()}/content/posts`);
+	// cwd => current working directory
 
 	const posts = files
 		.map((filename) => {
@@ -21,20 +21,13 @@ export function getSortedPosts() {
 				.readFileSync(`content/posts/${filename}`)
 				.toString();
 
-			const toRender = fs
-				.readFileSync(`content/posts/${filename}`)
-				.toString();
-
-			// Parse markdown and get frontmatter data.
-			const { data, content, excerpt } = matter(markdownWithMetadata);
+			// Parse the file to get frontmatter data and markdown content
+			const { data, content } = matter(markdownWithMetadata);
 
 			const frontmatter = {
 				...data,
 				date: getFormattedDate(data.date),
 			};
-
-			// Remove .md file extension from post name
-			const slug = filename.replace(".md", "");
 
 			return {
 				frontmatter,
@@ -47,33 +40,4 @@ export function getSortedPosts() {
 		);
 
 	return posts;
-}
-
-export function getPostsSlugs() {
-	const files = fs.readdirSync("content/posts");
-
-	const paths = files.map((filename) => ({
-		params: {
-			slug: filename.replace(".md", ""),
-		},
-	}));
-
-	return paths;
-}
-
-export function getPostBySlug(slug) {
-	// Get raw content for post given a slug
-	const markdownWithMetadata = fs
-		.readFileSync(path.join("content/posts", slug + ".md"))
-		.toString();
-
-	// Parse markdown, and get markdown's frontmatter and content.
-	const { data, content, excerpt } = matter(markdownWithMetadata);
-
-	const frontmatter = {
-		...data,
-		date: getFormattedDate(data.date),
-	};
-
-	return { frontmatter, post: { content, excerpt } };
 }

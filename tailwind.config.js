@@ -1,10 +1,20 @@
 module.exports = {
-	plugins: [require("@tailwindcss/typography")],
 	theme: {
 		typography: {
 			default: {
-				h2: {
-					fontSize: "1.2em",
+				css: {
+					h2: {
+						fontFamily: "Fira Code",
+						color: "black",
+						fontSize: "1.5em",
+					},
+					color: "#333",
+					a: {
+						color: "#333",
+						"&:hover": {
+							color: "#92014A",
+						},
+					},
 				},
 			},
 		},
@@ -26,8 +36,9 @@ module.exports = {
 				"8xl": "8rem",
 			},
 		},
-		variants: {
-			animation: ["responsive", "hover", "focus"],
-		},
 	},
+	variants: {
+		animation: ["responsive", "hover", "focus"],
+	},
+	plugins: [require("@tailwindcss/typography")],
 };

@@ -1,7 +1,6 @@
 import FooterLink from "./FooterLink";
 
 export default function Footer({ leadText, callToAction, arrayLinks }) {
-	console.log(leadText, callToAction);
 	return (
 		<footer className="font-coda text-codegray text-center h-screen flex p-12 lg:p-0">
 			<div className="w-screen self-center">

@@ -7,11 +7,9 @@ export default function Nav({ page }) {
 		return value != page;
 	});
 
-	console.log(existingInactivePages);
-
 	return (
 		<>
-			<nav className="w-full p-8 lg:p-12 lg:flex sm:text-right justify-between text-lg font-coda">
+			<nav className="w-full py-12 px-8 pt-8 lg:px-12 lg:flex sm:text-right justify-between text-lg font-coda">
 				<p className="font-semibold mb-2 text-primary text-xl">
 					{page}
 				</p>

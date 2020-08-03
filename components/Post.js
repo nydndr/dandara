@@ -1,7 +1,8 @@
+// This component renders markdown on the page.
+
 import ReactMarkdown from "react-markdown/with-html";
 
 import Layout from "./Layout";
-import { getPostBySlug, getPostsSlugs } from "../utils/posts";
 
 export default function Post({ post, frontmatter }) {
 	return (
@@ -17,28 +18,9 @@ export default function Post({ post, frontmatter }) {
 					<p className="text-xs">{frontmatter.date}</p>
 				</header>
 				<article className="prose lg:prose-xl">
-					<ReactMarkdown
-						className="prose lg:prose-xl"
-						escapeHtml={false}
-						source={post.content}
-					/>
+					<ReactMarkdown escapeHtml={false} source={post.content} />
 				</article>
 			</article>
 		</Layout>
 	);
-}
-
-/* export async function getStaticPaths() {
-	const paths = getPostsSlugs();
-
-	return {
-		paths,
-		fallback: false,
-	};
-}*/
-
-export async function getStaticProps({ params: { slug } }) {
-	const postData = getPostBySlug(slug);
-
-	return { props: postData };
 }

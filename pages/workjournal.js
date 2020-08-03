@@ -9,7 +9,6 @@ import { getSortedPosts } from "../utils/posts";
 
 export default function WorkJournal({ posts }) {
 	const linkstorender = ["github", "twitter"];
-	console.log(linkstorender);
 
 	return (
 		<>
@@ -23,11 +22,11 @@ export default function WorkJournal({ posts }) {
 
 			<Nav page={"workjournal"} />
 
-			<section className="w-10/12 lg:w-7/12 m-auto lg:mt-16 mt-4 space-y-16">
+			<section className="w-10/12 lg:w-1/2 m-auto lg:mt-4 space-y-16">
 				{posts.map(({ frontmatter: { title, language }, content }) => (
 					<article>
 						<Code postTitle={title} postLanguage={language} />
-						<section className="prose m-auto">
+						<section className="prose max-w-none">
 							<ReactMarkdown
 								escapeHtml={false}
 								source={content}

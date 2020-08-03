@@ -2,7 +2,7 @@ export default function FooterLink({ linkName }) {
 	switch (linkName) {
 		case "github":
 			return (
-				<div className="text-gray-900 hover:text-primary duration-500 flex flex-col items-center">
+				<div className="text-gray-900 hover:text-primary duration-500 flex flex-col items-center hover:animate-bounce">
 					<svg
 						className="fill-current mb-4"
 						width="126"
@@ -26,7 +26,7 @@ export default function FooterLink({ linkName }) {
 			break;
 		case "linkedin":
 			return (
-				<div className="text-gray-900 hover:text-secondary duration-500 flex flex-col items-center">
+				<div className="text-gray-900 hover:text-secondary duration-500 flex flex-col items-center hover:animate-bounce">
 					<svg
 						className="fill-current mb-4"
 						width="120"
@@ -54,7 +54,7 @@ export default function FooterLink({ linkName }) {
 
 		case "twitter":
 			return (
-				<div className="text-gray-900 hover:text-tertiary duration-500 flex flex-col items-center">
+				<div className="text-gray-900 hover:text-tertiary duration-500 flex flex-col items-center hover:animate-bounce">
 					<svg
 						class="fill-current mb-4"
 						width="126"
@@ -79,7 +79,7 @@ export default function FooterLink({ linkName }) {
 			break;
 		case "behance":
 			return (
-				<div className="text-gray-900 hover:text-primary duration-500 flex flex-col items-center">
+				<div className="text-gray-900 hover:text-primary duration-500 flex flex-col items-center hover:animate-bounce">
 					<svg
 						className="fill-current mb-4"
 						width="119"
@@ -104,7 +104,7 @@ export default function FooterLink({ linkName }) {
 			break;
 		case "email":
 			return (
-				<div className="text-gray-900 hover:text-secondary duration-500 flex flex-col items-center">
+				<div className="text-gray-900 hover:text-secondary duration-500 flex flex-col items-center hover:animate-bounce">
 					<svg
 						className="fill-current mb-4"
 						width="126"
