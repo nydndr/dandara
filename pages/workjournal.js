@@ -1,6 +1,5 @@
 import Head from "next/head";
 
-import Nav from "../components/Nav";
 import Code from "../components/Code";
 import Footer from "../components/Footer";
 
@@ -20,27 +19,42 @@ export default function WorkJournal({ posts }) {
 				/>
 			</Head>
 
-			<Nav page={"workjournal"} />
+			<main
+				style={{ scrollSnapAlign: "start" }}
+				className="w-10/12 lg:w-1/2 m-auto lg:mt-4"
+			>
+				<p className="text-lg text-gray-900 my-12">
+					The best things I've been doing, learning or liking a lot
+					from the past 88 weeks.
+				</p>
 
-			<section className="w-10/12 lg:w-1/2 m-auto lg:mt-4 space-y-16">
-				{posts.map(({ frontmatter: { title, language }, content }) => (
-					<article>
-						<Code postTitle={title} postLanguage={language} />
-						<section className="prose max-w-none">
-							<ReactMarkdown
-								escapeHtml={false}
-								source={content}
-							/>
-						</section>
-					</article>
-				))}
-			</section>
+				<section className="space-y-16">
+					{posts.map(
+						({ frontmatter: { title, language }, content }) => (
+							<article>
+								<Code
+									postTitle={title}
+									postLanguage={language}
+								/>
+								<section className="prose max-w-none">
+									<ReactMarkdown
+										escapeHtml={false}
+										source={content}
+									/>
+								</section>
+							</article>
+						)
+					)}
+				</section>
+			</main>
 
-			<Footer
-				leadText={"wow, did you really read all this?"}
-				callToAction={"here’s what i’m doing daily then:"}
-				arrayLinks={linkstorender}
-			/>
+			<div style={{ scrollSnapAlign: "start" }}>
+				<Footer
+					leadText={"wow, did you really read all this?"}
+					callToAction={"here’s what i’m doing daily then:"}
+					arrayLinks={linkstorender}
+				/>
+			</div>
 		</>
 	);
 }
