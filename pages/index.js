@@ -1,78 +1,89 @@
-import Footer from "../components/Footer";
+import Bio from "../components/Bio";
+import React, { useState } from "react";
 
-import { Link } from "../components/Link";
+import Footer from "../components/Footer";
+import Link from "next/link";
 
 function HomePage() {
+	const [bioLevel, setbioLevel] = useState(1);
+
 	return (
 		<>
-			<section
-				style={{ scrollSnapAlign: "start", backgroundColor: "#FFFFFF" }}
-				className="h-screen font-coda rounded-lg flex flex-col space-y-12 justify-center items-center"
-			>
-				<div
-					style={{ backgroundColor: "#fcfcfc" }}
-					id="greeting"
-					className="border-gray-700 border w-2/3 rounded-lg h-auto shadow-md"
-				>
-					<div className="flex p-4 space-x-3">
-						<div className="w-4 h-4 bg-red-600 rounded-full"></div>
-						<div className="w-4 h-4 bg-secondary rounded-full"></div>
-						<div className="w-4 h-4 bg-tertiary rounded-full"></div>
-					</div>
+			<section className="landing h-screen flex flex-col justify-center items-center">
+				<Bio level={bioLevel} />
+				<button onClick={() => setbioLevel(bioLevel + 1)}>
+					Click Me
+				</button>
+			</section>
 
-					<div className="text-lg p-4 pt-0">
-						<p>
-							<span className="text-gray-700 inline-block w-6 text-right">
-								1
-							</span>{" "}
-							Hi, I'm Nicoly.
-						</p>
-						<p>
-							<span className="text-gray-700 inline-block w-6 text-right">
-								2
-							</span>{" "}
-							I study development, therefore{" "}
-							<a className="text-primary" href="">
-								I develop
-							</a>
-							.
-						</p>
-						<p>
-							<span className="text-gray-700 inline-block w-6 text-right">
-								2
-							</span>{" "}
-							I like design, therefore{" "}
-							<a className="text-secondary">I design</a>.
-						</p>
-						<p>
-							<span className="text-gray-700 inline-block w-6 text-right">
-								3
-							</span>{" "}
-							I like good music, therefore I stan Beyoncé.
-						</p>
-						<p>
-							<span className="text-gray-700 inline-block w-6 text-right">
-								4
-							</span>{" "}
-							And oh, yeah,{" "}
-							<a className="text-tertiary">I tweet.</a>
-						</p>
-					</div>
+			<section className="call to-portfolio px-48 py-12 space-y-40">
+				<div class="flex flex-col">
+					<p className="font-coda text-lg pb-4 text-gray-800">
+						O que eu faço?
+					</p>
+					<p className="font-coda text-xl w-9/12 leading-loose pb-6">
+						Um adivinha de aniversário de namoro? Um querido diário?
+						Uma extensão para o Chrome?
+					</p>
+					<p className="font-sans font-light text-xl w-7/12 font-gray-900 leading-loose">
+						Uma aversão por tutoriais de aplicativos de tarefa me
+						levou a execução de projetos inusitados para aprender as
+						tecnologias que eu sei hoje.
+					</p>
+					<Link href="/projects" passHref>
+						<a className="font-coda text-primary text-2xl self-end pt-6">
+							Meus projetos
+						</a>
+					</Link>
+				</div>
+
+				<div className="flex flex-col">
+					<p className="font-coda text-lg pb-4 text-gray-800">
+						Onde eu faço?
+					</p>
+					<p className="font-coda text-xl w-9/12 leading-loose pb-6">
+						Eu acredito que aprender em público é a forma mais
+						eficiente - e divertida - de aprender.
+					</p>
+					<Link href="/workjournal" passHref>
+						<a className="font-coda text-secondary text-2xl self-end pt-6">
+							Leia meus diários secretos
+						</a>
+					</Link>
+					<Link href="/" passHref>
+						<a className="font-coda text-secondary text-2xl self-end pt-6">
+							Acompanhe meus 100 dias de aprendizado
+						</a>
+					</Link>
+				</div>
+
+				<div className="flex flex-col">
+					<p className="font-coda text-xl pb-4 text-gray-800">
+						Você prefere Nicoly ou Dandara?
+					</p>
+					<p className="font-light text-2xl leading-loose pb-6">
+						A essa altura do campeonato nem eu sei mais.<br></br>
+						Nome composto == variedade. <br></br> Se escrever
+						corretamente, eu juro que eu respondo.
+					</p>
 				</div>
 			</section>
 
-			<div style={{ scrollSnapAlign: "center" }}>
+			<div>
 				<Footer
-					leadText="Oi"
-					callToAction="Vamos conversar!"
-					arrayLinks={["github", "linkedin"]}
+					leadText="Quer saber ainda mais?"
+					callToAction="Me chama pra conversar."
+					arrayLinks={[
+						"github",
+						"behance",
+						"twitter",
+						"linkedin",
+						"email",
+					]}
 				></Footer>
 			</div>
-			{/* </div> */}
 		</>
 	);
 }
-
-HomePage.headerTitle = "This is home";
 
 export default HomePage;

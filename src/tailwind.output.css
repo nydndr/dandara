@@ -619,7 +619,7 @@ video {
 }
 
 .prose {
-  color: #4a5568;
+  color: #333;
   max-width: 65ch;
 }
 
@@ -632,8 +632,12 @@ video {
 }
 
 .prose a {
-  color: #1a202c;
+  color: #333;
   text-decoration: underline;
+}
+
+.prose a:hover {
+  color: #92014A;
 }
 
 .prose strong {
@@ -713,12 +717,13 @@ video {
 }
 
 .prose h2 {
-  color: #1a202c;
+  color: black;
   font-weight: 700;
   font-size: 1.5em;
   margin-top: 2em;
   margin-bottom: 1em;
   line-height: 1.3333333;
+  font-family: Fira Code;
 }
 
 .prose h3 {
@@ -1844,6 +1849,36 @@ video {
 .prose-2xl > :last-child {
   margin-bottom: 0;
 }
+
+.call a::after {
+  content: " ⟶";
+}
+
+.call a:hover::after {
+  content: " →";
+}
+
+nav p::after {
+  content: " ⟶";
+}
+
+nav p:hover::after {
+  content: " →";
+}
+
+.to-portfolio {
+  background-image: url("../public/images/project01.png"),
+		url("../public/images/project02.png"),
+		url("../public/images/project03.png");
+  background-position: 25% 75%, bottom 50px right 100px, right 35% top 25%;
+  background-size: 25% 20%;
+  background-repeat: no-repeat;
+}
+
+/* footer:focus,
+footer:hover {
+	background-color: #fff1be;
+} */
 
 .space-y-0 > :not(template) ~ :not(template) {
   --space-y-reverse: 0;
@@ -19920,7 +19955,7 @@ video {
   }
 
   .sm\:prose {
-    color: #4a5568;
+    color: #333;
     max-width: 65ch;
   }
 
@@ -19933,8 +19968,12 @@ video {
   }
 
   .sm\:prose a {
-    color: #1a202c;
+    color: #333;
     text-decoration: underline;
+  }
+
+  .sm\:prose a:hover {
+    color: #92014A;
   }
 
   .sm\:prose strong {
@@ -20014,12 +20053,13 @@ video {
   }
 
   .sm\:prose h2 {
-    color: #1a202c;
+    color: black;
     font-weight: 700;
     font-size: 1.5em;
     margin-top: 2em;
     margin-bottom: 1em;
     line-height: 1.3333333;
+    font-family: Fira Code;
   }
 
   .sm\:prose h3 {
@@ -39106,7 +39146,7 @@ video {
   }
 
   .md\:prose {
-    color: #4a5568;
+    color: #333;
     max-width: 65ch;
   }
 
@@ -39119,8 +39159,12 @@ video {
   }
 
   .md\:prose a {
-    color: #1a202c;
+    color: #333;
     text-decoration: underline;
+  }
+
+  .md\:prose a:hover {
+    color: #92014A;
   }
 
   .md\:prose strong {
@@ -39200,12 +39244,13 @@ video {
   }
 
   .md\:prose h2 {
-    color: #1a202c;
+    color: black;
     font-weight: 700;
     font-size: 1.5em;
     margin-top: 2em;
     margin-bottom: 1em;
     line-height: 1.3333333;
+    font-family: Fira Code;
   }
 
   .md\:prose h3 {
@@ -58292,7 +58337,7 @@ video {
   }
 
   .lg\:prose {
-    color: #4a5568;
+    color: #333;
     max-width: 65ch;
   }
 
@@ -58305,8 +58350,12 @@ video {
   }
 
   .lg\:prose a {
-    color: #1a202c;
+    color: #333;
     text-decoration: underline;
+  }
+
+  .lg\:prose a:hover {
+    color: #92014A;
   }
 
   .lg\:prose strong {
@@ -58386,12 +58435,13 @@ video {
   }
 
   .lg\:prose h2 {
-    color: #1a202c;
+    color: black;
     font-weight: 700;
     font-size: 1.5em;
     margin-top: 2em;
     margin-bottom: 1em;
     line-height: 1.3333333;
+    font-family: Fira Code;
   }
 
   .lg\:prose h3 {
@@ -77478,7 +77528,7 @@ video {
   }
 
   .xl\:prose {
-    color: #4a5568;
+    color: #333;
     max-width: 65ch;
   }
 
@@ -77491,8 +77541,12 @@ video {
   }
 
   .xl\:prose a {
-    color: #1a202c;
+    color: #333;
     text-decoration: underline;
+  }
+
+  .xl\:prose a:hover {
+    color: #92014A;
   }
 
   .xl\:prose strong {
@@ -77572,12 +77626,13 @@ video {
   }
 
   .xl\:prose h2 {
-    color: #1a202c;
+    color: black;
     font-weight: 700;
     font-size: 1.5em;
     margin-top: 2em;
     margin-bottom: 1em;
     line-height: 1.3333333;
+    font-family: Fira Code;
   }
 
   .xl\:prose h3 {

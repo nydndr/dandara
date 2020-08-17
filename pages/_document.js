@@ -6,10 +6,7 @@ class CustomDocument extends Document {
 		return (
 			<html>
 				<Head></Head>
-				<body
-					style={{ overflow: "hidden", height: "100vh" }}
-					className=""
-				>
+				<body className="overflow-hidden h-screen bg-cover">
 					<Main />
 					<NextScript />
 				</body>

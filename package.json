@@ -6,9 +6,6 @@
 	"scripts": {
 		"dev": "next",
 		"build": "next build",
-		"build:tailwind": "tailwind build src/tailwind.css -o src/tailwind.output.css",
-		"prestart": "npm run build:tailwind",
-		"prebuild": "npm run build:tailwind",
 		"start": "next start"
 	},
 	"keywords": [],
@@ -26,5 +23,7 @@
 		"snarkdown": "^1.2.2",
 		"tailwindcss": "^1.6.0"
 	},
-	"devDependencies": {}
+	"devDependencies": {
+		"@fullhuman/postcss-purgecss": "^2.3.0"
+	}
 }

@@ -1,4 +1,8 @@
 module.exports = {
+	purge: {
+		enabled: true,
+		content: ["./src/**/*.js", "./pages/*.js", "./components/*.js"],
+	},
 	theme: {
 		typography: {
 			default: {
