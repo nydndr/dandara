@@ -1,27 +1,18 @@
-import "../src/tailwind.css";
+import "../styles/main.css";
+
 import { Link } from "../components/Link";
 
 function MyApp({ Component, pageProps }) {
 	return (
 		<>
-			<div
-				style={{
-					overflow: "scroll",
-					overflowX: "hidden",
-					height: "100vh",
-
-					backgroundColor: "#FFFFFF",
-				}}
-			>
-				<nav className="w-full px-8 pt-8 lg:px-12 lg:flex sm:text-right justify-end text-lg font-coda space-y-4 lg:space-x-6 lg:space-y-0">
+			<div style={{ height: "100vh" }}>
+				<nav className="w-full px-8 pt-8 py-4 lg:px-12 lg:flex sm:text-right justify-end text-base font-coda space-y-4 lg:space-x-6 lg:space-y-0 bg-transparent">
 					<Link href="/">
 						{({ isActive }) =>
 							isActive ? (
-								<p className="text-primary font-semibold">
-									homepage
-								</p>
+								<p className="p-px text-primary">homepage</p>
 							) : (
-								<p className="text-gray-900">homepage</p>
+								<p className="p-px text-codegray">homepage</p>
 							)
 						}
 					</Link>
@@ -29,12 +20,12 @@ function MyApp({ Component, pageProps }) {
 						{({ isActive }) =>
 							isActive ? (
 								<p className="p-px text-primary font-semibold">
-									my projects
+									meus projetos
 								</p>
 							) : (
-								<p className="p-px text-gray-900">
+								<p className="p-px text-codegray">
 									{" "}
-									my projects
+									meus projetos
 								</p>
 							)
 						}
@@ -43,10 +34,12 @@ function MyApp({ Component, pageProps }) {
 						{({ isActive }) =>
 							isActive ? (
 								<p className="p-px text-primary font-semibold">
-									my journal
+									meu journal
 								</p>
 							) : (
-								<p className="p-px text-gray-900">my journal</p>
+								<p className="p-px text-codegray">
+									meu journal
+								</p>
 							)
 						}
 					</Link>

@@ -1,13 +1,15 @@
-export default function FooterLink({ linkName }) {
+export default function SocialLink({ linkName }) {
+	const style =
+		"text-codegray duration-500 flex flex-col items-center hover:animate-bounce";
 	switch (linkName) {
 		case "github":
 			return (
-				<div className="text-gray-900 duration-500 flex flex-col items-center hover:animate-bounce">
+				<div className={style}>
 					<a href="https://github.com/nydndr" target="_blank">
 						<svg
 							className="fill-current"
-							width="64"
-							height="64"
+							width="48"
+							height="48"
 							viewBox="0 0 126 126"
 							xmlns="http://www.w3.org/2000/svg"
 						>
@@ -20,15 +22,15 @@ export default function FooterLink({ linkName }) {
 			break;
 		case "linkedin":
 			return (
-				<div className="text-gray-900 duration-500 flex flex-col items-center hover:animate-bounce">
+				<div className={style}>
 					<a
 						href="https://www.linkedin.com/in/nicolydandara"
 						target="_blank"
 					>
 						<svg
 							className="fill-current"
-							width="64"
-							height="64"
+							width="48"
+							height="48"
 							viewBox="0 0 120 126"
 							fill="none"
 							xmlns="http://www.w3.org/2000/svg"
@@ -45,15 +47,15 @@ export default function FooterLink({ linkName }) {
 
 		case "twitter":
 			return (
-				<div className="text-gray-900 duration-500 flex flex-col items-center hover:animate-bounce">
+				<div className={style}>
 					<a
 						href="https://www.twitter.com/in/nydcodes"
 						target="_blank"
 					>
 						<svg
 							className="fill-current"
-							width="64"
-							height="64"
+							width="48"
+							height="48"
 							viewBox="0 0 126 126"
 							fill="none"
 							xmlns="http://www.w3.org/2000/svg"
@@ -67,15 +69,15 @@ export default function FooterLink({ linkName }) {
 			break;
 		case "behance":
 			return (
-				<div className="text-gray-900 duration-500 flex flex-col items-center hover:animate-bounce">
+				<div className={style}>
 					<a
 						href="https://www.behance.net/nicolydandara"
 						target="_blank"
 					>
 						<svg
 							className="fill-current"
-							width="64"
-							height="64"
+							width="48"
+							height="48"
 							viewBox="0 0 119 126"
 							fill="none"
 							xmlns="http://www.w3.org/2000/svg"
@@ -89,15 +91,15 @@ export default function FooterLink({ linkName }) {
 			break;
 		case "email":
 			return (
-				<div className="text-gray-900 duration-500 flex flex-col items-center hover:animate-bounce">
+				<div className={style}>
 					<a
 						className="text-lg font-bold text-center"
 						href="mailto:nicolydndr@gmail.com"
 					>
 						<svg
 							className="fill-current"
-							width="64"
-							height="64"
+							width="48"
+							height="48"
 							viewBox="0 0 126 126"
 							xmlns="http://www.w3.org/2000/svg"
 						>

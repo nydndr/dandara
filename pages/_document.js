@@ -6,7 +6,7 @@ class CustomDocument extends Document {
 		return (
 			<html>
 				<Head></Head>
-				<body className="overflow-hidden h-screen bg-cover">
+				<body>
 					<Main />
 					<NextScript />
 				</body>

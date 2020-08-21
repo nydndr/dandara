@@ -19,15 +19,7 @@ export default function WorkJournal({ posts }) {
 				/>
 			</Head>
 
-			<main
-				style={{ scrollSnapAlign: "start" }}
-				className="w-10/12 lg:w-1/2 m-auto lg:mt-4"
-			>
-				<p className="text-lg text-gray-900 my-12">
-					The best things I've been doing, learning or liking a lot
-					from the past 88 weeks.
-				</p>
-
+			<main className="w-10/12 lg:w-1/2 m-auto lg:mt-4">
 				<section className="space-y-16">
 					{posts.map(
 						({ frontmatter: { title, language }, content }) => (
