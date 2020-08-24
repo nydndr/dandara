@@ -33,14 +33,10 @@ nav p:hover::after {
 	content: " →";
 }
 
-.to-portfolio {
-	background-image: url("../public/images/project01.png"),
-		url("../public/images/project02.png"),
-		url("../public/images/project03.png");
-	background-position: 25% 75%, bottom 50px right 100px, right 35% top 25%;
-	background-size: 25% 20%;
+.showcase {
 	background-repeat: no-repeat;
+	background-position-x: center;
+	background-position-y: bottom;
 }
 
 @import "tailwindcss/utilities";
-

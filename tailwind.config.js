@@ -29,7 +29,6 @@ module.exports = {
 			},
 			fontFamily: {
 				coda: ['"Fira Code"', "monospaced"],
-				condensed: ['"Roboto Condensed"', "sans-serif"],
 			},
 			fontSize: {
 				// prettier-ignore

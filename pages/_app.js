@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }) {
 							)
 						}
 					</Link>
-					<Link href="/projects">
+					<Link href="/portfolio">
 						{({ isActive }) =>
 							isActive ? (
 								<p className="p-px text-primary font-semibold">
