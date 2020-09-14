@@ -13,7 +13,6 @@ export function getSortedPosts() {
 	// Get all posts located in `content/posts`
 	const files = fs.readdirSync(`${process.cwd()}/content/posts`);
 	// cwd => current working directory
-
 	const posts = files
 		.map((filename) => {
 			// Get raw content from file
@@ -40,4 +39,14 @@ export function getSortedPosts() {
 		);
 
 	return posts;
+}
+
+export function getPostQuantity() {
+	// Get all posts located in `content/posts`
+	const files = fs.readdirSync(`${process.cwd()}/content/posts`);
+	// cwd => current working directory
+
+	const quantity = files.length;
+
+	return quantity;
 }

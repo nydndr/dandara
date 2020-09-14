@@ -5,8 +5,8 @@ import { Link } from "../components/Link";
 function MyApp({ Component, pageProps }) {
 	return (
 		<>
-			<div style={{ height: "100vh" }}>
-				<nav className="w-full px-8 pt-8 py-4 lg:px-12 lg:flex sm:text-right justify-end text-base font-coda space-y-4 lg:space-x-6 lg:space-y-0 bg-transparent">
+			<div>
+				<nav className="w-full px-8 pt-8 py-4 text-right lg:px-12 lg:flex justify-end text-base font-coda space-y-4 lg:space-x-6 lg:space-y-0 bg-transparent">
 					<Link href="/">
 						{({ isActive }) =>
 							isActive ? (
