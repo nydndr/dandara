@@ -1,9 +1,14 @@
 import SocialLink from "../components/SocialLink.js";
 
 import Link from "next/Link";
+import Head from "next/Head";
+
 function HomePage() {
 	return (
 		<>
+			<Head>
+				<title>Nicoly Dandara</title>
+			</Head>
 			<section className="landing h-full w-full flex flex-col lg:flex-row p-8 lg:p-24 items-center">
 				<div className="w-full lg:w-1/2 space-y-12 lg:space-y-8">
 					<h1 className=" font-coda text-4xl text-black font-semibold">

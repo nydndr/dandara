@@ -1,6 +1,8 @@
 import Project from "../components/portfolio/Project.js";
 import Footer from "../components/Footer.js";
 
+import Head from "next/Head";
+
 const projects = [
 	{
 		title: "Em Desenvolvimento: Serase",
@@ -168,6 +170,9 @@ const projects = [
 export default function Portfolio() {
 	return (
 		<>
+			<Head>
+				<title>Portfólio | Nicoly Dandara</title>
+			</Head>
 			<p className="text-xl font-sans w-10/12 m-auto py-12">
 				O meu maior projeto em andamento e uma pequena seleção dos meus
 				melhores trabalhos.
