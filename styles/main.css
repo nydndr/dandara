@@ -17,12 +17,12 @@
 	font-style: normal;
 }
 
-.call a::after {
-	content: " ⟶";
+.call::after {
+	content: " →";
 }
 
-.call a:hover::after {
-	content: " →";
+.call:hover::after {
+	content: " ⟶";
 }
 
 nav p::after {
