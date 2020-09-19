@@ -45,7 +45,7 @@ function HomePage() {
 					</article>
 
 					<article className="hover:bg-gray-100 space-y-4 p-6">
-						<Link href="/portfolio">
+						<Link href="/workjournal">
 							<p className="call font-bold font-coda text-lg cursor-pointer">
 								Leia meus projetos
 							</p>
