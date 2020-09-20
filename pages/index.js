@@ -1,7 +1,7 @@
 import SocialLink from "../components/SocialLink.js";
 
-import Link from "next/Link";
-import Head from "next/Head";
+import Link from "next/link";
+import Head from "next/head";
 
 function HomePage() {
 	return (

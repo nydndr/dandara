@@ -1,7 +1,7 @@
 import Project from "../components/portfolio/Project.js";
 import Footer from "../components/Footer.js";
 
-import Head from "next/Head";
+import Head from "next/head";
 
 const projects = [
 	{
