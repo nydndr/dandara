@@ -20,7 +20,7 @@ export default function WorkJournal({ posts, quantity }) {
 				/>
 			</Head>
 
-			<div className="w-10/12 m-auto mt-12 mb-20">
+			<div className="w-10/12 m-auto space-y-4 my-20">
 				<h1 className="font-coda text-5xl font-semibold">
 					<span className="text-codegray">{quantity} semanas</span>
 					<br></br>
