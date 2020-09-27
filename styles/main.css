@@ -25,18 +25,21 @@
 	content: " ⟶";
 }
 
-nav p::after {
+nav p::after,
+.itemLink::after {
 	content: " ⟶";
 }
 
-nav p:hover::after {
+nav p:hover::after,
+.itemLink:hover::after {
 	content: " →";
 }
 
 .showcase {
+	background-color: purple;
 	background-repeat: no-repeat;
-	background-position-x: center;
-	background-position-y: bottom;
+	background-position: center;
+	background-size: 50%;
 }
 
 @import "tailwindcss/utilities";

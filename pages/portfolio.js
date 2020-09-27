@@ -1,194 +1,258 @@
-import Project from "../components/portfolio/Project.js";
-import Footer from "../components/Footer.js";
-
 import Head from "next/head";
 
-const projects = [
-	{
-		title: "Em Desenvolvimento: Serase",
-		color: "#61FF00",
-		img: "Serase",
-		content: {
-			info1: "Finalidade",
-			info1value: "CEFET",
-			info2: "Tecnologias",
-			info2value: ["React Native", "Expo", "Tailwind", "SQLite"],
-			info3: "Integrantes",
-			info3value: ["6 programadores"],
-			info4: "Meu Papel",
-			info4value: ["Design UI/UX", "Desenvolvimento Front-End"],
-			info5: "Proposta",
-			info5value:
-				"Um aplicativo de gerenciamento financeiro para gerenciamento de despesas, metas e dívidas - tudo em um só lugar enquanto você aprende sobre educação financeira.",
-			info6: "Princípios",
-			info6value: [
-				"Simplicidade e amigabilidade.",
-				"Fluxo de uso curto e didático.",
-				"Machine Learning acessível.",
-			],
-			links: [
-				{
-					call: "Serase no Github",
-					link: "https://github.com/Serase-Labs",
-				},
-				{
-					call: "Serase no Twitter",
-					link: "https://twitter.com/seraseapp",
-				},
-				{
-					call: "Serase em desenvolvimento",
-					link:
-						"https://twitter.com/nydcodes/status/1287554397409443844?s=20",
-				},
-			],
-		},
-	},
-	{
-		title: "Distraction Journal",
-		color: "#FFC703",
-		img: "DistractionJournal",
-		content: {
-			info1: "Finalidade",
-			info1value: "Experimentação",
-			info2: "Tecnologias",
-			info2value: ["Javascript", "Chrome Extension API", "Tailwind"],
-			info3: "Foco",
-			info3value: ["Desenvolvimento"],
-			info4: "Meu Papel",
-			info4value: ["Design", "Desenvolvimento"],
-			info5: "Proposta",
-			info5value:
-				"Extensão para Google Chrome que arquiva notas rápidas, mantendo suas distrações em segurança enquanto você navega pela internet e as tornando visíveis ao fim de um turno de trabalho ou estudo.",
-			info6: "Entregas-Chave",
-			info6value: [
-				"Uso da API Google Chrome Extension.",
-				"Extensão de estado contínuo.",
-				"Uso da biblioteca CSS Tailwind.",
-			],
-			links: [
-				{
-					call: "Github",
-					link: "https://github.com/nydndr/distraction-journal",
-				},
-			],
-		},
-	},
-	{
-		title: "Sistema Biblioteca & Alunos",
-		color: "#FFFFFF",
-		img: "Sistema",
-		content: {
-			info1: "Finalidade",
-			info1value: "CEFET",
-			info2: "Tecnologias",
-			info2value: ["Javascript", "Java", "Ajax", "HTML", "TSQL"],
-			info3: "Participantes",
-			info3value: ["7 Desenvolvedores", "6 sub-grupos"],
-			info4: "Meu Papel",
-			info4value: [
-				"Liderança de subgrupo",
-				"Desenvolvimento Front-End",
-				"Design",
-			],
-			info5: "Proposta",
-			info5value:
-				"Sistema de gerenciamento de alunos e de acervo de biblioteca para uma organização estudantil fictícia. Meu subgrupo tratou do lançamento do sistema de avaliações; atividades; sistema de reservas.",
-			info6: "Entregas-Chave",
-			info6value: [
-				"Aplicação Desktop e Web.",
-				"Banco de dados comunicante entre plataformas.",
-			],
-			links: [
-				{
-					call: "Github",
-					link: "https://github.com/INF2-2019",
-				},
-			],
-		},
-	},
-	{
-		title: "1000&1",
-		color: "#FF6F5E",
-		img: "1000&1",
-		content: {
-			info1: "Finalidade",
-			info1value: "Experimentação",
-			info2: "Tecnologias",
-			info2value: ["Javascript", "Tailwind", "Moment.js", "Alpine.js"],
-			info3: "Foco",
-			info3value: ["Design"],
-			info4: "Meu Papel",
-			info4value: ["Design", "Desenvolvimento"],
-			info5: "Proposta",
-			info5value:
-				"Ninguém sabe quando completa 1000 dias de namoro. É uma conta complicada, mas muito importante e esse site cuida disso pra você.",
-			info6: "Entregas-Chave",
-			info6value: [
-				"Manipulação de dados com Moment.js",
-				"Uso da biblioteca Talwind.",
-				"Consideração de UX Writing",
-			],
-			links: [
-				{
-					call: "Github",
-					link: "https://github.com/nydndr/1000-1",
-				},
-				{
-					call: "Website",
-					link: "https://nydndr.github.io/1000-1/",
-				},
-			],
-		},
-	},
-	{
-		title: "@MaisQueChup",
-		color: "#92014A",
-		img: "MaisQueChup",
-		content: {
-			info1: "Marca",
-			info1value: "MaisQueChup",
-			info2: "Tecnologias",
-			info2value: ["Figma"],
-			info3: "Veiculação",
-			info3value: ["Digital"],
-			info4: "Meu Papel",
-			info4value: ["Design"],
-			info5: "Produtos da Marca",
-			info5value: "Chups-Chups Cremosos, Fatias Suculentas e Salgados",
-			info6: "Entregas-Chave",
-			info6value: ["Cardápios", "Cartões", "Assets de feed do instagram"],
-			links: [
-				{
-					call: "Feed",
-					link: "https://www.instagram.com/maisquechup/",
-				},
-			],
-		},
-	},
-];
+import Footer from "../components/Footer.js";
 
 export default function Portfolio() {
+	const linkstorender = ["github", "behance", "email", "linkedin"];
+
 	return (
 		<>
 			<Head>
 				<title>Portfólio | Nicoly Dandara</title>
+				<meta
+					name="viewport"
+					content="initial-scale=1.0, width=device-width"
+				/>
 			</Head>
-			<p className="text-xl font-sans w-10/12 m-auto py-12">
-				O meu maior projeto em andamento e uma pequena seleção dos meus
-				melhores trabalhos.
-			</p>
 
-			<main className="space-y-12">
-				{projects.map((project) => (
-					<Project item={project} />
-				))}
-			</main>
+			<div className="w-10/12 m-auto space-y-4 my-20">
+				<h1 className="font-coda text-3xl lg:text-5xl font-semibold">
+					<span className="text-codegray">Desenvolvimento </span>
+					Front-End.<wbr></wbr> UI/UX
+					<span className="text-codegray"> Design.</span>
+				</h1>
 
-			<div className="bg-secondary h-2 w-4/12 m-auto rounded my-20"></div>
+				<p className="font-sans text-xl font-regular lg:font-light">
+					Meus melhores trabalhos (ou os que eu mais gosto de falar
+					sobre).
+				</p>
+			</div>
+
+			<section className="w-10/12 m-auto space-y-32">
+				<article className="flex flex-col lg:flex-row">
+					<div className="w-full lg:w-2/5 flex flex-col space-y-6 lg:space-y-0 lg:justify-between mb-4 lg:mb-0">
+						<div>
+							<h3 className="text-3xl font-semibold mb-4">
+								Serase
+							</h3>
+							<div className="flex flex-row w-11/12 flex-wrap">
+								<p className="bg-gray-300 p-1 px-2 mr-2">
+									React Native
+								</p>
+								<p className="bg-gray-300 p-1 px-2 mr-2">
+									Tailwind
+								</p>
+								<p className="bg-gray-300 p-1 px-2 mr-2">
+									SQLite
+								</p>
+								<p className="bg-gray-300 p-1 px-2 mr-2">
+									Expo
+								</p>
+							</div>
+						</div>
+
+						<p className="text-xl w-full lg:w-11/12">
+							Gerenciamento financeiro para quem não conhece sua
+							vida financeira. Didática, praticidade e
+							inteligência para o seu dinheiro, na sua palma da
+							sua mão.
+						</p>
+						<p className="text-xl text-right font-coda text-codegray w-full lg:w-11/12">
+							Em desenvolvimento.
+						</p>
+					</div>
+					<div
+						className="showcase w-full lg:w-3/5 py-24 px-12 lg:p-4"
+						style={{ backgroundColor: "#61FF00" }}
+					>
+						<img
+							className="m-auto"
+							src="images/SeraseShowcase.png"
+						></img>
+					</div>
+				</article>
+
+				<article className="flex flex-col lg:flex-row">
+					<div className="w-full lg:w-2/5 flex flex-col space-y-6 lg:space-y-0 lg:justify-between mb-4 lg:mb-0">
+						<div>
+							<h3 className="text-3xl font-semibold mb-4">
+								Distraction Journal
+							</h3>
+							<div className="flex flex-row w-11/12 flex-wrap">
+								<p className="bg-gray-300 p-1 px-2 mr-2">
+									Chrome Extension API
+								</p>
+								<p className="bg-gray-300 p-1 px-2 mr-2">
+									Tailwind
+								</p>
+							</div>
+						</div>
+
+						<p className="text-xl w-full lg:w-11/12">
+							Guarde suas distrações em segurança enquanto você
+							navega pela internet e as acesse ao fim de um turno
+							de trabalho.
+						</p>
+						<p className="text-xl text-right font-coda text-codegray w-full lg:w-11/12">
+							<a
+								className="itemLink"
+								href="https://github.com/nydndr/distraction-journal"
+							>
+								Github
+							</a>
+						</p>
+					</div>
+					<div
+						className="showcase w-full lg:w-3/5 py-24 px-12 lg:p-4"
+						style={{ backgroundColor: "#FFC703" }}
+					>
+						<img
+							className="m-auto"
+							src="images/DistractionJournalShowcase.png"
+						></img>
+					</div>
+				</article>
+
+				<article className="flex flex-col lg:flex-row">
+					<div className="w-full lg:w-2/5 flex flex-col space-y-6 lg:space-y-0 lg:justify-between mb-4 lg:mb-0">
+						<div>
+							<h3 className="text-3xl font-semibold mb-4">
+								Sistema Escolar
+							</h3>
+							<div className="flex flex-row w-11/12 flex-wrap">
+								<p className="bg-gray-300 p-1 px-2 mr-2">
+									Javascript
+								</p>
+								<p className="bg-gray-300 p-1 px-2 mr-2">
+									Java
+								</p>
+								<p className="bg-gray-300 p-1 px-2 mr-2">
+									Ajax
+								</p>
+								<p className="bg-gray-300 p-1 px-2 mr-2">
+									TSQL
+								</p>
+							</div>
+						</div>
+
+						<p className="text-xl w-full lg:w-11/12">
+							Sistema de gerenciamento de alunos e de acervo de
+							biblioteca. Meu subgrupo tratou do lançamento do
+							sistema de avaliações; atividades; sistema de
+							reservas.
+						</p>
+						<p className="text-xl text-right font-coda text-codegray w-full lg:w-11/12">
+							<a
+								className="itemLink"
+								href="hhttps://github.com/INF2-2019"
+							>
+								Github
+							</a>
+						</p>
+					</div>
+					<div className="showcase bg-white w-full lg:w-3/5 py-24 px-12 lg:p-4">
+						<img
+							className="m-auto"
+							src="images/SistemaShowcase.png"
+						></img>
+					</div>
+				</article>
+
+				<article className="flex flex-col lg:flex-row">
+					<div className="w-full lg:w-2/5 flex flex-col space-y-6 lg:space-y-0 lg:justify-between mb-4 lg:mb-0">
+						<div>
+							<h3 className="text-3xl font-semibold mb-4">
+								1000&1
+							</h3>
+							<div className="flex flex-row w-11/12 flex-wrap">
+								<p className="bg-gray-300 p-1 px-2 mr-2">
+									Javascript
+								</p>
+								<p className="bg-gray-300 p-1 px-2 mr-2">
+									Tailwind
+								</p>
+								<p className="bg-gray-300 p-1 px-2 mr-2">
+									Alpine.js
+								</p>
+								<p className="bg-gray-300 p-1 px-2 mr-2">
+									Moment.js
+								</p>
+							</div>
+						</div>
+
+						<p className="text-xl w-full lg:w-11/12">
+							Ninguém sabe quando completa 1000 dias de namoro. É
+							uma conta complicada, mas muito importante e esse
+							site cuida disso pra você.
+						</p>
+						<p className="text-xl text-right font-coda text-codegray w-full lg:w-11/12">
+							<a
+								className="itemLink"
+								href="https://github.com/nydndr/1000-1"
+							>
+								Acesse
+							</a>
+						</p>
+					</div>
+					<div
+						className="showcase w-full lg:w-3/5 py-24 px-12 lg:p-4"
+						style={{ backgroundColor: "#FF6F5E" }}
+					>
+						<img
+							className="m-auto"
+							src="images/10001Showcase.png"
+						></img>
+					</div>
+				</article>
+
+				<article className="flex flex-col lg:flex-row">
+					<div className="w-full lg:w-2/5 flex flex-col space-y-6 lg:space-y-0 lg:justify-between mb-4 lg:mb-0">
+						<div>
+							<h3 className="text-3xl font-semibold mb-4">
+								@MaisQueChup
+							</h3>
+							<div className="flex flex-row w-11/12 flex-wrap">
+								<p className="bg-gray-300 p-1 px-2 mr-2">
+									Figma
+								</p>
+								<p className="bg-gray-300 p-1 px-2 mr-2">
+									Canva
+								</p>
+							</div>
+						</div>
+
+						<p className="text-xl w-full lg:w-11/12">
+							Assets para mídias sociais, cardápios, cartões e
+							produtos de impressão rápida para uma marca
+							deliciosa.
+						</p>
+						<p className="text-xl text-right font-coda text-codegray w-full lg:w-11/12">
+							<a
+								className="itemLink"
+								href="https://www.instagram.com/maisquechup/"
+							>
+								MaisQueChup
+							</a>
+						</p>
+					</div>
+					<div
+						className="showcase w-full lg:w-3/5 py-24 px-12 lg:p-4"
+						style={{ backgroundColor: "#92014A" }}
+					>
+						<img
+							className="m-auto"
+							src="images/MaisQueChupShowcase.png"
+						></img>
+					</div>
+				</article>
+			</section>
+
+			<div className="w-1/5 m-auto h-1 bg-gray-200 rounded-full my-32"></div>
+
 			<Footer
-				leadText="Precisando de uma designer ou desenvolvedora?"
-				callToAction="Entre em contato."
-				arrayLinks={["linkedin", "email"]}
+				leadText={"Precisando dos meus serviços?"}
+				callToAction={"Me chame por aí!"}
+				arrayLinks={linkstorender}
 			/>
 		</>
 	);

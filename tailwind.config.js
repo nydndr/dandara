@@ -25,7 +25,7 @@ module.exports = {
 				primary: "#92014A",
 				secondary: "#FFC703",
 				tertiary: "#92FF4F",
-				codegray: "#151515",
+				codegray: "#474747",
 			},
 			fontFamily: {
 				coda: ['"Fira Code"', "monospaced"],

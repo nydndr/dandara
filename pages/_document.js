@@ -5,7 +5,13 @@ class CustomDocument extends Document {
 	render() {
 		return (
 			<html>
-				<Head></Head>
+				<Head>
+					<link
+						rel="shortcut icon"
+						href="images/favicon.ico"
+						type="image/x-icon"
+					></link>
+				</Head>
 				<body>
 					<Main />
 					<NextScript />
