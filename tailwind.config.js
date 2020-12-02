@@ -28,7 +28,8 @@ module.exports = {
 				codegray: "#474747",
 			},
 			fontFamily: {
-				coda: ['"Fira Code"', "monospaced"],
+				fivo: ['"Fivo Sans Modern"', "sans-serif"],
+				manrope: ['"Manrope"', "sans-serif"],
 			},
 			fontSize: {
 				// prettier-ignore
