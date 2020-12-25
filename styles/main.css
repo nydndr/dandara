@@ -13,29 +13,39 @@
 	font-style: normal;
 }
 
-.call::after {
-	content: " →";
+:root {
+	--brand-yellow: #ffe400;
 }
 
-.call:hover::after {
-	content: " ⟶";
+h1 {
+	-webkit-text-stroke: 1px var(--brand-yellow);
 }
 
-nav p::after,
-.itemLink::after {
-	content: " ⟶";
+.rolling {
+	display: inline-block;
+	transform: translateY(-60%);
+	color: white;
 }
 
-nav p:hover::after,
-.itemLink:hover::after {
-	content: " →";
+.rolling {
+	animation: rollDown 3s linear infinite;
 }
 
-.showcase {
-	background-color: purple;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 50%;
+@keyframes rollDown {
+	0% {
+		transform: translateY(-50%);
+		color: white;
+	}
+
+	50% {
+		transform: translateY(0);
+		color: black;
+	}
+
+	100% {
+		transform: translateY(50%);
+		color: white;
+	}
 }
 
 @import "tailwindcss/utilities";

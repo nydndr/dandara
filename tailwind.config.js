@@ -32,9 +32,7 @@ module.exports = {
 				manrope: ['"Manrope"', "sans-serif"],
 			},
 			fontSize: {
-				// prettier-ignore
-				'7xl': '5rem',
-				"8xl": "8rem",
+				"16xl": "15rem",
 			},
 		},
 	},
