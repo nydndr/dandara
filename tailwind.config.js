@@ -21,11 +21,8 @@ module.exports = {
 		},
 		extend: {
 			colors: {
-				cover: "#FCFCFC",
-				primary: "#92014A",
-				secondary: "#FFC703",
-				tertiary: "#92FF4F",
-				codegray: "#474747",
+				yellow: "#FFE400",
+				yellowplus: "#FECD1A",
 			},
 			fontFamily: {
 				fivo: ['"Fivo Sans Modern"', "sans-serif"],
@@ -33,6 +30,7 @@ module.exports = {
 			},
 			fontSize: {
 				"16xl": "15rem",
+				"11xl": "10rem",
 			},
 		},
 	},
