@@ -5,8 +5,9 @@ import { Link } from "../components/Link";
 function MyApp({ Component, pageProps }) {
 	return (
 		<>
-			<div>
-				<nav className="w-full px-8 pt-8 py-4 text-right lg:px-12 lg:flex justify-end text-base font-coda space-y-4 lg:space-x-6 lg:space-y-0 bg-transparent">
+			<Component {...pageProps} />
+			{/* <div>
+				 <nav className="w-full px-8 pt-8 py-4 text-right lg:px-12 lg:flex justify-end text-base font-coda space-y-4 lg:space-x-6 lg:space-y-0 bg-transparent">
 					<Link href="/">
 						{({ isActive }) =>
 							isActive ? (
@@ -44,8 +45,8 @@ function MyApp({ Component, pageProps }) {
 						}
 					</Link>
 				</nav>
-				<Component {...pageProps} />
-			</div>
+ 
+			</div> */}{" "}
 		</>
 	);
 }

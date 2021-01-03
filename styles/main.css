@@ -15,10 +15,16 @@
 
 :root {
 	--brand-yellow: #ffe400;
+	--brand-black: #0b0b0d;
 }
 
-h1 {
+body {
+	margin: 0;
+}
+
+.yellow-stroke {
 	-webkit-text-stroke: 1px var(--brand-yellow);
+	color: var(--brand-black);
 }
 
 .rolling {
@@ -28,7 +34,7 @@ h1 {
 }
 
 .rolling {
-	animation: rollDown 3s linear infinite;
+	animation: rollDown 2s linear infinite;
 }
 
 @keyframes rollDown {

@@ -1,24 +1,22 @@
-import Document, { Head, Main, NextScript } from "next/document";
-import React from "react";
+import Document, { Html, Head, Main, NextScript } from "next/document";
 
-class CustomDocument extends Document {
+class MyDocument extends Document {
+	static async getInitialProps(ctx) {
+		const initialProps = await Document.getInitialProps(ctx);
+		return { ...initialProps };
+	}
+
 	render() {
 		return (
-			<html>
-				<Head>
-					<link
-						rel="shortcut icon"
-						href="images/favicon.ico"
-						type="image/x-icon"
-					></link>
-				</Head>
+			<Html>
+				<Head />
 				<body>
 					<Main />
 					<NextScript />
 				</body>
-			</html>
+			</Html>
 		);
 	}
 }
 
-export default CustomDocument;
+export default MyDocument;
