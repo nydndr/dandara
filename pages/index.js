@@ -4,7 +4,7 @@ import Link from "next/link";
 import Head from "next/head";
 
 import Hero from "../components/landing/Hero";
-import Bio from "../components/landing/Bio";
+import AboutCTA from "../components/landing/AboutCTA";
 import WorkCTA from "../components/landing/WorkCTA";
 import JournalCTA from "../components/landing/JournalCTA";
 import CTA from "../components/landing/CTA";
@@ -14,7 +14,7 @@ function HomePage() {
 	return (
 		<>
 			<Hero />
-			<Bio />
+			<AboutCTA />
 			<WorkCTA />
 			<JournalCTA />
 			<CTA />

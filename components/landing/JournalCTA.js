@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from "react";
+import Link from "next/link";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
@@ -53,10 +54,16 @@ function JournalCTA() {
 						dev
 					</h2>
 				</div>
-				<p className="font-manrope text-center w-full text-2xl">
-					React, React Native, Figma, TailwindCSS, Next.js e
-					contando... Leia o meu progresso ->
+				<p className="font-manrope m-auto text-center w-3/4 text-2xl mb-12">
+					Atualizações semanais sobre o meu aprendizado de novas
+					tecnologias e fundamentos do Design e da Programação. Figma,
+					React, C#... e contando.
 				</p>
+				<Link href="/work/about">
+					<p className="font-manrope text-center cursor-pointer call font-semibold text-xl">
+						Mais sobre mim
+					</p>
+				</Link>
 				<div>
 					<h2 className="text-yellow opacity-25 text-16xl font-fivo w-full design text-center">
 						design

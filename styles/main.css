@@ -23,7 +23,7 @@ body {
 }
 
 .yellow-stroke {
-	-webkit-text-stroke: 1px var(--brand-yellow);
+	-webkit-text-stroke: 2px var(--brand-yellow);
 	color: var(--brand-black);
 }
 
@@ -45,13 +45,26 @@ body {
 
 	50% {
 		transform: translateY(0);
-		color: black;
+		color: #fecd1a;
 	}
 
 	100% {
 		transform: translateY(50%);
 		color: white;
 	}
+}
+
+/* Animating link arrows */
+.call::after {
+	content: " →";
+}
+
+.call:hover::after {
+	content: " ⟶";
+}
+
+.go:hover::after {
+	content: " ⟶";
 }
 
 @import "tailwindcss/utilities";

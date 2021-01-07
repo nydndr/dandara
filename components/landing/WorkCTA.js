@@ -10,7 +10,9 @@ export default function Projects() {
 				<div className="p-6 text-yellowplus">
 					<h3 className="font-fivo text-6xl">Serase</h3>
 					<Link href="/work/serase">
-						<p className="font-manrope">Ver mais -></p>
+						<p className="font-manrope cursor-pointer call text-right">
+							Ver mais
+						</p>
 					</Link>
 				</div>
 			</div>
@@ -22,27 +24,31 @@ export default function Projects() {
 				<div className="p-6 text-white">
 					<h3 className="font-fivo text-6xl">dandara</h3>
 					<Link href="/work/dandara">
-						<p className="font-manrope">Ver mais -></p>
+						<p className="font-manrope cursor-pointer call text-right">
+							Ver mais
+						</p>
 					</Link>
 				</div>
 			</div>
 			<div className="h-full grid grid-rows-2 gap-6">
 				<div className="flex justify-end items-end pr-6 pb-6">
 					<div>
-						<h3 className="font-fivo text-xl">Mais UI/UX</h3>
+						<h3 className="font-fivo text-xl">Mais Design</h3>
 						<Link href="https://www.instagram.com/ddedandara/">
-							<p className="font-manrope text-right">
-								Meu Instagram ->
+							<p className="font-manrope cursor-pointer call text-right">
+								Meu Instagram
 							</p>
 						</Link>
 					</div>
 				</div>
 				<div className="bg-yellow flex justify-end items-end pr-6 pb-6">
 					<div>
-						<h3 className="font-fivo text-xl">Mais Programação</h3>
+						<h3 className="font-fivo text-xl">
+							Mais Desenvolvimento
+						</h3>
 						<Link href="https://github.com/nydndr">
-							<p className="font-manrope text-right">
-								Meu Github ->
+							<p className="font-manrope cursor-pointer call text-right">
+								Meu Github
 							</p>
 						</Link>
 					</div>
