@@ -1,5 +1,3 @@
-import SocialLink from "../components/SocialLink.js";
-
 import Link from "next/link";
 import Head from "next/head";
 
