@@ -1,24 +1,6 @@
 module.exports = {
 	purge: ["./components/**/*.js", "./pages/**/*.js"],
 	theme: {
-		typography: {
-			default: {
-				css: {
-					h2: {
-						fontFamily: "Fira Code",
-						color: "black",
-						fontSize: "1.5em",
-					},
-					color: "#333",
-					a: {
-						color: "#333",
-						"&:hover": {
-							color: "#92014A",
-						},
-					},
-				},
-			},
-		},
 		extend: {
 			colors: {
 				yellow: "#FFE400",

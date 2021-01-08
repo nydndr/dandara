@@ -11,13 +11,13 @@ function getFormattedDate(date) {
 
 export function getSortedPosts() {
 	// Get all posts located in `content/posts`
-	const files = fs.readdirSync(`${process.cwd()}/content/posts`);
+	const files = fs.readdirSync(`${process.cwd()}/content/entries`);
 	// cwd => current working directory
 	const posts = files
 		.map((filename) => {
 			// Get raw content from file
 			const markdownWithMetadata = fs
-				.readFileSync(`content/posts/${filename}`)
+				.readFileSync(`content/entries/${filename}`)
 				.toString();
 
 			// Parse the file to get frontmatter data and markdown content
@@ -41,9 +41,9 @@ export function getSortedPosts() {
 	return posts;
 }
 
-export function getPostQuantity() {
+export function getEntriesQuantity() {
 	// Get all posts located in `content/posts`
-	const files = fs.readdirSync(`${process.cwd()}/content/posts`);
+	const files = fs.readdirSync(`${process.cwd()}/content/entries`);
 	// cwd => current working directory
 
 	const quantity = files.length;

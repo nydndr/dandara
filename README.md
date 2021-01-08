@@ -1,16 +1,11 @@
-## Landing Page Redesign
+## Journal Redesign
 
--   [x] Implement landing section
--   [x] Implement "Role pra Baixo" animation
--   [x] Implement Work CTA
--   [x] Implement Journal CTA
--   [x] Implement CTA section
--   [x] Implement Footer
--   [ ] Implement loading state page
--   [ ] Implement 404 page
--   [x] Improve copywriting
-
-_Require GSAP_
-
--   [x] Implement scrolling animation on Journal CTA
--   [ ] Implement outline animation on Hero `h1`
+-   [x] Implement Hero section
+-   [x] Improve week counter
+-   [ ] Implement quick-listing section toggle
+-   [ ] Implement quick-listing section fetch
+-   [ ] Implement `mdx` rendering instead of `mdx`
+-   [ ] Enhance journal readability
+-   [ ] Implement pagination to journal entries
+-   [ ] Implement social share image for journal
+-   [ ] Enhance journal SEO

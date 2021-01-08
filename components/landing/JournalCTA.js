@@ -59,7 +59,7 @@ function JournalCTA() {
 					tecnologias e fundamentos do Design e da Programação. Figma,
 					React, C#... e contando.
 				</p>
-				<Link href="/work/about">
+				<Link href="/journal">
 					<p className="font-manrope text-center cursor-pointer call font-semibold text-xl">
 						Mais sobre mim
 					</p>
