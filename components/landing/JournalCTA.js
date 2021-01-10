@@ -61,7 +61,7 @@ function JournalCTA() {
 				</p>
 				<Link href="/journal">
 					<p className="font-manrope text-center cursor-pointer call font-semibold text-xl">
-						Mais sobre mim
+						Leia meu journal
 					</p>
 				</Link>
 				<div>

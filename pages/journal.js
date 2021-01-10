@@ -1,6 +1,7 @@
 import Head from "next/head";
 
 import Hero from "../components/journal/Hero";
+import QuickList from "../components/journal/QuickList";
 import Footer from "../components/landing/Footer";
 
 import ReactMarkdown from "react-markdown/with-html";
@@ -19,22 +20,20 @@ export default function WorkJournal({ posts, quantity }) {
 			</Head>
 
 			<Hero postQuantity={quantity} />
+			<QuickList />
 
-			<main
-				style={{ transform: "translateY(-0.1%)" }}
-				className="w-7/12 m-auto"
-			>
+			<main className="w-7/12 m-auto">
 				<section className="space-y-16 divide-y-2 divide-gray-100 divide-solid w-full">
 					{posts.map(
 						(
 							{ frontmatter: { title, language }, content },
 							index
 						) => (
-							<article key={index} className="">
+							<article key={index} className=" z-0">
 								<p className="block font-fivo text-4xl text text-yellowplus my-12">
 									{title}
 								</p>
-								<section className="prose max-w-none prose-lg prose-blue">
+								<section className="prose max-w-none prose-lg prose-blue font-manrope">
 									<ReactMarkdown
 										escapeHtml={false}
 										source={content}
