@@ -1,39 +1,18 @@
 module.exports = {
 	purge: ["./components/**/*.js", "./pages/**/*.js"],
 	theme: {
-		typography: {
-			default: {
-				css: {
-					h2: {
-						fontFamily: "Fira Code",
-						color: "black",
-						fontSize: "1.5em",
-					},
-					color: "#333",
-					a: {
-						color: "#333",
-						"&:hover": {
-							color: "#92014A",
-						},
-					},
-				},
-			},
-		},
 		extend: {
 			colors: {
-				cover: "#FCFCFC",
-				primary: "#92014A",
-				secondary: "#FFC703",
-				tertiary: "#92FF4F",
-				codegray: "#474747",
+				yellow: "#FFE400",
+				yellowplus: "#FECD1A",
 			},
 			fontFamily: {
-				coda: ['"Fira Code"', "monospaced"],
+				fivo: ['"Fivo Sans Modern"', "sans-serif"],
+				manrope: ['"Manrope"', "sans-serif"],
 			},
 			fontSize: {
-				// prettier-ignore
-				'7xl': '5rem',
-				"8xl": "8rem",
+				"16xl": "15rem",
+				"11xl": "10rem",
 			},
 		},
 	},

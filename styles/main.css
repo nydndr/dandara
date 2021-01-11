@@ -2,21 +2,59 @@
 @import "tailwindcss/components";
 
 @font-face {
-	font-family: "Fira Code";
-	src: url("../public/fonts/FiraCode-Regular.woff2") format("woff2"),
-		url("../public/fonts/FiraCode-Regular.woff") format("woff");
-	font-weight: 400;
-	font-style: normal;
+	font-family: "Manrope";
+	src: url("../public/fonts/Manrope-VariableFont_wght.ttf") format("truetype");
 }
 
 @font-face {
-	font-family: "Fira Code";
-	src: url("../public/fonts/FiraCode-SemiBold.woff2") format("woff2"),
-		url("../public/fonts/FiraCode-SemiBold.woff") format("woff");
-	font-weight: 600;
+	font-family: "Fivo Sans Modern";
+	src: url("../public/fonts/FivoSansModern-Bold.otf") format("opentype");
+	font-weight: bold;
 	font-style: normal;
 }
 
+:root {
+	--brand-yellow: #ffe400;
+	--brand-black: #0b0b0d;
+}
+
+body {
+	margin: 0;
+}
+
+.yellow-stroke {
+	-webkit-text-stroke: 2px var(--brand-yellow);
+	color: var(--brand-black);
+}
+
+.rolling {
+	display: inline-block;
+	transform: translateY(-60%);
+	color: white;
+}
+
+.rolling {
+	animation: rollDown 2s linear infinite;
+}
+
+@keyframes rollDown {
+	0% {
+		transform: translateY(-50%);
+		color: white;
+	}
+
+	50% {
+		transform: translateY(0);
+		color: #fecd1a;
+	}
+
+	100% {
+		transform: translateY(50%);
+		color: white;
+	}
+}
+
+/* Animating link arrows */
 .call::after {
 	content: " →";
 }
@@ -25,21 +63,8 @@
 	content: " ⟶";
 }
 
-nav p::after,
-.itemLink::after {
+.go:hover::after {
 	content: " ⟶";
-}
-
-nav p:hover::after,
-.itemLink:hover::after {
-	content: " →";
-}
-
-.showcase {
-	background-color: purple;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 50%;
 }
 
 @import "tailwindcss/utilities";

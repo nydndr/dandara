@@ -1,0 +1,37 @@
+[
+	{
+		"id": "1",
+		"nome": "1000&1",
+		"link": "https://nydndr.github.io/1000-1/"
+	},
+	{
+		"id": "2",
+		"nome": "Esse site",
+		"link": "https://dandara.vercel.app"
+	},
+	{
+		"id": "3",
+		"nome": "#100DaysOfProjects",
+		"link": "https://twitter.com/100projectdays?lang=en"
+	},
+	{
+		"od": "4",
+		"nome": "Cursô",
+		"link": null
+	},
+	{
+		"id": "5",
+		"nome": "Serase",
+		"link": "https://github.com/Serase-Labs/serase"
+	},
+	{
+		"id": "6",
+		"nome": "@ddedandara",
+		"link": "https://www.instagram.com/ddedandara/"
+	},
+	{
+		"id": "7",
+		"nome": "OTF",
+		"link": null
+	}
+]
