@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Projects() {
 	return (
-		<div className="w-3/4 grid grid-cols-3 gap-6 min-h-screen min-w-full m-auto p-16">
+		<div className="w-3/4 grid sm:grid-cols-1 lg:grid-cols-3 gap-6 min-h-screen min-w-full m-auto p-4">
 			<div
 				className="h-full bg-black bg-cover bg-center flex justify-end items-end"
 				style={{ backgroundImage: 'url("static/images/Serase.png")' }}
@@ -21,7 +21,7 @@ export default function Projects() {
 				className="h-full bg-black bg-cover bg-center flex justify-end items-end"
 				style={{ backgroundImage: 'url("static/images/Dandara.png")' }}
 			>
-				<div className="p-6 text-white">
+				<div className="p-6 text-yellowplus">
 					<h3 className="font-fivo text-6xl">dandara</h3>
 					<Link href="/work/dandara">
 						<p className="font-manrope cursor-pointer call text-right">
@@ -31,7 +31,7 @@ export default function Projects() {
 				</div>
 			</div>
 			<div className="h-full grid grid-rows-2 gap-6">
-				<div className="flex justify-end items-end pr-6 pb-6">
+				<div className="flex justify-end items-end p-6">
 					<div>
 						<h3 className="font-fivo text-xl">Mais Design</h3>
 						<Link href="https://www.instagram.com/ddedandara/">
@@ -41,7 +41,7 @@ export default function Projects() {
 						</Link>
 					</div>
 				</div>
-				<div className="bg-yellow flex justify-end items-end pr-6 pb-6">
+				<div className="bg-yellow flex justify-end items-end p-6">
 					<div>
 						<h3 className="font-fivo text-xl">
 							Mais Desenvolvimento

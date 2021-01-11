@@ -20,20 +20,21 @@ export default function WorkJournal({ posts, quantity }) {
 			</Head>
 
 			<Hero postQuantity={quantity} />
+
 			<QuickList />
 
-			<main className="w-7/12 m-auto">
+			<main className="w-9/12 lg:w-7/12 m-auto">
 				<section className="space-y-16 divide-y-2 divide-gray-100 divide-solid w-full">
 					{posts.map(
 						(
 							{ frontmatter: { title, language }, content },
 							index
 						) => (
-							<article key={index} className=" z-0">
-								<p className="block font-fivo text-4xl text text-yellowplus my-12">
+							<article key={index}>
+								<p className="block font-fivo text-2xl lg:text-4xl text-yellowplus my-12">
 									{title}
 								</p>
-								<section className="prose max-w-none prose-lg prose-blue font-manrope">
+								<section className="prose max-w-none prose-sm lg:prose-lg prose-blue font-manrope">
 									<ReactMarkdown
 										escapeHtml={false}
 										source={content}

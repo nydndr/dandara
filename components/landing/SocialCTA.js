@@ -7,7 +7,7 @@ export default function SocialCTA() {
 					xmlns="http://www.w3.org/2000/svg"
 					width="30"
 					height="30"
-					className="fill-current cursor-pointer"
+					className="fill-current cursor-pointer w-6 h-6"
 					viewBox="0 0 256 256"
 				>
 					<rect width="256" height="256" fill="none"></rect>
@@ -40,7 +40,7 @@ export default function SocialCTA() {
 					xmlns="http://www.w3.org/2000/svg"
 					width="30"
 					height="30"
-					className="fill-current cursor-pointer"
+					className="fill-current cursor-pointer w-6 h-6"
 					viewBox="0 0 256 256"
 				>
 					<rect width="256" height="256" fill="none"></rect>
@@ -94,7 +94,7 @@ export default function SocialCTA() {
 					xmlns="http://www.w3.org/2000/svg"
 					width="30"
 					height="30"
-					className="fill-current cursor-pointer"
+					className="fill-current cursor-pointer w-6 h-6"
 					viewBox="0 0 256 256"
 				>
 					<rect width="256" height="256" fill="none"></rect>
@@ -113,7 +113,7 @@ export default function SocialCTA() {
 					xmlns="http://www.w3.org/2000/svg"
 					width="30"
 					height="30"
-					className="fill-current cursor-pointer"
+					className="fill-current cursor-pointer w-6 h-6"
 					viewBox="0 0 256 256"
 				>
 					<rect width="256" height="256" fill="none"></rect>

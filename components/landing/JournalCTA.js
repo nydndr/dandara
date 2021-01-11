@@ -47,25 +47,27 @@ function JournalCTA() {
 	}, []);
 
 	return (
-		<div className="overflow-hidden">
-			<section className="h-full w-full grid-rows-3 box-border" ref={ref}>
+		<div className="overflow-hidden flex items-center justify-center h-screen">
+			<section className="w-full grid-rows-3 box-border" ref={ref}>
 				<div>
-					<h2 className="text-yellow opacity-25 text-16xl font-fivo dev text-center">
+					<h2 className="text-yellow opacity-25 text-3xl lg:text-16xl font-fivo dev text-center">
 						dev
 					</h2>
 				</div>
-				<p className="font-manrope m-auto text-center w-3/4 text-2xl mb-12">
-					Atualizações semanais sobre o meu aprendizado de novas
-					tecnologias e fundamentos do Design e da Programação. Figma,
-					React, C#... e contando.
-				</p>
-				<Link href="/journal">
-					<p className="font-manrope text-center cursor-pointer call font-semibold text-xl">
-						Leia meu journal
-					</p>
-				</Link>
 				<div>
-					<h2 className="text-yellow opacity-25 text-16xl font-fivo w-full design text-center">
+					<p className="font-manrope m-auto text-center w-3/4 text-lg lg:text-2xl mb-12">
+						Atualizações semanais sobre o meu aprendizado de novas
+						tecnologias e fundamentos do Design e da Programação.
+						Figma, React, C#... e contando.
+					</p>
+					<Link href="/journal">
+						<p className="font-manrope text-center cursor-pointer call font-semibold text-xl">
+							Leia meu journal
+						</p>
+					</Link>
+				</div>
+				<div>
+					<h2 className="text-yellow opacity-25 text-3xl lg:text-16xl font-fivo w-full design text-center py-6">
 						design
 					</h2>
 				</div>

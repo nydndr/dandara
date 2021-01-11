@@ -5,15 +5,15 @@ export default function QuickList() {
 	const [toggleModal, setToggleModal] = useState(false);
 
 	const buttonColor = toggleModal
-		? "w-16 h-16 bg-black rounded-full"
-		: "w-16 h-16 bg-yellowplus rounded-full";
+		? "w-10 h-10 lg:w-16 lg:h-16 bg-black rounded-full"
+		: "w-10 h-10 lg:w-16 lg:h-16 bg-yellowplus rounded-full";
 
 	const sectionColor = toggleModal ? "py-6 bg-yellow mb-10" : "py-6 mb-10";
 
 	return (
 		<section className={sectionColor}>
 			<div className="w-full flex justify-end px-12 items-center">
-				<p className="font-manrope text-gray-600 px-6 text-lg">
+				<p className="font-manrope text-gray-600 px-6 text-xs lg:text-lg text-right">
 					Links para os projetos citados ao longo do journal
 				</p>
 				<button

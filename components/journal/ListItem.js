@@ -5,11 +5,11 @@ export default function ListItem({ item }) {
 	const [toggleDescription, setToggleDescription] = useState(false);
 
 	const itemButtonColor = toggleDescription
-		? "font-manrope font-bold text-6xl my-4 inline text-black ml-2"
-		: "font-manrope font-semibold text-6xl my-3 inline text-black ml-2";
+		? "font-manrope font-bold text-xl lg:text-6xl inline text-black"
+		: "font-manrope font-semibold text-xl lg:text-6xl inline text-black";
 
 	return (
-		<div className="flex max-w-full w-auto items-center">
+		<div className="flex max-w-full w-auto items-center p-2 lg:p-8">
 			{item.link ? (
 				<button
 					className={itemButtonColor}
@@ -18,7 +18,7 @@ export default function ListItem({ item }) {
 					{item.nome}
 				</button>
 			) : (
-				<p className="font-manrope font-semibold text-6xl my-3 inline text-w ml-2 text-gray-400">
+				<p className="font-manrope font-semibold text-xl lg:text-6xl inline text-gray-400">
 					{item.nome}
 				</p>
 			)}
@@ -27,7 +27,7 @@ export default function ListItem({ item }) {
 				<Link href={item.link}>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
-						className="fill-current stroke-current text-black w-20 h-20 cursor-pointer"
+						className="fill-current stroke-current text-black w-6 h-6 lg:w-20 lg:h-20 cursor-pointer"
 						viewBox="0 0 256 256"
 					>
 						<rect
