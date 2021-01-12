@@ -1,16 +1,20 @@
 {
-	"name": "nydndr",
-	"version": "1.0.0",
-	"description": "",
+	"name": "dandara",
+	"version": "1.1.0",
+	"description": "Nicoly Dandara personal website.",
 	"main": "index.js",
 	"scripts": {
 		"dev": "next",
 		"build": "next build",
 		"start": "next start"
 	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
+	"keywords": [
+		"personal",
+		"website",
+		"portfolio"
+	],
+	"author": "@nydndr",
+	"license": "MIT",
 	"dependencies": {
 		"@mdx-js/loader": "^1.6.9",
 		"@next/mdx": "^9.4.4",
