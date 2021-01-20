@@ -7,8 +7,19 @@ import Footer from "../components/landing/Footer";
 import ReactMarkdown from "react-markdown/with-html";
 import { getSortedPosts } from "../utils/entries";
 import { getEntriesQuantity } from "../utils/entries";
+import { useTitle, useTitleTemplate, useMeta, useLang } from "hoofd";
 
 export default function WorkJournal({ posts, quantity }) {
+	useTitle("Meu Journal");
+	useMeta({
+		name: "description",
+		content: "Documentações pessoais sobre desenvolvimento e design.",
+	});
+	useMeta({
+		name: "keywords",
+		content: "Desenvolvimento, programação, design, ui, ux",
+	});
+
 	return (
 		<>
 			<Head>

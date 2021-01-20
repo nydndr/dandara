@@ -11,10 +11,10 @@ export default function Navbar() {
 
 	return (
 		<>
-			<nav className="flex items-center flex-wrap bg-white p-3 ">
+			<nav className="flex items-center flex-wrap bg-white pt-3 px-3">
 				<Link href="/">
 					<a className="inline-flex items-center p-2 mr-4 ">
-						<span className="text-2xl text-black font-fivo   tracking-wide">
+						<span className="text-2xl text-black font-fivo tracking-wide">
 							d
 						</span>
 					</a>
@@ -38,7 +38,7 @@ export default function Navbar() {
 						/>
 					</svg>
 				</button>
-				{/*Note that in this div we will use a ternary operator to decide whether or not to display the content of the div  */}
+
 				<div
 					className={`${
 						active ? "" : "hidden"
@@ -48,6 +48,11 @@ export default function Navbar() {
 						<Link href="/">
 							<a className="lg:inline-flex lg:w-auto w-full px-3 py-2 text-black items-center justify-center font-manrope font-semibold hover:text-yellowplus">
 								início
+							</a>
+						</Link>
+						<Link href="/sobre">
+							<a className="lg:inline-flex lg:w-auto w-full px-3 py-2 text-black items-center justify-center font-manrope font-semibold hover:text-yellowplus">
+								sobre mim
 							</a>
 						</Link>
 						<Link href="/journal">

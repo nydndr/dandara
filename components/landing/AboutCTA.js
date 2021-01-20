@@ -10,7 +10,7 @@ export default function Bio() {
 					divido meus aprendizados de programação entre o curso e
 					metodologias autodidatas.
 				</h3>
-				<Link href="/about">
+				<Link href="/sobre">
 					<p className="font-manrope cursor-pointer call font-semibold text-lg lg:text-xl">
 						Mais sobre mim
 					</p>
