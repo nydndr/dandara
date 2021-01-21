@@ -4,6 +4,7 @@
 @font-face {
 	font-family: "Manrope";
 	src: url("../public/fonts/Manrope-VariableFont_wght.ttf") format("truetype");
+	font-display: fallback;
 }
 
 @font-face {
@@ -11,12 +12,13 @@
 	src: url("../public/fonts/FivoSansModern-Bold.otf") format("opentype");
 	font-weight: bold;
 	font-style: normal;
+	font-display: fallback;
 }
 
 :root {
 	--brand-yellow: #ffe400;
-    --brand-black: #0b0b0d;
-    --brand-gray: #e8eae6;
+	--brand-black: #0b0b0d;
+	--brand-gray: #e8eae6;
 }
 
 body {
@@ -29,7 +31,7 @@ body {
 }
 
 .gray-stroke {
-    -webkit-text-stroke: 2px var(--brand-gray);
+	-webkit-text-stroke: 2px var(--brand-gray);
 	color: var(--brand-gray);
 }
 

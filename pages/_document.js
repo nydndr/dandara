@@ -9,7 +9,30 @@ class MyDocument extends Document {
 	render() {
 		return (
 			<Html>
-				<Head />
+				<Head>
+					<link
+						rel="preload"
+						href="/fonts/FivoSansModern-Bold.otf"
+						as="font"
+						crossOrigin=""
+					/>
+					<link
+						rel="preload"
+						href="/fonts/Manrope-VariableFont_wght.ttf"
+						as="font"
+						crossOrigin=""
+					/>
+					<link
+						rel="shortcut icon"
+						href="/static/favicon.ico"
+						type="image/x-icon"
+					/>
+					<link
+						rel="icon"
+						href="/static/favicon.ico"
+						type="image/x-icon"
+					/>
+				</Head>
 				<body>
 					<Main />
 					<NextScript />

@@ -6,7 +6,6 @@ function MyApp({ Component, pageProps }) {
 	useLang("pt-br");
 	useMeta({ name: "author", content: "Nicoly Dandara" });
 
-	useTitle("Inicio");
 	useMeta({
 		name: "description",
 		content: "Desenvolvedora de Software e UI/UX Designer",
