@@ -20,7 +20,7 @@ export default function CTA() {
 				</div>
 				<div className="flex flex-row justify-end items-end text-center">
 					<div>
-						<Link href="/resume">
+						<Link href="/curriculo">
 							<h2 className="font-fivo text-4xl lg:text-9xl yellow-stroke cursor-pointer">
 								currículo
 							</h2>

@@ -60,6 +60,11 @@ export default function Navbar() {
 								journal
 							</a>
 						</Link>
+						<Link href="/curriculo">
+							<a className="lg:inline-flex lg:w-auto w-full px-3 py-2 text-orange items-center justify-center font-manrope font-semibold hover:text-yellowplus">
+								me contrate
+							</a>
+						</Link>
 					</div>
 				</div>
 			</nav>

@@ -134,7 +134,7 @@ export default function Sobre() {
 					<p className="font-manrope text-base md:text-2xl leading-relaxed">
 						Estou procurando por um estágio em desenvolvimento.
 					</p>
-					<Link href="/resume">
+					<Link href="/curriculo">
 						<h2 className="font-fivo text-4xl md:text-9xl yellow-stroke cursor-pointer go">
 							currículo
 						</h2>
