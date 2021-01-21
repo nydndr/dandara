@@ -120,7 +120,7 @@ export default function Sobre() {
 			</section>
 
 			<section className="w-full bg-yellow py-12 px-6 lg:px-12">
-				<p className=" font-manrope text-white text-right md:font-semibold tracking-wider mb-12">
+				<p className=" font-manrope text-white text-right font-semibold tracking-wider mb-12">
 					Habilidades
 				</p>
 				<p className="font-manrope font-semibold text-2xl md:text-6xl leading-relaxed md:leading-loose">
