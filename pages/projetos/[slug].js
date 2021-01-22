@@ -34,7 +34,7 @@ export default function Project(props) {
 					<h1 className="font-semibold text-2xl xl:text-6xl leading-relaxed md:leading-loose">
 						{props.data.title}
 					</h1>
-					<h2 className="text-base lg:text-2xl xl:text-3xl leading-relaxed md:leading-loose">
+					<h2 className="text-base lg:text-2xl xl:text-3xl sm:leading-relaxed md:leading-loose lg:w-8/12 m-auto">
 						{props.data.introduction}
 					</h2>
 
@@ -55,7 +55,7 @@ export default function Project(props) {
 							src={props.data.aside}
 						></img>
 					</aside>
-					<article className="prose max-w-none prose-sm md:prose-lg xl:prose-xl prose-yellow">
+					<article className="prose max-w-none lg:w-6/12 prose-sm md:prose-lg prose-yellow">
 						<ReactMarkdown
 							escapeHtml={false}
 							source={props.content}
