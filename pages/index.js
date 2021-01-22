@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Head from "next/head";
+import { useTitle } from "hoofd";
 
 import Navbar from "../components/Navbar";
 
@@ -10,6 +11,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 function HomePage() {
+	useTitle(" ");
 	return (
 		<div className="font-manrope">
 			<Navbar />

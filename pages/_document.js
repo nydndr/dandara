@@ -14,13 +14,15 @@ class MyDocument extends Document {
 						rel="preload"
 						href="/fonts/FivoSansModern-Bold.otf"
 						as="font"
-						crossOrigin=""
+						type="font/otf"
+						crossorigin="anonymous"
 					/>
 					<link
 						rel="preload"
 						href="/fonts/Manrope-VariableFont_wght.ttf"
 						as="font"
-						crossOrigin=""
+						type="font/ttf"
+						crossorigin="anonymous"
 					/>
 					<link
 						rel="shortcut icon"
