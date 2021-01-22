@@ -9,7 +9,7 @@ export default function Projects() {
 			>
 				<div className="p-6 text-yellowplus">
 					<h3 className="font-fivo text-6xl">Serase</h3>
-					<Link href="/work/serase">
+					<Link href="/projetos/serase">
 						<p className="font-manrope cursor-pointer call text-right">
 							Ver mais
 						</p>
@@ -23,11 +23,8 @@ export default function Projects() {
 			>
 				<div className="p-6 text-yellowplus">
 					<h3 className="font-fivo text-6xl">dandara</h3>
-					<Link href="/work/dandara">
-						<p className="font-manrope cursor-pointer call text-right">
-							Ver mais
-						</p>
-					</Link>
+
+					<p className="font-manrope text-right">Em escrita</p>
 				</div>
 			</div>
 			<div className="h-full grid grid-rows-2 gap-6">
