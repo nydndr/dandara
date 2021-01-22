@@ -34,7 +34,7 @@ export default function Hero() {
 					projetos, minhas falações e muita exaltação ao brutalismo.
 				</h4>
 				<SocialCTA />
-				<span className="rolling font-manrope text-lg">
+				<span className="rolling font-manrope text-lg text-yellowplus">
 					role pra baixo
 				</span>
 			</div>

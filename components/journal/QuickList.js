@@ -1,7 +1,7 @@
 import { useState } from "react";
 import List from "./List";
 
-export default function QuickList() {
+export default function QuickList(props) {
 	const [toggleModal, setToggleModal] = useState(false);
 
 	const buttonColor = toggleModal
@@ -14,7 +14,7 @@ export default function QuickList() {
 		<section className={sectionColor}>
 			<div className="w-full flex justify-end px-12 items-center">
 				<p className="font-manrope text-gray-600 px-6 text-xs lg:text-lg text-right">
-					Links para os projetos citados ao longo do journal
+					{props.text}
 				</p>
 				<button
 					onClick={() => {
