@@ -25,20 +25,20 @@ export default function Project(props) {
 		<>
 			<Navbar />
 			<div className="m-auto my-12 md:my-24 w-10/12 font-manrope space-y-24 md:space-y-24">
-				<header className="text-center space-y-6">
+				<header className="text-center space-y-6 lg:space-y-12">
 					<img
 						className="m-auto bg-neutral p-4"
 						src={props.data.main}
 					></img>
 
-					<h1 className="font-semibold text-2xl md:text-6xl leading-relaxed md:leading-loose">
+					<h1 className="font-semibold text-2xl xl:text-6xl leading-relaxed md:leading-loose">
 						{props.data.title}
 					</h1>
-					<h2 className="text-base md:text-2xl leading-relaxed md:leading-loose">
+					<h2 className="text-base lg:text-2xl xl:text-3xl leading-relaxed md:leading-loose">
 						{props.data.introduction}
 					</h2>
 
-					<div className="flex items-center justify-center space-x-4 text-sm">
+					<div className="flex items-center justify-center space-x-4 text-sm lg:text-xl">
 						<Link href={props.data.link}>
 							<p className="go cursor-pointer text-orange font-semibold">
 								Acessar
@@ -48,14 +48,14 @@ export default function Project(props) {
 					</div>
 				</header>
 
-				<main className="space-y-6 flex flex-col md:flex-row">
+				<main className="space-y-6 flex flex-col lg:flex-row md:w-8/12 lg:w-full m-auto lg:space-x-12">
 					<aside>
 						<img
 							className="m-auto bg-neutral"
 							src={props.data.aside}
 						></img>
 					</aside>
-					<article className="prose max-w-none prose-sm md:prose-lg prose-yellow">
+					<article className="prose max-w-none prose-sm md:prose-lg xl:prose-xl prose-yellow">
 						<ReactMarkdown
 							escapeHtml={false}
 							source={props.content}
