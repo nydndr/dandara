@@ -7,7 +7,7 @@ import Footer from "../components/landing/Footer";
 import ReactMarkdown from "react-markdown/with-html";
 import { getSortedPosts } from "../utils/entries";
 import { getEntriesQuantity } from "../utils/entries";
-import { useTitle, useTitleTemplate, useMeta, useLang } from "hoofd";
+import { useTitle, useMeta } from "hoofd";
 
 export default function WorkJournal({ posts, quantity }) {
 	useTitle("Meu Journal");

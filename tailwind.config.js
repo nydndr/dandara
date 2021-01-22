@@ -5,7 +5,8 @@ module.exports = {
 			colors: {
 				yellow: "#FFE400",
 				yellowplus: "#FECD1A",
-				orange: "#F58634",
+                orange: "#F58634",
+                neutral: "#F6F6F6"
 			},
 			fontFamily: {
 				fivo: ['"Fivo Sans Modern"', "sans-serif"],
