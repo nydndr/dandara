@@ -1,34 +1,5 @@
 import "./globals.css";
 import Link from "next/link";
-import {
-  Manrope,
-  Anton,
-  Fira_Code,
-  Covered_By_Your_Grace,
-} from "next/font/google";
-
-const manrope = Manrope({
-  subsets: ["latin"],
-  display: "block",
-  adjustFontFallback: false,
-});
-const anton = Anton({
-  subsets: ["latin"],
-  weight: "400",
-  display: "block",
-  adjustFontFallback: false,
-});
-const fira_code = Fira_Code({
-  subsets: ["latin"],
-  display: "block",
-  adjustFontFallback: false,
-});
-const covered_by_your_grace = Covered_By_Your_Grace({
-  subsets: ["latin"],
-  weight: "400",
-  display: "block",
-  adjustFontFallback: false,
-});
 
 export const metadata = {
   title: "Dandara | Product Designer",
@@ -39,14 +10,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={
-          (manrope.className,
-          anton.className,
-          fira_code.className,
-          covered_by_your_grace.className,
-          "overflow-x-hidden font-manrope")
-        }>
+      <body className={"overflow-x-hidden font-manrope"}>
         <nav className="px-6 md:px-20 my-12 flex w-screen justify-between gap-12 text-xl font-anton uppercase text-dandara-black">
           <div className="flex items-center space-x-6">
             <Link href="/">

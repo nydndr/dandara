@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Manrope";
+  src: url("/Manrope.ttf") format("ttf");
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Anton";
+  src: url("/Anton.ttf") format("ttf");
+  font-style: normal;
+  font-display: block;
+}
+
 body {
   background-color: #fffef9;
 }
