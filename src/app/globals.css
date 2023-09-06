@@ -2,36 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-}
-
 body {
   background-color: #fffef9;
-}
-
-@layer components {
-  .row {
-    @apply grid grid-cols-4 w-full;
-  }
-
-  .year {
-    @apply font-fira font-semibold text-gray-500 text-xl;
-  }
-
-  .year:nth-child(even),
-  .year-active:nth-child(even) {
-    @apply text-right;
-  }
-
-  .year-active {
-    @apply font-fira font-semibold text-gray-500 text-2xl;
-  }
-
-  .organization {
-    @apply border-dandara-black border-2 font-manrope font-semibold text-2xl py-2 px-2 uppercase transition-colors;
-  }
-
-  .organization:hover {
-    @apply bg-dandara-black text-white;
-  }
 }
