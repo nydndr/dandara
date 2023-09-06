@@ -7,13 +7,27 @@ import {
   Covered_By_Your_Grace,
 } from "next/font/google";
 
-const manrope = Manrope({ subsets: ["latin"], display: "block" });
-const anton = Anton({ subsets: ["latin"], weight: "400", display: "block" });
-const fira_code = Fira_Code({ subsets: ["latin"], display: "block" });
+const manrope = Manrope({
+  subsets: ["latin"],
+  display: "block",
+  adjustFontFallback: false,
+});
+const anton = Anton({
+  subsets: ["latin"],
+  weight: "400",
+  display: "block",
+  adjustFontFallback: false,
+});
+const fira_code = Fira_Code({
+  subsets: ["latin"],
+  display: "block",
+  adjustFontFallback: false,
+});
 const covered_by_your_grace = Covered_By_Your_Grace({
   subsets: ["latin"],
   weight: "400",
   display: "block",
+  adjustFontFallback: false,
 });
 
 export const metadata = {
