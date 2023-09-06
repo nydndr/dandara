@@ -618,14 +618,14 @@ export default function Desafio() {
             objetivas.”
           </p>
 
-          <p className="border border-white w-fit px-3 py-1 rounded-full">"</p>
+          <p className="border border-white w-fit px-3 py-1 rounded-full">.</p>
         </div>
 
         <div className="space-y-6">
           <p>
             “As ações ficaram bem descritas e ficou muito fácil de interagir.”
           </p>
-          <p className="border border-white w-fit px-3 py-1 rounded-full">"</p>
+          <p className="border border-white w-fit px-3 py-1 rounded-full">.</p>
         </div>
 
         <div className="space-y-6">
@@ -635,7 +635,7 @@ export default function Desafio() {
             <span className="line-through">ksjdhksd</span> arrasou e estou
             curiosa pelos próximos.”
           </p>
-          <p className="border border-white w-fit px-3 py-1 rounded-full">"</p>
+          <p className="border border-white w-fit px-3 py-1 rounded-full">.</p>
         </div>
       </section>
 
