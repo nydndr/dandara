@@ -1,113 +1,93 @@
-import Image from 'next/image'
+"use client";
+
+import Link from "next/link";
+import Head from "next/head";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+    <>
+      <Head>
+        <title>Dandara | Product Designer</title>
+        <meta
+          property="og:title"
+          content="Dandara | Product Designer"
+          key="title"
         />
-      </div>
+        <meta
+          name="description"
+          content="Portfólio de Nicoly Dandara, Product Designer/Gráfica/de Informação nascida e lapidada no Brasil."></meta>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+        <meta name="author" content="Nicoly Dandara"></meta>
+      </Head>
+      <main className="font-manrope text-dandara-black">
+        <div>
+          <section className="px-12 my-20 font-manrope">
+            <p className="text-3xl md:text-6xl font-bold leading-relaxed pb-6">
+              Meu nome é Nicoly Dandara, <br></br> mas o Nicoly é mudo.
+            </p>
+            <div className=" space-y-2">
+              <p className="font-semibold text-xl">Product Designer @ Stone</p>
+              <p className="font-medium">
+                No passado: Product Designer @ QuintoAndar
+              </p>
+            </div>
+          </section>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+          <section className="grid grid-cols-1 md:grid-cols-3 gap-y-10 md:gap-10 text-white">
+            <div className="bg-desafiouiux px-6 py-12 space-y-4 flex flex-col justify-between">
+              <p className="uppercase font-anton text-xl tracking-wide">
+                #1 Desafio Jovens UI/UX
+              </p>
+              <p className="font-medium w-11/12">
+                Onboarding para aplicação de gerenciamento financeiro, vencedor
+                do prêmio Jovens UI/UX
+              </p>
+              <div>
+                <Link href="design/desafio">
+                  <button className="border px-3 py-1 rounded-full">{`Ler Case →`}</button>
+                </Link>
+              </div>
+            </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
+            <div className="col-span-2 bg-stone block md:grid md:grid-cols-2">
+              <div className="px-6 py-12 space-y-4 flex flex-col justify-between">
+                <p className="uppercase font-anton text-xl tracking-wide">
+                  Product Designer @ Stone
+                </p>
+                <p className="font-medium w-11/12">
+                  Cuidando de 20+ maquininhas e elevando a régua do design na
+                  maior adquirete do Brasil
+                </p>
+                <div>
+                  <Link href="design/stone">
+                    <button className="border px-3 py-1 rounded-full">{`Ler mais →`}</button>
+                  </Link>
+                </div>
+              </div>
+              <div className="bg-[url('/images/home_stone.png')] bg-cover bg-no-repeat"></div>
+            </div>
+          </section>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+          <section className=" bg-dandara-yellow mt-12 px-6 py-12 space-y-6">
+            <p className="text-4xl font-bold tracking-tight">
+              Quer colaborar? Vamos conversar!
+            </p>
+            <p className="font-medium">
+              Envie um{" "}
+              <Link className="underline" href="mailto:nicolydndr@gmail.com">
+                email
+              </Link>{" "}
+              ou me pinga no{" "}
+              <Link
+                className="underline"
+                href="https://www.linkedin.com/in/nicolydandara/">
+                LinkedIn
+              </Link>{" "}
+              e vamos marcar um papo.
+            </p>
+          </section>
+        </div>
+      </main>
+    </>
+  );
 }
