@@ -22,7 +22,7 @@ export default function Home() {
       <main className="font-manrope text-dandara-black">
         <div>
           <section className="px-12 my-20 font-manrope">
-            <p className="text-3xl md:text-6xl font-bold leading-relaxed pb-6">
+            <p className="text-3xl md:text-6xl font-bold leading-loose pb-6">
               Meu nome é Nicoly Dandara, <br></br> mas o Nicoly é mudo.
             </p>
             <div className=" space-y-2">

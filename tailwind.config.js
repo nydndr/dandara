@@ -20,8 +20,6 @@ module.exports = {
       fontFamily: {
         anton: ["Anton", "sans-serif"],
         manrope: ["Manrope", "sans-serif"],
-        fira: ["Fira Code", "monospace"],
-        grace: ["Covered By Your Grace", "handwritten"],
       },
     },
   },
