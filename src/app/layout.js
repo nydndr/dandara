@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
             </Link>
           </div>
         </nav>
-        <div className="px-6 md:px-20 mx-auto lg:w-2/3">{children}</div>
+        <div className="px-6 md:px-20 mx-auto xl:w-2/3">{children}</div>
       </body>
     </html>
   );
