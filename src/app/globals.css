@@ -1,26 +1,68 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fffbef;
+  --foreground: #353535;
+  --dandara: #ffcc00;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-manrope);
+  --font-mono: var(--font-inconsolata);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.textmarker-effect-hover {
+    position: relative;
+    padding-left: 10px;
+    padding-right: 10px;
+  
+    &:before {
+        position: absolute;
+        z-index: -1;
+        content: '';
+        background: var(--dandara);
+        height: 30px;
+        left: 0;
+        bottom: -5px;
+        width: 0%;
+        opacity: 0.7;
+        transition: all 0.5s;
+    }
+    
+    &:hover:before {
+        width: 100%;
+    }
+}
+
+@keyframes highlighter-animation {
+  0% { width: 0%; }
+  100% { width: 100%; }
+};
+
+.textmarker-effect-auto {
+    position: relative;
+    padding-left: 10px;
+    padding-right: 10px;
+  
+    &:before {
+        position: absolute;
+        z-index: -1;
+        content: '';
+        background: var(--dandara);
+        height: 120%;
+        left: 0;
+        bottom: -5px;
+        width: 0%;
+        opacity: 0.7;
+        transition: all 0.5s;
+        animation: highlighter-animation 2s ease-in-out forwards;
+    }
 }
