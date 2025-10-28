@@ -2,10 +2,10 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata = {
-  title: "Career",
+  title: "Work",
 };
 
-export default function Career() {
+export default function Work() {
   return (
     <div className="mx-auto my-24 max-w-4xl font-sans">
       <section className="space-y-4">
@@ -16,7 +16,7 @@ export default function Career() {
           >
             Dandara \
           </Link>{" "}
-          Career
+          Work
         </h1>
         <div className="my-6 justify-between space-y-12 leading-7 font-medium md:flex md:grid-cols-2 md:space-x-16">
           <div className="w-full space-y-4">
@@ -81,7 +81,7 @@ export default function Career() {
       <section className="my-24">
         <div className="justify-between border-b-3 border-dotted text-(--foreground)/30">
           <h2 className="font-mono text-3xl font-bold tracking-wide uppercase">
-            Career Highlights
+            Highlights
           </h2>
         </div>
 
