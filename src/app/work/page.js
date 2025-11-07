@@ -48,11 +48,24 @@ export default function Work() {
           </div>
           <div className="w-full space-y-4">
             <p>
-              Unfortunetely, my stay at 5A was short due to a company
-              reestructuration layoff. I left there with a good taste of how
-              mature design teams operate and shortly after started at Stone. At
-              Stone, I proppel and polish old and new applications on credit
-              card machines.
+              Unfortunetely, my stay at{" "}
+              <Link
+                href="https://newsroom.quintoandar.com.br/"
+                className="underline underline-offset-2 hover:bg-(--dandara)"
+              >
+                5A
+              </Link>{" "}
+              was short due to a company reestructuration layoff. I left there
+              with a good taste of how mature design teams operate and shortly
+              after started at Stone. At{" "}
+              <Link
+                href="https://stone.com.br/"
+                className="underline underline-offset-2 hover:bg-(--dandara)"
+              >
+                Stone
+              </Link>
+              , I proppel and polish old and new applications on credit card
+              machines.
             </p>
             <p>
               This is a very niche opportunity of design and a very risky sector
@@ -79,10 +92,47 @@ export default function Work() {
       </section>
 
       <section className="my-24">
-        <div className="justify-between border-b-3 border-dotted text-(--foreground)/30">
-          <h2 className="font-mono text-3xl font-bold tracking-wide uppercase">
-            Highlights
-          </h2>
+        <h3 className="text-3xl font-bold tracking-tight text-gray-700/20">
+          Highlights
+        </h3>
+
+        <div className="my-8 grid grid-cols-2 gap-16">
+          <div className="flex flex-col items-center space-y-2 rounded-md border-1 border-gray-700/20 py-6">
+            <Image
+              src={"/career/talk.jpg"}
+              width={2929}
+              height={3905}
+              className="max-w-1/2 rounded-md"
+              alt="Dandara standing on a stage in front of a projected green screen, she is holding a mic and mid-speech"
+            ></Image>
+            <p className="mt-2 max-w-1/2 text-center font-mono text-sm font-medium text-(--foreground)/40 uppercase">
+              Presenting the POS App Store for 100 designers
+            </p>
+          </div>
+
+          <article className="flex flex-col justify-center space-y-2">
+            <h3 className="w-4/5 text-2xl font-bold tracking-tight hover:underline hover:underline-offset-2">
+              Main Product Designer of In-Person Sales at Stone, designing sale
+              experiences for brazilians entrepeuneurs
+            </h3>
+            <p className="md:w-10/12">
+              In charge of the user interface and experience of more than 10
+              applications distributed in more than 16 different credit card
+              machine models for all Stone Co. organizations.
+            </p>
+          </article>
+
+          <article className="rounded-md bg-(--dandara)">
+            <div className="flex justify-between">
+              <p className="">
+                3 lessons from 3 years designing at the edge of experience
+              </p>
+
+              <button className="size-10 rounded-full bg-transparent mix-blend-difference">
+                seta
+              </button>
+            </div>
+          </article>
         </div>
 
         <div className="my-8 justify-between space-y-12 font-medium md:flex md:grid-cols-2 md:space-x-12">
@@ -101,16 +151,6 @@ export default function Work() {
           </div>
           <div>
             <div className="space-y-6">
-              <article className="space-y-1">
-                <a className="text-2xl font-bold hover:underline hover:underline-offset-2">
-                  In-Person-Sales design&nbsp;context
-                </a>
-                <p className="md:w-10/12">
-                  In charge of the experience of more than 10 apps in 16 credit
-                  card machine models, encompassing 2 different systems and all
-                  Stone sub-organizations.
-                </p>
-              </article>
               <article className="space-y-1">
                 <a className="text-2xl font-bold hover:underline hover:underline-offset-2">
                   POS App Store
@@ -148,19 +188,83 @@ export default function Work() {
         </div>
       </section>
 
-      <h3
-        id="cta"
-        className="text-3xl font-bold tracking-tighter md:text-6xl md:leading-16"
-      >
-        If you think I can help your product, service or team,{" "}
-        <Link
-          href="mailto:nicolydndr@gmail.com"
-          className="underline underline-offset-4"
+      <section className="space-y-10">
+        <div className="space-y-4">
+          <div className="bold hover:text(--foreground) flex h-fit w-fit items-center space-x-4 rounded-full border-1 border-gray-200 bg-gray-200/30 px-2 py-1">
+            <p className="font-mono tracking-tight lowercase">Full time</p>
+          </div>
+          <div>
+            <div className="flex items-center gap-4">
+              <p className="text-3xl font-bold tracking-tighter md:text-6xl md:leading-16">
+                Product Designer
+              </p>
+              <Link
+                href="#cta"
+                className="bold hover:text(--foreground) flex h-fit w-fit items-center space-x-4 rounded-full border-1 border-gray-200 bg-gray-200/30 px-4 py-2"
+              >
+                <span className="relative flex size-3">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-(--dandara) opacity-75"></span>
+                  <span className="relative inline-flex size-3 rounded-full bg-(--dandara)"></span>
+                </span>
+                <p className="font-mono tracking-tight lowercase">Open</p>
+              </Link>
+            </div>
+            <div className="flex items-center gap-4">
+              <p className="text-3xl font-bold tracking-tighter md:text-6xl md:leading-16">
+                Design Engineer
+              </p>
+              <Link
+                href="#cta"
+                className="bold hover:text(--foreground) flex h-fit w-fit items-center space-x-4 rounded-full border-1 border-gray-200 bg-gray-200/30 px-4 py-2"
+              >
+                <span className="relative flex size-3">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-(--dandara) opacity-75"></span>
+                  <span className="relative inline-flex size-3 rounded-full bg-(--dandara)"></span>
+                </span>
+                <p className="font-mono tracking-tight lowercase">Open</p>
+              </Link>
+            </div>
+          </div>
+        </div>
+        <div className="space-y-4">
+          <div className="bold hover:text(--foreground) flex h-fit w-fit items-center space-x-4 rounded-full border-1 border-gray-200 bg-gray-200/30 px-2 py-1">
+            <p className="font-mono tracking-tight lowercase">Part time</p>
+          </div>
+          <div>
+            <div className="flex items-center gap-4">
+              <p className="text-3xl font-bold tracking-tighter md:text-6xl md:leading-16">
+                Talk Speaker
+              </p>
+              <Link
+                href="#cta"
+                className="bold hover:text(--foreground) flex h-fit w-fit items-center space-x-4 rounded-full border-1 border-gray-200 bg-gray-200/30 px-4 py-2"
+              >
+                <span className="relative flex size-3">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-(--dandara) opacity-75"></span>
+                  <span className="relative inline-flex size-3 rounded-full bg-(--dandara)"></span>
+                </span>
+                <p className="font-mono tracking-tight lowercase">Open</p>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer className="my-20">
+        <h3
+          id="cta"
+          className="text-3xl font-bold tracking-tighter md:text-6xl md:leading-16"
         >
-          reach out
-        </Link>
-        ! Let's talk about making it a reality.
-      </h3>
+          If you think I can help you,{" "}
+          <Link
+            href="mailto:nicolydndr@gmail.com"
+            className="underline underline-offset-4"
+          >
+            reach out
+          </Link>
+          ! Let's talk about making it a reality.
+        </h3>
+      </footer>
     </div>
   );
 }

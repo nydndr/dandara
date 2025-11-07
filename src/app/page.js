@@ -10,11 +10,11 @@ export default function Home() {
         </h1>
         <h2 className="text-xl font-medium text-gray-700 md:text-3xl md:leading-10">
           Taking care of all{" "}
-          <Link href="/work" className="textmarker-effect-auto">
-            POS&nbsp;design&nbsp;at&nbsp;Stone
+          <Link href="/work" className="textmarker-effect-mvp">
+            in-person sale experience at Stone
           </Link>
           , mapping the field of design at{" "}
-          <Link href="/" className="textmarker-effect-auto">
+          <Link href="/" className="textmarker-effect-mvp">
             Designers, <em>et al</em>
           </Link>{" "}
           and curating content at Amarelo Dandara.
@@ -23,59 +23,30 @@ export default function Home() {
 
       <section className="my-12 space-y-12 font-medium md:flex md:grid-cols-2 md:justify-between md:space-x-12">
         <div className="w-full">
-          <div className="flex flex-col justify-between space-y-2 border-b-3 border-dotted py-2 md:flex-row md:space-y-0">
-            <h3 className="font-mono text-3xl font-bold tracking-wide uppercase">
-              Experience
-            </h3>
+          <div className="flex flex-col justify-between space-y-2 border-b-1 border-gray-700/20 py-2 md:flex-row md:space-y-0">
+            <h3 className="text-3xl font-bold tracking-tight">Work</h3>
             <Link
               href="#cta"
-              className="bold hover:text(--foreground) flex w-fit items-center space-x-4 self-end rounded-full bg-(--dandara)/10 px-4 py-2"
+              className="bold hover:text(--foreground) flex w-fit items-center space-x-4 self-end rounded-full border-1 border-gray-200 bg-gray-200/30 px-4 py-2"
             >
               <span className="relative flex size-3">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-(--dandara) opacity-75"></span>
                 <span className="relative inline-flex size-3 rounded-full bg-(--dandara)"></span>
               </span>
-              <p>Open for work</p>
+              <p className="font-mono tracking-tight lowercase">
+                Open for work
+              </p>
             </Link>
           </div>
 
-          <div className="space-y-6 py-4">
-            <article className="">
+          <div className="px-4 py-4">
+            <div className="border-l-3 border-(--dandara) bg-(--dandara)/20 px-3 py-4">
               <p className="text-lg">
-                Product Designer II @{" "}
-                <a
-                  className="underline underline-offset-3"
-                  href="https://www.stone.com.br/"
-                >
-                  Stone Co.
-                </a>
+                I create simple experiences that solve complex and niche user
+                needs by combining my cross-functional knowledge of design,
+                business and development with the knowledge of others.
               </p>
-              <p className="text-sm">2024 ━ Now</p>
-            </article>
-            <article className="">
-              <p className="text-lg">
-                Product Designer I @{" "}
-                <a
-                  className="underline underline-offset-3"
-                  href="https://www.stone.com.br/"
-                >
-                  Stone Co.
-                </a>
-              </p>
-              <p className="text-sm">2022 ━ 2024</p>
-            </article>
-            <article className="">
-              <p className="text-lg">
-                Product Designer I @{" "}
-                <a
-                  className="underline underline-offset-3"
-                  href="https://grupoquintoandar.com/pt/"
-                >
-                  QuintoAndar
-                </a>
-              </p>
-              <p className="text-sm">2021 ━ 2022</p>
-            </article>
+            </div>
           </div>
           <div className="flex flex-col items-end justify-between md:flex-row md:items-center">
             <button className="mr-2 rounded-md px-4 py-2 whitespace-nowrap opacity-50 transition-all duration-300 ease-in-out hover:bg-(--dandara) hover:text-(--foreground) hover:opacity-100">
@@ -96,10 +67,8 @@ export default function Home() {
         </div>
 
         <div className="w-full">
-          <div className="flex justify-between border-b-3 border-dotted py-1.5">
-            <h3 className="font-mono text-3xl font-bold tracking-wide uppercase">
-              Projects
-            </h3>
+          <div className="flex justify-between border-b-1 border-gray-700/20 py-2.5">
+            <h3 className="text-3xl font-bold tracking-tight">Projects</h3>
           </div>
           <div className="space-y-6 py-4">
             <article className="space-y-1">

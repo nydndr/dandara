@@ -53,9 +53,8 @@ body {
 }
 
 .textmarker-effect-auto {
+  display: inline;
   position: relative;
-  padding-left: 10px;
-  padding-right: 10px;
 
   &:before {
     position: absolute;
@@ -72,6 +71,27 @@ body {
   }
 }
 
-.aura {
-  background-color: red;
+@keyframes highlighter-animation-mvp {
+  0% {
+    background-size: 2vw;
+  }
+  100% {
+    background-size: 100%;
+  }
+}
+
+.textmarker-effect-mvp {
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 2.5px;
+  padding-bottom: 2.5px;
+  display: inline;
+  background: url("/highlighter-with-opacity.svg");
+  background-repeat: no-repeat;
+  transition: all 0.5s;
+  animation: highlighter-animation-mvp 2s ease-in-out forwards;
+}
+
+.textmarker-effect-mvp:hover {
+  background: url("/highligther.svg");
 }
