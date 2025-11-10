@@ -73,7 +73,7 @@ body {
 
 @keyframes highlighter-animation-mvp {
   0% {
-    background-size: 2vw;
+    background-size: 0;
   }
   100% {
     background-size: 100%;
@@ -87,11 +87,68 @@ body {
   padding-bottom: 2.5px;
   display: inline;
   background: url("/highlighter-with-opacity.svg");
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   transition: all 0.5s;
   animation: highlighter-animation-mvp 2s ease-in-out forwards;
 }
 
 .textmarker-effect-mvp:hover {
   background: url("/highligther.svg");
+}
+
+@keyframes sunshine {
+  0% {
+    scale: 1;
+  }
+  50% {
+    background: radial-gradient(var(--dandara), transparent);
+  }
+  100% {
+    scale: 2;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    box-shadow:
+      0 0 5px 5px var(--dandara),
+      0 0 5px 5px orange inset;
+  }
+  100% {
+    box-shadow:
+      0 0 35px 5px var(--dandara),
+      0 0 25px 10px orange inset;
+  }
+}
+
+.dandara-sun {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(var(--dandara) 70%, transparent 100%);
+  position: relative;
+  z-index: 1;
+}
+
+.dandara-sun::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(orange 10%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.4s;
+  z-index: -1;
+  box-shadow:
+    0 0 5px 5px var(--dandara),
+    0 0 5px 5px orange inset;
+  border-radius: 100%;
+}
+
+.dandara-sun:hover::before {
+  opacity: 1;
+  transition: opacity 0.5s;
+  animation: shimmer 1s ease-in infinite alternate;
 }

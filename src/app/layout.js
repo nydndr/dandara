@@ -47,7 +47,7 @@ export default function RootLayout({ children }) {
         <nav className="animation-fade-in flex items-center justify-between gap-6 py-8 font-sans text-sm font-medium">
           {/* animate this */}
           <Link href="/">
-            <div className="size-10 rounded-full bg-(--dandara)"></div>
+            <div className="dandara-sun size-10 rounded-full"></div>
           </Link>
           <div>
             <Link

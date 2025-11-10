@@ -52,7 +52,7 @@ export default function Home() {
             <button className="mr-2 rounded-md px-4 py-2 whitespace-nowrap opacity-50 transition-all duration-300 ease-in-out hover:bg-(--dandara) hover:text-(--foreground) hover:opacity-100">
               <Link
                 target="_blank"
-                href="https://drive.google.com/file/d/1K8dhryLe11a8_9aTGQfGifM8EKzTH6_S/view?usp=sharing"
+                href="https://drive.google.com/file/d/1RI9D4Nn2BTSb5wvfFmqhk9y_wy7xqizP/view?usp=sharing"
               >
                 Get my CV ⤓
               </Link>
@@ -116,19 +116,38 @@ export default function Home() {
         </div>
       </section>
 
-      <h4
-        id="cta"
-        className="text-3xl font-bold tracking-tighter md:text-6xl md:leading-16"
-      >
-        If you think I can help your product, service or team,{" "}
-        <Link
-          href="mailto:nicolydndr@gmail.com"
-          className="underline underline-offset-4"
+      <footer className="my-20 space-y-6">
+        <h3
+          id="cta"
+          className="text-3xl font-bold tracking-tighter md:text-6xl md:leading-16"
         >
-          reach out
-        </Link>
-        ! Let's talk about making it a reality.
-      </h4>
+          If I can help you, send me an{" "}
+          <Link
+            href="mailto:nicolydndr@gmail.com"
+            className="underline underline-offset-4"
+          >
+            email{" "}
+          </Link>
+          and let's have a chat!
+        </h3>
+        <p className="text-black/50">
+          You can also find me on{" "}
+          <Link
+            href="https://www.linkedin.com/in/nicolydandara/"
+            className="font-bold underline underline-offset-2 hover:bg-(--dandara)"
+          >
+            LinkedIn
+          </Link>{" "}
+          and{" "}
+          <Link
+            href="https://x.com/amarelodandara"
+            className="font-bold underline underline-offset-2 hover:bg-(--dandara)"
+          >
+            Twitter
+          </Link>
+          .
+        </p>
+      </footer>
     </div>
   );
 }
