@@ -109,10 +109,12 @@ export default function Home() {
               </p>
             </article>
           </div>
-
-          {
-            // <Link href="/career" className="float-right opacity-50 hover:text-(--foreground) hover:opacity-100 hover:bg-(--dandara) rounded-md px-4 py-2 transition-all ease-in-out duration-300">See all projects →</Link>
-          }
+          <Link
+            href="/projects"
+            className="float-right rounded-md px-4 py-2 whitespace-nowrap opacity-50 transition-all duration-300 ease-in-out hover:bg-(--dandara) hover:text-(--foreground) hover:opacity-100"
+          >
+            See all my projects →
+          </Link>
         </div>
       </section>
 

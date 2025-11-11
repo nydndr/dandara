@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Manrope, Inconsolata } from "next/font/google";
+import { Manrope, Inconsolata, Work_Sans } from "next/font/google";
 import "./globals.css";
 
 const manrope = Manrope({
@@ -10,6 +10,12 @@ const manrope = Manrope({
 
 const inconsolata = Inconsolata({
   variable: "--font-inconsolata",
+  weights: ["400", "700"],
+  subsets: ["latin"],
+});
+
+const work = Work_Sans({
+  variable: "--font-work",
   weights: ["400", "700"],
   subsets: ["latin"],
 });
@@ -42,7 +48,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${manrope.variable} ${inconsolata.variable} mx-8 antialiased`}
+        className={`${manrope.variable} ${inconsolata.variable} ${work.variable} mx-8 antialiased`}
       >
         <nav className="animation-fade-in flex items-center justify-between gap-6 py-8 font-sans text-sm font-medium">
           {/* animate this */}

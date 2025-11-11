@@ -4,7 +4,7 @@ import { getLatestUpdate } from "./getLatestUpdate";
 
 export const metadata = {
   title: "Now",
-  description: "What I am working on right now.",
+  description: "What Dandara is working on right now.",
 };
 
 export default async function NowPage() {

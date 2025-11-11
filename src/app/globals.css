@@ -12,6 +12,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-manrope);
   --font-mono: var(--font-inconsolata);
+  --font-work: var(--font-work);
 }
 
 body {

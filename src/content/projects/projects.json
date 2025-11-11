@@ -1,0 +1,85 @@
+{
+  "projects": [
+    {
+      "title": "Designers, et al",
+      "description": "An attempt to visualize the field of Design and all its very specific niche fields. Did you know there are designers specialized in building TV Show Titles? Or fonts for musical notation engraving? Now you will know. This is being built in public.",
+      "year": "01/2025",
+      "medium": "product",
+      "status": 0,
+      "isFavorite": true,
+      "hasEnglish": true,
+      "hasPortuguese": true,
+      "links": [],
+      "posts": [
+        {
+          "title": "(MVP)ing the field of Design",
+          "address": "/blog/designers-et-al-mvp",
+          "language": "english"
+        },
+        {
+          "title": "Um MVP do campo do Design",
+          "address": "/blog/pt/designers-et-al-mvp",
+          "language": "portuguese"
+        }
+      ]
+    },
+    {
+      "title": "This website",
+      "description": "My home in the internet. Built with Next.js and Tailwindcss, and designed-in-code, this serves as a professional website for my Product Design career, but is also meant to be a solid base for anything else I decide to do on the internet. Currently on v1 with planned features for the next quarter.",
+      "year": "10/2025",
+      "medium": "product",
+      "status": 1,
+      "isFavorite": false,
+      "hasEnglish": true,
+      "hasPortuguese": false,
+      "links": [
+        { "title": "adandara.com", "address": "https://www.adandara.com/" }
+      ],
+      "posts": [
+        {
+          "title": "How this site works",
+          "address": "/blog/this-site",
+          "language": "english"
+        }
+      ]
+    },
+    {
+      "title": "Amarelo Dandara",
+      "description": "Monthly newsletter curated with the best I find in the internet. Every end of month I scavage my resonance calendar for the most insightful or ethereally beautiful thoughts, songs, paintings, writings and so on. The final product is an issue that arrives directly to your inbox for free.",
+      "year": "09/2025",
+      "medium": "writing",
+      "status": 1,
+      "isFavorite": false,
+      "hasEnglish": false,
+      "hasPortuguese": true,
+      "links": [
+        {
+          "title": "Read and subscribe on substack",
+          "address": "https://nydndr.substack.com/"
+        }
+      ],
+      "posts": []
+    },
+    {
+      "title": "Fin",
+      "description": "A financial application for the youth I built in almost two weeeks for the #1 UI/UX Jr competition. It was my first attempt at executing a full Product Design flow and the result exceeded even my own expectations. I was awarded a couple months later and had my first experience of presenting a study case live to a bunch of people. I love this one.",
+      "year": "07/2021",
+      "medium": "product",
+      "status": 1,
+      "isFavorite": false,
+      "hasEnglish": false,
+      "hasPortuguese": true,
+      "links": [
+        {
+          "title": "Watch the award ceremony",
+          "address": "https://www.youtube.com/watch?v=qv3Z4_mBg9M&pp=0gcJCQYKAYcqIYzv"
+        },
+        {
+          "title": "Read the case in full",
+          "address": "https://www.behance.net/gallery/123564241/Fin-Financas-Jovem"
+        }
+      ],
+      "posts": []
+    }
+  ]
+}
