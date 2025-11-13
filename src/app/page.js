@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import ProjectList from "./projects/components/ProjectList";
+
 export default function Home() {
   return (
     <div className="mx-auto my-24 max-w-4xl font-sans">
@@ -67,48 +69,15 @@ export default function Home() {
         </div>
 
         <div className="w-full">
-          <div className="flex justify-between border-b-1 border-gray-700/20 py-2.5">
-            <h3 className="text-3xl font-bold tracking-tight">Projects</h3>
+          <div className="flex justify-between py-2.5">
+            <h3 className="text-3xl font-bold tracking-tight text-gray-700/20">
+              Projects
+            </h3>
           </div>
           <div className="space-y-6 py-4">
-            <article className="space-y-1">
-              <a className="text-2xl font-bold hover:underline hover:underline-offset-2">
-                Designers, <em>et al</em> ↗
-              </a>
-              <p className="w-10/12">
-                The field of design and all its super specific subfields,
-                visualized.
-              </p>
-            </article>
-            <article className="space-y-1">
-              <Link
-                target="_blank"
-                href="https://nydndr.substack.com/"
-                className="text-2xl font-bold hover:underline hover:underline-offset-2"
-              >
-                Amarelo Dandara ↗
-              </Link>
-              <p className="w-10/12">
-                Monthly newsletter with the best I find around the web & world.
-              </p>
-            </article>
-            <article className="space-y-1">
-              <Link
-                target="_blank"
-                href="https://www.behance.net/gallery/123564241/Fin-Financas-Jovem"
-                className="text-2xl font-bold hover:underline hover:underline-offset-2"
-              >
-                Fin. →{" "}
-                <span className="font-mono text-lg font-medium text-gray-500/50 uppercase">
-                  Awarded design
-                </span>
-              </Link>
-              <p className="w-10/12">
-                Personal finance application for the new generation, #1 at UI/UX
-                Jr. Competition.{" "}
-              </p>
-            </article>
+            <ProjectList display="preview" />
           </div>
+
           <Link
             href="/projects"
             className="float-right rounded-md px-4 py-2 whitespace-nowrap opacity-50 transition-all duration-300 ease-in-out hover:bg-(--dandara) hover:text-(--foreground) hover:opacity-100"

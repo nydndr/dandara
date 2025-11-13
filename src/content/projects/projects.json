@@ -3,6 +3,7 @@
     {
       "title": "Designers, et al",
       "description": "An attempt to visualize the field of Design and all its very specific niche fields. Did you know there are designers specialized in building TV Show Titles? Or fonts for musical notation engraving? Now you will know. This is being built in public.",
+      "mainLink": null,
       "year": "01/2025",
       "medium": "product",
       "status": 0,
@@ -26,6 +27,7 @@
     {
       "title": "This website",
       "description": "My home in the internet. Built with Next.js and Tailwindcss, and designed-in-code, this serves as a professional website for my Product Design career, but is also meant to be a solid base for anything else I decide to do on the internet. Currently on v1 with planned features for the next quarter.",
+      "mainLink": "https://www.adandara.com/",
       "year": "10/2025",
       "medium": "product",
       "status": 1,
@@ -46,6 +48,7 @@
     {
       "title": "Amarelo Dandara",
       "description": "Monthly newsletter curated with the best I find in the internet. Every end of month I scavage my resonance calendar for the most insightful or ethereally beautiful thoughts, songs, paintings, writings and so on. The final product is an issue that arrives directly to your inbox for free.",
+      "mainLink": "https://nydndr.substack.com/",
       "year": "09/2025",
       "medium": "writing",
       "status": 1,
@@ -63,6 +66,7 @@
     {
       "title": "Fin",
       "description": "A financial application for the youth I built in almost two weeeks for the #1 UI/UX Jr competition. It was my first attempt at executing a full Product Design flow and the result exceeded even my own expectations. I was awarded a couple months later and had my first experience of presenting a study case live to a bunch of people. I love this one.",
+      "mainLink": "https://www.behance.net/gallery/123564241/Fin-Financas-Jovem",
       "year": "07/2021",
       "medium": "product",
       "status": 1,
