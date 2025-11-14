@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getAllProjects } from "../getAllProjects";
+import { getAllProjects } from "../../src/app/projects/getAllProjects";
 
 export default async function ProjectList({ display }) {
   return (

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getAllBlogPosts } from "../getAllBlogPosts";
+import { getAllBlogPosts } from "../../src/app/blog/getAllBlogPosts";
 
 export default async function BlogPlostList() {
   return (

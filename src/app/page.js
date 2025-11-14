@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import ProjectList from "./projects/components/ProjectList";
+import ProjectList from "../../components/projects/ProjectList";
 
 export default function Home() {
   return (
