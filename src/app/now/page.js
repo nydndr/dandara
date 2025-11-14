@@ -20,31 +20,30 @@ export default async function NowPage() {
           </Link>{" "}
           Now
         </h1>
-        <div className="space-y-2">
-          <h2 className="text-xl font-medium text-gray-700 md:text-3xl md:leading-10">
-            This is a summary of{" "}
-            <span className="textmarker-effect-auto whitespace-nowrap">
-              where I'm putting my energy
-            </span>{" "}
-            right now.
-          </h2>
-          <h3 className="text-lg font-medium text-gray-700/40 md:leading-9">
-            Read more about{" "}
-            <Link
-              href="https://nownownow.com/about"
-              className="underline underline-offset-2"
-            >
-              Now
-            </Link>{" "}
-            pages
-          </h3>
-        </div>
+        <h2 className="text-xl text-gray-700 md:w-4/5 md:text-2xl md:leading-10">
+          This is a summary of{" "}
+          <span className="highligther-animated">
+            where I'm putting my energy
+          </span>{" "}
+          right now.
+        </h2>
+
+        <p className="text-lg font-medium text-gray-700/40 md:leading-9">
+          Read more about{" "}
+          <Link
+            href="https://nownownow.com/about"
+            className="underline underline-offset-2"
+          >
+            Now
+          </Link>{" "}
+          pages
+        </p>
       </section>
-      <article className="mt-16">
+      <article className="mt-12">
         {getLatestUpdate().then((data) => {
           return (
             <div
-              className="prose prose-a:underline-offset-2 prose-em:text-gray-700/40 prose-h1:tracking-tight"
+              className="prose prose-a:underline-offset-2 prose-a:hover:bg-(--dandara) prose-em:text-gray-700/40 prose-h1:tracking-tight font-work prose-headings:font-sans"
               dangerouslySetInnerHTML={{ __html: data.contentHtml }}
             ></div>
           );

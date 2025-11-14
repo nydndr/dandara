@@ -28,7 +28,7 @@ export default async function BlogPlostList() {
                           id="flag-icons-br"
                           viewBox="0 0 640 480"
                         >
-                          <g stroke-width="1pt">
+                          <g strokeWidth="1pt">
                             <path
                               fill="#229e45"
                               fillRule="evenodd"
@@ -172,7 +172,7 @@ export default async function BlogPlostList() {
                           id="flag-icons-br"
                           viewBox="0 0 640 480"
                         >
-                          <g stroke-width="1pt">
+                          <g strokeWidth="1pt">
                             <path
                               fill="#229e45"
                               fillRule="evenodd"
@@ -297,6 +297,7 @@ export default async function BlogPlostList() {
                               d="m301.8 204.5 2.3-9.8 7.2 1.7-.3 1.6-5.3-1.2-.5 2.2 4.9 1.1-.4 1.7-4.9-1.2-.6 2.7 5.5 1.3-.4 1.6z"
                             />
                           </g>
+                          w
                         </svg>
                       </div>
                     </span>

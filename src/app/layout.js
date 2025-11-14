@@ -55,7 +55,7 @@ export default function RootLayout({ children }) {
           <Link href="/">
             <div className="dandara-sun size-10 rounded-full"></div>
           </Link>
-          <div>
+          <div className="flex gap-1">
             <Link
               className="rounded-md px-4 py-2 whitespace-nowrap opacity-50 transition-all duration-300 ease-in-out hover:bg-(--dandara) hover:text-(--foreground) hover:opacity-100"
               href="/now"

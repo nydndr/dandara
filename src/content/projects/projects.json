@@ -2,7 +2,7 @@
   "projects": [
     {
       "title": "Designers, et al",
-      "description": "An attempt to visualize the field of Design and all its very specific niche fields. Did you know there are designers specialized in building TV Show Titles? Or fonts for musical notation engraving? Now you will know. This is being built in public.",
+      "description": "An attempt to visualize the field of Design and all its very specific sub fields. Did you know there are designers specialized in building TV Show Titles? Or fonts for musical notation engraving? Now you will know. This is being built in public.",
       "mainLink": null,
       "year": "01/2025",
       "medium": "product",
@@ -11,22 +11,11 @@
       "hasEnglish": true,
       "hasPortuguese": true,
       "links": [],
-      "posts": [
-        {
-          "title": "(MVP)ing the field of Design",
-          "address": "/blog/designers-et-al-mvp",
-          "language": "english"
-        },
-        {
-          "title": "Um MVP do campo do Design",
-          "address": "/blog/pt/designers-et-al-mvp",
-          "language": "portuguese"
-        }
-      ]
+      "posts": []
     },
     {
       "title": "This website",
-      "description": "My home in the internet. Built with Next.js and Tailwindcss, and designed-in-code, this serves as a professional website for my Product Design career, but is also meant to be a solid base for anything else I decide to do on the internet. Currently on v1 with planned features for the next quarter.",
+      "description": "My home in the internet. Built with Next.js and Tailwindcss, and designed-in-code, this serves as a professional website for my Product Design career, but is also meant to be a solid base for anything else I decide to do on the internet.",
       "mainLink": "https://www.adandara.com/",
       "year": "10/2025",
       "medium": "product",
@@ -40,7 +29,7 @@
       "posts": [
         {
           "title": "How this site works",
-          "address": "/blog/this-site",
+          "address": "/blog/how-this-site-works.mdx",
           "language": "english"
         }
       ]

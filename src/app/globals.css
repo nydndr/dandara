@@ -81,9 +81,15 @@ body {
   }
 }
 
-.textmarker-effect-mvp {
-  padding-right: 10px;
-  padding-left: 10px;
+.highligther {
+  background: url("/highlighter-with-opacity.svg");
+}
+
+/* Highlighter animation */
+
+.highligther-animated {
+  padding-right: 5px;
+  padding-left: 5px;
   padding-top: 2.5px;
   padding-bottom: 2.5px;
   display: inline;
@@ -93,7 +99,7 @@ body {
   animation: highlighter-animation-mvp 2s ease-in-out forwards;
 }
 
-.textmarker-effect-mvp:hover {
+.highligther-animated:hover {
   background: url("/highligther.svg");
 }
 
@@ -152,4 +158,23 @@ body {
   opacity: 1;
   transition: opacity 0.5s;
   animation: shimmer 1s ease-in infinite alternate;
+}
+
+/* Live post component */
+
+.live-post-signal:hover ~ .live-post-tip {
+  display: block;
+}
+
+.live-post-signal:hover {
+  animation: none;
+  opacity: 100%;
+}
+
+/* Blog post */
+.blog-post > h1 {
+}
+
+.animate-ping {
+  animation-iteration-count: 5;
 }
