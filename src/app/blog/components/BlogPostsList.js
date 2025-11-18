@@ -1,12 +1,19 @@
 import Link from "next/link";
-import { getAllBlogPosts } from "../../src/app/blog/getAllBlogPosts";
+import { getAllBlogPosts } from "../../blog/getAllBlogPosts";
+
+function formatDate(date) {
+  const formattedDate = new Date(date).toLocaleDateString("en-us", {
+    month: "long",
+    year: "numeric",
+  });
+
+  return formattedDate;
+}
 
 export default async function BlogPlostList() {
   return (
     <div>
       {getAllBlogPosts().then((data) => {
-        console.log(data);
-
         return data
           .sort((a, b) => b.updated_at - a.updated_at)
           .map((post, postIndex) => (
@@ -16,7 +23,7 @@ export default async function BlogPlostList() {
                   href={"/blog/" + post.file_name}
                   className="flex items-center gap-2"
                 >
-                  <h4 className="text-xl font-bold hover:bg-(--dandara) hover:underline hover:underline-offset-2">
+                  <h4 className="text-lg font-bold hover:bg-(--dandara) hover:underline hover:underline-offset-2">
                     {post.title}
                   </h4>
                   {post.portuguese == true ? (
@@ -313,7 +320,9 @@ export default async function BlogPlostList() {
               )}
 
               <p className="font-mono text-sm font-medium text-(--foreground)/40 uppercase">
-                {post.updated_at}
+                {post.live == true
+                  ? formatDate(post.updated_at)
+                  : formatDate(post.created_at)}
               </p>
             </article>
           ));

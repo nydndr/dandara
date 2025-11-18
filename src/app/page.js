@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import ProjectList from "../../components/projects/ProjectList";
+import ProjectList from "./projects/components/ProjectList";
 
 export default function Home() {
   return (
@@ -75,7 +75,7 @@ export default function Home() {
               Projects
             </h3>
           </div>
-          <div className="space-y-2 py-2 lg:space-y-6">
+          <div className="space-y-2 py-2">
             <ProjectList display="preview" />
           </div>
 

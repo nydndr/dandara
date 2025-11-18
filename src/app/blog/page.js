@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import BlogPlostList from "../../../components/blog/BlogPostsList";
+import BlogPlostList from "./components/BlogPostsList";
 
 export default function Blog() {
   return (

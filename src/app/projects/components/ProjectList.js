@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getAllProjects } from "../../src/app/projects/getAllProjects";
+import { getAllProjects } from "../getAllProjects";
 
 export default async function ProjectList({ display }) {
   return (
@@ -14,9 +14,7 @@ export default async function ProjectList({ display }) {
                   <article key={projectIndex}>
                     {project.status == 0 ? (
                       <header className="flex items-center gap-2 hover:cursor-wait">
-                        <h4 className="text-lg font-bold lg:text-2xl">
-                          {project.title}
-                        </h4>
+                        <h4 className="text-lg font-bold">{project.title}</h4>
                         <div className="hover:text(--foreground) flex h-fit w-fit items-center space-x-4 rounded-full border-1 border-(--dandara) bg-(--dandara)/20 px-2 py-1 text-sm">
                           <p className="font-mono tracking-tight lowercase">
                             coming soon
@@ -26,7 +24,7 @@ export default async function ProjectList({ display }) {
                     ) : (
                       <header className="flex items-center gap-2">
                         <Link href={project.mainLink}>
-                          <h4 className="text-lg font-bold underline underline-offset-2 md:text-2xl">
+                          <h4 className="text-lg font-bold underline underline-offset-2">
                             {project.title} ↗
                           </h4>
                         </Link>

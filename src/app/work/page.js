@@ -94,7 +94,7 @@ export default function Work() {
           Highlights
         </h3>
 
-        <div className="my-8 grid-flow-row space-y-6 md:grid-flow-col md:grid-cols-2 md:gap-x-16">
+        <div className="my-8 space-y-6 md:grid md:grid-cols-2 md:gap-x-16">
           <article className="flex flex-col items-center justify-between space-y-4 rounded-md border-1 border-gray-700/20 py-6">
             <Image
               src={"/work/pos.png"}
@@ -145,7 +145,7 @@ export default function Work() {
           </article>
 
           <article className="col-span-2 flex flex-col items-center space-y-2 rounded-md border-1 border-gray-700/20 p-4 md:p-6 md:px-12">
-            <div className="justify-content flex items-center overflow-x-scroll px-2 md:px-12">
+            <div className="justify-content flex items-center overflow-x-scroll px-2 md:overflow-hidden md:px-6">
               <Image
                 src={"/work/app-store-1.png"}
                 width={1832}
@@ -302,7 +302,7 @@ export default function Work() {
           </div>
           <div className="flex items-center gap-2 md:gap-4">
             <p className="text-xl font-bold tracking-tighter md:text-6xl md:leading-16">
-              UI/UX Designer
+              UI Designer
             </p>
             <div className="bold hover:text(--foreground) flex h-fit w-fit items-center space-x-4 rounded-full border-1 border-gray-200 bg-gray-200/30 px-2 py-1 text-xs whitespace-nowrap">
               <p className="font-mono lowercase">Part time</p>

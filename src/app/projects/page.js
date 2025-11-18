@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import ProjectList from "../../../components/projects/ProjectList";
+import ProjectList from "./components/ProjectList";
 
 export const metadata = {
   title: "Projects",

@@ -1,4 +1,4 @@
-import BlogPost from "../../../../components/blog/BlogPost";
+import BlogPost from "../components/BlogPost";
 
 // export async function generateMetadata({ params, searchParams }, parent) {
 //   const { slug } = await params;

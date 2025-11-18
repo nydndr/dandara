@@ -6,7 +6,7 @@ import fs from "fs";
 import path from "path";
 import Link from "next/link";
 
-export default async function BlogPost(slug) {
+export default async function BlogPost({ slug }) {
   const filePath = path.join(process.cwd(), "src/content/blog/" + slug);
   const fileContent = fs.readFileSync(filePath, "utf8");
 
@@ -36,29 +36,35 @@ export default async function BlogPost(slug) {
     <div className="mx-auto my-12 font-sans md:max-w-4xl">
       <header className="space-y-4">
         <div>
+          <div className="text-lg font-bold tracking-tighter">
+            <Link
+              href="/"
+              className="opacity-40 transition-all hover:opacity-100"
+            >
+              Dandara \
+            </Link>{" "}
+            <Link
+              href="/blog"
+              className="opacity-40 transition-all hover:opacity-100"
+            >
+              Blog \
+            </Link>
+          </div>
           <h1 className="text-lg font-bold tracking-tight md:text-4xl">
             {postMetadata.title}
           </h1>
 
-          <h2 className="text-gray-700 md:w-4/5 md:text-2xl md:text-xl md:leading-10">
+          <h2 className="text-gray-700 md:w-4/5 md:text-xl md:leading-10">
             {postMetadata.description}
           </h2>
         </div>
 
         {postMetadata.live == true ? (
           <>
-            <div className="justify-between space-y-4 font-mono font-medium md:my-6 md:flex md:space-y-6">
-              <div>
-                <p className="font-mono text-sm font-medium text-gray-700/30 uppercase md:text-base">
-                  <span className="normal-case">First posted at </span>
-                  {createdAt}
-                </p>
-
-                <p className="font-mono text-sm font-medium text-gray-700/70 uppercase">
-                  <span className="normal-case">Last updated at </span>
-                  {updatedAt}
-                </p>
-              </div>
+            <div className="items-center justify-between space-y-4 font-mono font-medium md:my-6 md:flex md:space-y-0">
+              <p className="font-mono font-medium text-gray-700/70 uppercase">
+                {updatedAt}
+              </p>
 
               <div className="flex flex-col items-center gap-2 md:items-end">
                 <div className="live-post-signal bold hover:text(--foreground) flex w-fit items-center space-x-4 rounded-full border-1 border-gray-200 bg-gray-200/30 px-4 py-2">
@@ -73,16 +79,17 @@ export default async function BlogPost(slug) {
 
                 <div className="live-post-tip z-10 hidden w-64 rounded-md border-1 border-gray-200 bg-gray-200/30 px-4 py-2 text-center text-sm font-normal">
                   <p>
-                    A live post is a living document for ideas I am currently
+                    A live post is a living document for ideas I am recurrently
                     working on.
                   </p>
+                  <p>First posted on {createdAt}</p>
                 </div>
               </div>
             </div>
           </>
         ) : (
           <>
-            <div className="my-4 flex font-mono font-medium">
+            <div className="flex font-mono font-medium md:my-6">
               <p className="font-mono font-medium text-gray-700/30 uppercase">
                 {createdAt}
               </p>
