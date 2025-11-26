@@ -9,36 +9,35 @@ export const metadata = {
 
 export default async function NowPage() {
   return (
-    <div className="mx-auto my-24 max-w-4xl font-sans">
-      <section className="space-y-6">
-        <h1 className="text-3xl font-bold tracking-tighter md:text-6xl md:leading-16">
+    <div className="mx-auto my-24 max-w-4xl space-y-12 font-sans">
+      <header className="space-y-4">
+        <h1 className="text-3xl font-bold tracking-tighter text-stone-700 md:text-6xl md:leading-16">
           <Link
             href="/"
-            className="opacity-40 transition-all hover:opacity-100"
+            className="text-stone-700/20 transition-all hover:text-stone-700"
           >
             Dandara \
           </Link>{" "}
           Now
         </h1>
-        <h2 className="text-xl text-gray-700 md:w-4/5 md:text-2xl md:leading-10">
-          This is a summary of{" "}
-          <span className="highligther-animated">
-            where I'm putting my energy
-          </span>{" "}
-          right now.
-        </h2>
 
-        <p className="text-lg font-medium text-gray-700/40 md:leading-9">
-          Read more about{" "}
-          <Link
-            href="https://nownownow.com/about"
-            className="underline underline-offset-2"
-          >
-            Now
-          </Link>{" "}
-          pages
-        </p>
-      </section>
+        <div className="space-y-1">
+          <h3 className="text-xl font-medium md:w-4/5 md:text-2xl md:leading-10">
+            This is a summary of where I'm investing my energy right now.
+          </h3>
+
+          <p>
+            Read more about{" "}
+            <Link
+              href="https://nownownow.com/about"
+              className="underline underline-offset-2 transition hover:bg-(--dandara)"
+            >
+              Now
+            </Link>{" "}
+            pages.
+          </p>
+        </div>
+      </header>
       <article className="mt-12">
         {getLatestUpdate().then((data) => {
           return (

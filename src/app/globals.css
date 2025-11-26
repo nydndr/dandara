@@ -178,3 +178,11 @@ body {
 .animate-ping {
   animation-iteration-count: 5;
 }
+
+.right-arrow:hover::after {
+  content: " →";
+}
+
+.down-arrow:hover::after {
+  content: " ⤓";
+}

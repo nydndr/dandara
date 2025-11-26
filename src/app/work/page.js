@@ -7,17 +7,20 @@ export const metadata = {
 
 export default function Work() {
   return (
-    <div className="mx-auto my-24 max-w-4xl font-sans">
-      <section className="space-y-4">
-        <h1 className="text-3xl font-bold tracking-tighter md:text-6xl md:leading-16">
+    <div className="mx-auto my-24 max-w-4xl space-y-12 font-sans">
+      <header className="space-y-4">
+        <h1 className="text-3xl font-bold tracking-tighter text-stone-700 md:text-6xl md:leading-16">
           <Link
             href="/"
-            className="opacity-40 transition-all hover:opacity-100"
+            className="text-stone-700/20 transition-all hover:text-stone-700"
           >
             Dandara \
           </Link>{" "}
           Work
         </h1>
+      </header>
+
+      <section className="space-y-4">
         <div className="my-6 justify-between space-y-12 leading-7 font-medium md:flex md:grid-cols-2 md:space-x-16">
           <div className="w-full space-y-4">
             <p>
@@ -77,23 +80,20 @@ export default function Work() {
               </span>
               .
             </p>
-            <button className="float-right mr-2 rounded-md px-4 py-2 whitespace-nowrap text-gray-700/50 transition-all duration-300 ease-in-out hover:bg-(--dandara) hover:text-(--foreground) hover:opacity-100">
+
+            <div className="flex flex-col items-end justify-end md:flex-row md:items-center">
               <Link
-                target="_blank"
                 href="https://drive.google.com/file/d/1RI9D4Nn2BTSb5wvfFmqhk9y_wy7xqizP/view?usp=sharing"
+                className="down-arrow rounded-md border-1 border-dashed border-gray-700/20 px-2 py-2 whitespace-nowrap text-gray-700/70 transition-all duration-300 ease-in-out hover:bg-(--dandara) hover:px-5 hover:text-(--foreground) hover:opacity-100"
               >
-                Get my CV ⤓
+                Get my CV
               </Link>
-            </button>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="my-24">
-        <h3 className="text-3xl font-bold tracking-tight text-gray-700/20">
-          Highlights
-        </h3>
-
+      <section className="">
         <div className="my-8 space-y-6 md:grid md:grid-cols-2 md:gap-x-16">
           <article className="flex flex-col items-center justify-between space-y-4 rounded-md border-1 border-gray-700/20 py-6">
             <Image
@@ -108,7 +108,7 @@ export default function Work() {
             </p>
           </article>
 
-          <article className="flex flex-col justify-center space-y-2">
+          <article className="flex flex-col justify-center space-y-2 leading-7">
             <h3 className="text-lg font-bold tracking-tight md:w-4/5 md:text-2xl">
               Main Product Designer of In-Person Sales at Stone, designing sale
               experiences for brazilians entrepeuneurs
@@ -120,7 +120,7 @@ export default function Work() {
             </p>
           </article>
 
-          <article className="flex flex-col justify-center space-y-2">
+          <article className="flex flex-col justify-center space-y-2 leading-7">
             <h3 className="text-lg font-bold tracking-tight md:w-4/5 md:text-2xl">
               End-to-end, edge-to-edge
             </h3>
@@ -224,7 +224,7 @@ export default function Work() {
             <h3 className="text-lg font-bold tracking-tight md:w-4/5 md:text-2xl">
               UI/UX Jr. #1 Winner
             </h3>
-            <div className="space-y-2">
+            <div className="space-y-2 leading-7">
               <p>
                 Drove a Design Thinking process from beginning to end, designing
                 high-quality Figma prototypes of a financial application for the
@@ -265,9 +265,14 @@ export default function Work() {
             </p>
           </article>
         </div>
-        <button className="float-right mr-2 rounded-md px-4 py-2 whitespace-nowrap text-gray-700/50 transition-all duration-300 ease-in-out hover:bg-(--dandara) hover:text-(--foreground) hover:opacity-100">
-          <Link href="/projects">Also check out my Projects →</Link>
-        </button>
+        <div className="flex flex-col items-end justify-end md:flex-row md:items-center">
+          <Link
+            href="/projects"
+            className="right-arrow rounded-md border-1 border-dashed border-gray-700/20 px-2 py-2 whitespace-nowrap text-gray-700/70 transition-all duration-300 ease-in-out hover:bg-(--dandara) hover:px-5 hover:text-(--foreground) hover:opacity-100"
+          >
+            Also check out my projects
+          </Link>
+        </div>
       </section>
 
       <section className="space-y-10">
@@ -316,7 +321,7 @@ export default function Work() {
         </div>
       </section>
 
-      <footer className="my-20 space-y-6">
+      <footer className="space-y-6">
         <h3
           id="cta"
           className="text-3xl font-bold tracking-tighter md:text-6xl md:leading-16"

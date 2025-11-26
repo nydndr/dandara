@@ -36,21 +36,21 @@ export default async function BlogPost({ slug }) {
     <div className="mx-auto my-12 font-sans md:max-w-4xl">
       <header className="space-y-4">
         <div>
-          <div className="text-lg font-bold tracking-tighter">
+          <div className="text-lg font-bold tracking-tighter text-stone-700">
             <Link
               href="/"
-              className="opacity-40 transition-all hover:opacity-100"
+              className="text-stone-700/20 transition-all hover:text-stone-700"
             >
               Dandara \
-            </Link>{" "}
+            </Link>
             <Link
               href="/blog"
-              className="opacity-40 transition-all hover:opacity-100"
+              className="text-stone-700/20 transition-all hover:text-stone-700"
             >
               Blog \
             </Link>
           </div>
-          <h1 className="text-lg font-bold tracking-tight md:text-4xl">
+          <h1 className="text-lg font-bold tracking-tighter md:text-4xl">
             {postMetadata.title}
           </h1>
 
@@ -101,6 +101,25 @@ export default async function BlogPost({ slug }) {
         className="blogpost prose"
         dangerouslySetInnerHTML={{ __html: contentHTML }}
       ></div>
+
+      <footer className="my-20 space-y-6">
+        <p className="text-gray-700/50">
+          You can also find me on{" "}
+          <Link
+            href="https://www.linkedin.com/in/nicolydandara/"
+            className="underline underline-offset-2 hover:bg-(--dandara)"
+          >
+            LinkedIn
+          </Link>{" "}
+          and{" "}
+          <Link
+            href="https://x.com/amarelodandara"
+            className="underline underline-offset-2 hover:bg-(--dandara)"
+          >
+            Twitter
+          </Link>
+        </p>
+      </footer>
     </div>
   );
 }

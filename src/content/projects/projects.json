@@ -1,8 +1,8 @@
 {
   "projects": [
     {
-      "title": "Designers, et al",
-      "description": "An attempt to visualize the field of Design and all its very specific sub fields. Did you know there are designers specialized in building TV Show Titles? Or fonts for musical notation engraving? Now you will know. This is being built in public.",
+      "title": "When",
+      "description": "Finally a calendar that accepts life as it is",
       "mainLink": null,
       "year": "01/2025",
       "medium": "product",
@@ -15,7 +15,7 @@
     },
     {
       "title": "This website",
-      "description": "My home in the internet. Built with Next.js and Tailwindcss, and designed-in-code, this serves as a professional website for my Product Design career, but is also meant to be a solid base for anything else I decide to do on the internet.",
+      "description": "My home in the web",
       "mainLink": "https://www.adandara.com/",
       "year": "10/2025",
       "medium": "product",
@@ -36,7 +36,7 @@
     },
     {
       "title": "Amarelo Dandara",
-      "description": "Monthly newsletter curated with the best I find in the internet. Every end of month I scavage my resonance calendar for the most insightful or ethereally beautiful thoughts, songs, paintings, writings and so on. The final product is an issue that arrives directly to your inbox for free.",
+      "description": "Monthly newsletter curated with the best I find around the web",
       "mainLink": "https://nydndr.substack.com/",
       "year": "09/2025",
       "medium": "writing",
