@@ -22,7 +22,7 @@ export default async function Projects() {
         </h1>
       </header>
 
-      <section className="space-y-12">
+      <section className="divide-y-1 divide-stone-700/20">
         <ProjectList display="full" />
       </section>
 
