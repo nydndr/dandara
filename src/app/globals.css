@@ -100,7 +100,7 @@ body {
 }
 
 .highligther-animated:hover {
-  background: url("/highligther.svg");
+  background: url("/highlighter.svg");
 }
 
 @keyframes sunshine {
@@ -175,8 +175,8 @@ body {
 .blog-post > h1 {
 }
 
-.animate-ping {
-  animation-iteration-count: 5;
+.left-arrow:hover::before {
+  content: "← ";
 }
 
 .right-arrow:hover::after {
@@ -185,4 +185,8 @@ body {
 
 .down-arrow:hover::after {
   content: " ⤓";
+}
+
+.add-tag {
+  background-color: red;
 }

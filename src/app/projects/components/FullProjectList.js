@@ -11,9 +11,9 @@ export default async function ProjectList() {
         return (
           <>
             {allProjects.map((project, projectIndex) => (
-              <article key={projectIndex} className="space-y-4 py-12">
+              <article key={projectIndex} className="space-y-4 py-6 md:py-12">
                 <div className="flex flex-col items-center space-y-4 rounded-md border-1 border-gray-700/20 py-4">
-                  <div className="relative h-96 w-full overflow-hidden rounded-md">
+                  <div className="relative h-40 w-full overflow-hidden rounded-md md:h-96">
                     <Image
                       src={`/projects/${project.title.replace(/\s/g, "").toLowerCase()}.png`}
                       fill={true}
@@ -41,7 +41,7 @@ export default async function ProjectList() {
                     </Link>
                   )}
 
-                  <p className="text-sm leading-6 font-medium md:text-base md:leading-7">
+                  <p className="text-sm md:text-base md:leading-7">
                     {project.description}.
                   </p>
 
@@ -64,24 +64,23 @@ export default async function ProjectList() {
                   )}
 
                   {project.posts.length > 0 && (
-                    <diV className="flex items-end gap-2 pt-4">
+                    <div className="gap-2 pt-4 md:flex md:items-end">
                       <p className="font-mono text-sm font-bold text-stone-700/40 uppercase">
                         I also wrote about it:{" "}
                       </p>
 
-                      <ul>
+                      <ul className="flex gap-2">
                         {project.posts.map((post, postIndex) => (
                           <li key={postIndex}>
-                            <Link
-                              href={post.address}
-                              className="flex gap-1 border-b-1 pt-1 text-sm font-medium transition-all hover:gap-2 hover:bg-(--dandara)"
-                            >
-                              <p>{post.title}</p>
+                            <Link href={post.address}>
+                              <p className="w-fit gap-1 border-b-1 text-sm font-medium hover:bg-(--dandara)">
+                                {post.title}
+                              </p>
                             </Link>
                           </li>
                         ))}
                       </ul>
-                    </diV>
+                    </div>
                   )}
                 </div>
               </article>

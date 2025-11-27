@@ -275,48 +275,50 @@ export default function Work() {
         </div>
       </section>
 
-      <section className="space-y-10">
+      <section>
         <div className="space-y-4">
           <Link
             href="#cta"
-            className="bold hover:text(--foreground) flex w-fit items-center space-x-4 self-end rounded-full border-1 border-gray-200 bg-gray-200/30 px-4 py-2"
+            className="bold hover:text(--foreground) flex w-fit items-center space-x-4 self-end rounded-full border-1 border-stone-700/20 bg-gray-200/30 px-2 py-1"
           >
             <span className="relative flex size-3">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-(--dandara) opacity-75"></span>
               <span className="relative inline-flex size-3 rounded-full bg-(--dandara)"></span>
             </span>
-            <p className="font-mono text-xs whitespace-nowrap lowercase">
-              Open for work
+            <p className="font-mono text-sm whitespace-nowrap text-stone-700/70 lowercase">
+              Open to opportunities
             </p>
           </Link>
           <div className="flex items-center gap-2 md:gap-4">
             <p className="text-xl font-bold tracking-tighter md:text-6xl md:leading-16">
-              Product Designer
+              Product Design
             </p>
-            <div className="bold hover:text(--foreground) flex h-fit w-fit items-center space-x-4 rounded-full border-1 border-gray-200 bg-gray-200/30 px-2 py-1 text-xs whitespace-nowrap">
-              <p className="font-mono lowercase">Full time</p>
-            </div>
           </div>
           <div className="flex items-center gap-2 md:gap-4">
             <p className="text-xl font-bold tracking-tighter md:text-6xl md:leading-16">
-              Design Engineer
+              Design Engineering
             </p>
-            <div className="bold hover:text(--foreground) flex h-fit w-fit items-center space-x-4 rounded-full border-1 border-gray-200 bg-gray-200/30 px-2 py-1 text-xs whitespace-nowrap">
-              <p className="font-mono lowercase">Full time</p>
-            </div>
           </div>
           <div className="flex items-center gap-2 md:gap-4">
             <p className="text-xl font-bold tracking-tighter md:text-6xl md:leading-16">
-              UI Designer
+              Web Design
             </p>
-            <div className="bold hover:text(--foreground) flex h-fit w-fit items-center space-x-4 rounded-full border-1 border-gray-200 bg-gray-200/30 px-2 py-1 text-xs whitespace-nowrap">
-              <p className="font-mono lowercase">Part time</p>
-            </div>
+            <span className="rounded-full border-1 border-stone-700/20 px-2 py-0.5 font-mono text-sm whitespace-nowrap text-stone-700/70 lowercase">
+              part time
+            </span>
           </div>
           <div className="flex items-center gap-2 md:gap-4">
             <p className="text-xl font-bold tracking-tighter md:text-6xl md:leading-16">
-              Talk Speaker
+              Speaking
             </p>
+            <div className="flex items-center gap-1">
+              <span className="rounded-full border-1 border-stone-700/20 px-2 py-0.5 font-mono text-sm whitespace-nowrap text-stone-700/70 lowercase">
+                events
+              </span>
+              <span className="rounded-full border-1 border-stone-700/20 px-2 py-0.5 font-mono text-sm whitespace-nowrap text-stone-700/70 lowercase">
+                podcasts
+              </span>
+            </div>
           </div>
         </div>
       </section>
@@ -350,7 +352,6 @@ export default function Work() {
           >
             Twitter
           </Link>
-          .
         </p>
       </footer>
     </div>

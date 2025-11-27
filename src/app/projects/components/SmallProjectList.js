@@ -9,7 +9,7 @@ export default async function SmallProjectList() {
     return (
       <>
         {allProjects.slice(0, 3).map((project, projectIndex) => (
-          <article key={projectIndex} className="space-y-12">
+          <article key={projectIndex} className="">
             {project.status == 0 ? (
               <div className="flex items-center gap-2">
                 <p className="w-fit font-bold">{project.title}</p>
@@ -26,7 +26,9 @@ export default async function SmallProjectList() {
               </Link>
             )}
 
-            <p className="w-10/12">{project.description}</p>
+            <p className="w-11/12 text-sm md:w-10/12 md:text-base">
+              {project.description}
+            </p>
           </article>
         ))}
       </>

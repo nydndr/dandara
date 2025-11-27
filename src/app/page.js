@@ -4,7 +4,7 @@ import SmallprojectList from "./projects/components/SmallProjectList";
 
 export default function Home() {
   return (
-    <div className="mx-auto my-24 max-w-4xl space-y-12 font-sans">
+    <div className="mx-auto my-24 max-w-4xl space-y-24 font-sans">
       <header className="space-y-4">
         <h1 className="text-3xl font-bold tracking-tighter text-stone-700/20 md:text-6xl md:leading-16">
           Product Designer @ Stone
@@ -24,26 +24,26 @@ export default function Home() {
             className="underline underline-offset-2 transition hover:bg-(--dandara)"
           >
             QuintoAndar
-          </Link>{" "}
-          and TeamHub. I curate content at{" "}
+          </Link>
+          . I curate content at{" "}
           <Link
             href="https://nydndr.substack.com/"
             className="highligther-animated"
           >
             Amarelo Dandara
           </Link>{" "}
-          and take things seriously everywhere.
+          and take life seriously, everywhere.
         </h3>
       </header>
 
-      <section className="py-12 md:flex md:grid-cols-2 md:justify-between md:space-x-12">
+      <section className="space-y-12 md:flex md:grid-cols-2 md:justify-between md:space-y-0 md:space-x-12">
         <div className="w-full">
           <div className="space-y-8">
             <div className="space-y-4 leading-7 font-medium">
               <p>
                 Portuguese is my first language, English is my second. Design is
-                my first language, Development is my second. Sometimes I use
-                one, sometimes I use the other but I am always thinking in both.
+                my first language, Development is my second. Sometimes I design,
+                sometimes I code. But I always think in both.
               </p>
 
               <p>
@@ -78,21 +78,21 @@ export default function Home() {
                   . Take a peek at my{" "}
                   <Link
                     href="https://www.figma.com/@dandara"
-                    className="underline underline-offset-4 hover:bg-(--dandara)"
+                    className="underline underline-offset-2 hover:bg-(--dandara)"
                   >
                     Figma
                   </Link>{" "}
                   or{" "}
                   <Link
                     href="https://github.com/nydndr"
-                    className="underline underline-offset-4 hover:bg-(--dandara)"
+                    className="underline underline-offset-2 hover:bg-(--dandara)"
                   >
                     Github
                   </Link>{" "}
                   too. But ideally, send me an{" "}
                   <Link
                     href="mailto:nicolydndr@gmail.com"
-                    className="underline underline-offset-4 hover:bg-(--dandara)"
+                    className="underline underline-offset-2 hover:bg-(--dandara)"
                   >
                     email
                   </Link>
