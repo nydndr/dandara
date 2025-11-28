@@ -63,7 +63,7 @@ export default async function ProjectList() {
                     </div>
                   )}
 
-                  {project.posts.length > 0 && (
+                  {/* {project.posts.length > 0 && (
                     <div className="gap-2 pt-4 md:flex md:items-end">
                       <p className="font-mono text-sm font-bold text-stone-700/40 uppercase">
                         I also wrote about it:{" "}
@@ -81,7 +81,7 @@ export default async function ProjectList() {
                         ))}
                       </ul>
                     </div>
-                  )}
+                  )} */}
                 </div>
               </article>
             ))}
