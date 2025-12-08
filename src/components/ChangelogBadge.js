@@ -76,6 +76,9 @@ export default function ChangelogBadge({ type, done }) {
       case "security":
         element.label = "Security";
         break;
+      case "learn":
+        element.label = "Learn";
+        break;
     }
   }
 
