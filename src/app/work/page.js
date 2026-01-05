@@ -1,8 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
 
+import POSGallery from "./components/POSGallery";
+
 export const metadata = {
   title: "Work",
+  description: "Dandara's Portfolio of most relevant works.",
 };
 
 export default function Work() {
@@ -18,29 +21,267 @@ export default function Work() {
           </Link>{" "}
           Work
         </h1>
+        <h3 className="text-xl font-medium tracking-tight md:w-4/5 md:text-2xl md:leading-10">
+          My portfolio of niche and technical problems I have solved with a
+          product, service and interaction design approach.
+        </h3>
       </header>
 
+      <article className="space-y-4 leading-7">
+        <POSGallery></POSGallery>
+        <div className="space-y-1">
+          <h3 className="text-lg font-bold tracking-tight md:text-2xl">
+            Voice of design for all In-Person Sales
+          </h3>
+          <div className="mt-6 justify-between space-y-12 md:flex md:grid-cols-2 md:space-x-16">
+            <div className="w-full space-y-4">
+              <p>
+                In charge of user interfaces and experiences at Latin America's
+                biggest acquirer. Designing and delivering applications on all
+                Stone Co. organizations for three years and counting.
+              </p>
+              {/* <div className="flex flex-col items-end justify-end md:flex-row md:items-center">
+                <Link
+                  href="/work/stone"
+                  className="right-arrow rounded-md px-2 py-2 whitespace-nowrap text-stone-700/70 transition-all duration-300 ease-in-out hover:bg-(--dandara) hover:px-5 hover:text-(--foreground) hover:opacity-100"
+                >
+                  Read more
+                </Link>
+              </div> */}
+            </div>
+
+            <div className="w-full space-y-2 divide-y-1 divide-solid divide-stone-700/20">
+              <div className="flex gap-2 pb-4">
+                <span className="w-24 font-mono text-5xl font-medium text-stone-700/70">
+                  10+
+                </span>
+                <p className="">
+                  applications ranging for general purpose to very specific
+                  subfields of sales
+                </p>
+              </div>
+              <div className="flex gap-2 pt-4">
+                <span className="w-24 font-mono text-5xl font-medium text-stone-700/70">
+                  20+
+                </span>
+                <p className="">
+                  models of credit card machines with cohesive and responsive
+                  experiences
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article className="space-y-4 leading-7">
+        <div className="justify-content col-span-2 flex-col items-center space-y-2 overflow-x-scroll rounded-md border-1 border-gray-700/20 p-4 px-2 md:overflow-hidden md:p-6 md:px-6">
+          <div className="flex gap-4">
+            <div>
+              <Image
+                src={"/work/app-store-1.png"}
+                width={703}
+                height={1207}
+                className=""
+                alt="App Store running on credit card machine showing an app page."
+              ></Image>
+              <p className="text-center font-mono text-sm font-medium text-(--foreground)/40 uppercase">
+                Store App
+              </p>
+            </div>
+
+            <div>
+              <Image
+                src={"/work/app-store-2.png"}
+                width={703}
+                height={1207}
+                className=""
+                alt="App Store running on credit card machine showing an app page."
+              ></Image>
+              <p className="text-center font-mono text-sm font-medium text-(--foreground)/40 uppercase">
+                Camera App
+              </p>
+            </div>
+
+            <div>
+              <Image
+                src={"/work/app-store-3.png"}
+                width={703}
+                height={1207}
+                className=""
+                alt="App Store running on credit card machine showing an app page."
+              ></Image>
+              <p className="text-center font-mono text-sm font-medium text-(--foreground)/40 uppercase">
+                Ticketing App
+              </p>
+            </div>
+
+            <div>
+              <Image
+                src={"/work/app-store-4.png"}
+                width={703}
+                height={1207}
+                className=""
+                alt="App Store running on credit card machine showing an app page."
+              ></Image>
+              <p className="text-center font-mono text-sm font-medium text-(--foreground)/40 uppercase">
+                Scheduled Payments App
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="space-y-1">
+          <h3 className="text-lg font-bold tracking-tight md:text-2xl">
+            An app store for credit card machines
+          </h3>
+
+          <div className="mt-6 justify-between space-y-12 md:flex md:grid-cols-2 md:space-x-16">
+            <div className="w-full space-y-4">
+              <p className="">
+                The flow to hire and install these partner apps was convoluted
+                for both Stone agents and Stone clients (entrepeuneurs). The App
+                Store brought the simplicity we already know from our phones to
+                credit card machines.
+              </p>
+
+              {/* <div className="flex flex-col items-end justify-end md:flex-row md:items-center">
+                <Link
+                  href="/work/store"
+                  className="right-arrow rounded-md px-2 py-2 whitespace-nowrap text-stone-700/70 transition-all duration-300 ease-in-out hover:bg-(--dandara) hover:px-5 hover:text-(--foreground) hover:opacity-100"
+                >
+                  Read more
+                </Link>
+              </div> */}
+            </div>
+
+            <div className="w-full space-y-2 divide-y-1 divide-solid divide-stone-700/20">
+              <div className="flex gap-2 pb-4">
+                <span className="w-24 font-mono text-5xl font-medium text-stone-700/70">
+                  40%
+                </span>
+                <p className="">
+                  of Stone Parter base migrated to this new flow within the
+                  initial 6 months of launch
+                </p>
+              </div>
+              <div className="flex gap-2 pt-4">
+                <span className="w-24 font-mono text-5xl font-medium text-stone-700/70 italic">
+                  ""
+                </span>
+                <p className="">
+                  Before this, it was a tiring process to install apps for the
+                  clients. - <span className="text-sm">Stone Agent</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
       <section className="space-y-4">
-        <div className="my-6 justify-between space-y-12 leading-7 font-medium md:flex md:grid-cols-2 md:space-x-16">
+        <h4 className="text-2xl font-bold tracking-tight text-stone-700/20">
+          Side Projects
+        </h4>
+
+        <div className="flex gap-6">
+          <article className="flex w-full flex-col justify-center space-y-4">
+            <div className="justify-content flex h-120 flex-col items-center space-y-6 overflow-x-scroll rounded-md border-1 border-gray-700/20 p-4 px-2 md:overflow-hidden md:p-6 md:px-6">
+              <Image
+                src={"/work/fin-home.png"}
+                width={2929}
+                height={3905}
+                className="max-w-1/2 rounded-md"
+                alt="Home of a financial application called Fin"
+              ></Image>
+              <p className="max-w-1/2 text-center font-mono text-sm font-medium text-(--foreground)/40 uppercase">
+                Awarded mobile application
+              </p>
+            </div>
+            <div className="space-y-2">
+              <div className="">
+                <h3 className="text-lg font-bold tracking-tight md:w-4/5 md:text-2xl">
+                  Fin.
+                </h3>
+                <div className="space-y-2 leading-7">
+                  <p>Financial application for the youth.</p>
+                </div>
+              </div>
+              <div className="w-full space-y-2 divide-y-1 divide-solid divide-stone-700/20">
+                <div className="flex gap-2 pb-4">
+                  <span className="font-mono text-5xl font-medium text-stone-700/70">
+                    #1
+                  </span>
+                  <div className="flex flex-col justify-between">
+                    <p>at UI/UX Jr. competition</p>
+                    <p className="text-sm">
+                      You can{" "}
+                      <Link
+                        target="_blank"
+                        href="https://www.youtube.com/watch?v=qv3Z4_mBg9M&pp=0gcJCQYKAYcqIYzv"
+                        className="underline underline-offset-2 hover:bg-(--dandara)"
+                      >
+                        watch me
+                      </Link>{" "}
+                      present at the ceremony
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article className="flex w-full flex-col space-y-4">
+            <div className="justify-content col-span-2 flex h-120 flex-col items-center space-y-2 overflow-x-scroll rounded-md border-1 border-gray-700/20 p-4 px-2 md:overflow-hidden md:p-6 md:px-6">
+              <Image
+                src={"/work/muni-mockup.png"}
+                width={1724}
+                height={1720}
+                className="rounded-md"
+                alt="Extension running on chrome browser"
+              ></Image>
+              <p className="mt-2 max-w-1/2 text-center font-mono text-sm font-medium text-(--foreground)/40 uppercase">
+                Chrome extension
+              </p>
+            </div>
+            <div className="space-y-2">
+              <div className="">
+                <h3 className="text-lg font-bold tracking-tight md:w-4/5 md:text-2xl">
+                  Muni
+                </h3>
+                <div className="leading-7">
+                  <p>Keep tabs on what you accomplished at work.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section className="my-24 space-y-4">
+        <h4 className="text-2xl font-bold tracking-tight text-stone-700/20">
+          About
+        </h4>
+
+        <div className="flex gap-6">
           <div className="w-full space-y-4">
-            <p>
+            <p className="leading-7">
               My career started in programming. I worked as a{" "}
               <span className="highligther">
                 front-end developer for an HR Saas
               </span>{" "}
-              that offered an unified way of managing culture and well-being at
-              companies. Although coding is a passion of mine, I felt the need
-              to know more about our users and their needs, enough to find out{" "}
+              . The need to know more about our users needs at every problem we
+              faced, told me{" "}
               <span className="highligther">
                 Product Design was a better use of my skills
-              </span>
-              .
+              </span>{" "}
+              at that moment. I pivoted that same year with some free courses,
+              some books and a ton of Scott H. Young energy.
             </p>
-            <p>
-              That same year, with some free courses, books and some Scott H.
-              Young energy, I studied Design. This happened in pandemic times
-              while I also studied for Brazil uni entrance exam. Somehow it all
-              worked out: I survived the pandemic,{" "}
+            <p className="leading-7">
+              All of this happened in pandemic times while I also studied for
+              Brazil uni entrance exam. Somehow it all worked out: I survived
+              the pandemic,{" "}
               <span className="highligther">
                 got a full-time role as Product Designer in one of Brazil more
                 established design teams, made it to university with honors and
@@ -49,36 +290,18 @@ export default function Work() {
               .
             </p>
           </div>
-          <div className="w-full space-y-4">
-            <p>
-              Unfortunetely, my stay at{" "}
-              <Link
-                href="https://newsroom.quintoandar.com.br/"
-                className="underline underline-offset-2 hover:bg-(--dandara)"
-              >
-                5A
-              </Link>{" "}
-              was short due to a company reestructuration layoff. I left there
-              with a good taste of how mature design teams operate and shortly
-              after started at Stone. At{" "}
-              <Link
-                href="https://stone.com.br/"
-                className="underline underline-offset-2 hover:bg-(--dandara)"
-              >
-                Stone
-              </Link>
-              , I proppel and polish old and new applications on credit card
-              machines.
+          <div className="w-full space-y-4 leading-7">
+            <p className="">
+              Since then, I have designed for very niche and exciting companies
+              with the mission of revolutionizing fields known for their
+              bureaucracy and resistance to change.
             </p>
             <p>
-              This is a very niche opportunity of design and a very risky sector
-              (finances and entreuperneuship). Consolidating my skills in this
-              environment is likely the reason why{" "}
               <span className="highligther">
-                I love complex and specific problems to which we can always find
-                elegant, and, in retrospect, simple solutions
-              </span>
-              .
+                My preferred problems are those that go beyond our screens
+              </span>{" "}
+              and can be seen as services and parts of a system, thankfully this
+              definition fits more problems than people would think.
             </p>
 
             <div className="flex flex-col items-end justify-end md:flex-row md:items-center">
@@ -88,236 +311,6 @@ export default function Work() {
               >
                 Get my CV
               </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="">
-        <div className="my-8 space-y-6 md:grid md:grid-cols-2 md:gap-x-16">
-          <article className="flex flex-col items-center justify-between space-y-4 rounded-md border-1 border-gray-700/20 py-6">
-            <Image
-              src={"/work/pos.png"}
-              width={2929}
-              height={3905}
-              className="max-w-1/2 rounded-md"
-              alt="Dandara standing on a stage in front of a projected green screen, she is holding a mic and mid-speech"
-            ></Image>
-            <p className="mt-2 max-w-1/2 text-center font-mono text-sm font-medium text-(--foreground)/40 uppercase">
-              Credit card machines experiences
-            </p>
-          </article>
-
-          <article className="flex flex-col justify-center space-y-2 leading-7">
-            <h3 className="text-lg font-bold tracking-tight md:w-4/5 md:text-2xl">
-              Main Product Designer of In-Person Sales at Stone, designing sale
-              experiences for brazilians entrepeuneurs
-            </h3>
-            <p className="md:w-10/12">
-              In charge of the user interface and experience of more than 10
-              applications distributed in more than 16 different credit card
-              machine models for all Stone Co. organizations.
-            </p>
-          </article>
-
-          <article className="flex flex-col justify-center space-y-2 leading-7">
-            <h3 className="text-lg font-bold tracking-tight md:w-4/5 md:text-2xl">
-              End-to-end, edge-to-edge
-            </h3>
-            <p className="md:w-10/12">
-              Onboard new credit card machines models to our ecosystem, beat
-              competitors on time-to-market for new trasaction technologies,
-              design proprietary applications that cover very specific areas of
-              business.
-            </p>
-          </article>
-          <article className="flex flex-col items-center justify-between space-y-4 rounded-md border-1 border-gray-700/20 py-6">
-            <Image
-              src={"/work/talk.jpg"}
-              width={2929}
-              height={3905}
-              className="max-w-1/2 rounded-md"
-              alt="Dandara standing on a stage in front of a projected green screen, she is holding a mic and mid-speech"
-            ></Image>
-            <p className="mt-2 max-w-1/2 text-center font-mono text-sm font-medium text-(--foreground)/40 uppercase">
-              Presenting the POS App Store for 100 designers
-            </p>
-          </article>
-
-          <article className="col-span-2 flex flex-col items-center space-y-2 rounded-md border-1 border-gray-700/20 p-4 md:p-6 md:px-12">
-            <div className="justify-content flex items-center overflow-x-scroll px-2 md:overflow-hidden md:px-6">
-              <Image
-                src={"/work/app-store-1.png"}
-                width={1832}
-                height={3656}
-                className="w-fit rounded-md md:max-h-128"
-                alt="App Store running on credit card machine showing an app page."
-              ></Image>
-              <Image
-                src={"/work/app-store-2.png"}
-                width={1832}
-                height={3656}
-                className="w-fit rounded-md md:max-h-128"
-                alt="App Store running on credit card machine, the filtering tab is open."
-              ></Image>
-              <Image
-                src={"/work/app-store-3.png"}
-                width={1832}
-                height={3656}
-                className="w-fit rounded-md md:max-h-128"
-                alt="App Store running on credit card machine, the sorting tab is open."
-              ></Image>
-            </div>
-            <p className="mt-2 max-w-1/2 text-center font-mono text-sm font-medium text-(--foreground)/40 uppercase">
-              POS App Store
-            </p>
-
-            <div className="my-6 justify-between space-y-12 text-sm leading-6 font-medium md:flex md:grid-cols-2 md:space-x-16">
-              <div className="w-full space-y-4">
-                <p className="text-lg font-bold tracking-tight md:w-4/5 md:text-2xl">
-                  POS App Store
-                </p>
-                <div className="border-l-3 border-(--dandara) bg-(--dandara)/20 px-3 py-4">
-                  <p className="italic md:text-lg">
-                    “Before this, it was a tiring process to install apps for
-                    the clients.” - Stone Agent
-                  </p>
-                </div>
-
-                <p>
-                  On August 2023 Stone had +200 partners running software on its
-                  credit card machines. The flow to hire and install these
-                  partner apps was convoluted for both Stone agents and Stone
-                  clients (entrepeuneurs).
-                </p>
-
-                <p>
-                  Why not bring the simplicity we already know of installing
-                  apps on our phones to these machines?
-                </p>
-              </div>
-              <div className="w-full space-y-4">
-                <p>
-                  I conducted an internal discovery to delineate the risks and
-                  challenges of simplifying this flow, for example, how could
-                  this overload our internal teams? The result of this discovery
-                  was a rulebook for partners and testing teams.
-                </p>
-                <p>
-                  I also developed the first proprietary app for the store,
-                  "Fichas" (Tickets), focused on making the machine usable in
-                  small events and not only day-to-day sales.
-                </p>
-
-                <div className="px-3 py-4">
-                  <p className="text-lg font-bold">
-                    40% of Stone partner base was migrated to this new flow
-                    within the initial 6 months of launch. Today, this is the
-                    default flow for partners.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article className="flex flex-col justify-center space-y-2">
-            <h3 className="text-lg font-bold tracking-tight md:w-4/5 md:text-2xl">
-              UI/UX Jr. #1 Winner
-            </h3>
-            <div className="space-y-2 leading-7">
-              <p>
-                Drove a Design Thinking process from beginning to end, designing
-                high-quality Figma prototypes of a financial application for the
-                youth. The App was awarded #1 at UI/UX Jr competition.
-              </p>
-              <p>
-                You can{" "}
-                <Link
-                  target="_blank"
-                  href="https://www.youtube.com/watch?v=qv3Z4_mBg9M&pp=0gcJCQYKAYcqIYzv"
-                  className="underline underline-offset-2 hover:bg-(--dandara)"
-                >
-                  watch me
-                </Link>{" "}
-                present the case and receive jury's consideration at the
-                ceremony or{" "}
-                <Link
-                  target="_blank"
-                  href="https://www.youtube.com/watch?v=qv3Z4_mBg9M&pp=0gcJCQYKAYcqIYzv"
-                  className="underline underline-offset-2 hover:bg-(--dandara)"
-                >
-                  read the case{" "}
-                </Link>{" "}
-                in full.
-              </p>
-            </div>
-          </article>
-          <article className="flex flex-col items-center space-y-2 rounded-md border-1 border-gray-700/20 py-6">
-            <Image
-              src={"/work/fin-home.png"}
-              width={2929}
-              height={3905}
-              className="max-w-1/2 rounded-md"
-              alt="Dandara standing on a stage in front of a projected green screen, she is holding a mic and mid-speech"
-            ></Image>
-            <p className="mt-2 max-w-1/2 text-center font-mono text-sm font-medium text-(--foreground)/40 uppercase">
-              Awarded mobile application
-            </p>
-          </article>
-        </div>
-        <div className="flex flex-col items-end justify-end md:flex-row md:items-center">
-          <Link
-            href="/projects"
-            className="right-arrow rounded-md border-1 border-dashed border-gray-700/20 px-2 py-2 whitespace-nowrap text-gray-700/70 transition-all duration-300 ease-in-out hover:bg-(--dandara) hover:px-5 hover:text-(--foreground) hover:opacity-100"
-          >
-            Also check out my projects
-          </Link>
-        </div>
-      </section>
-
-      <section>
-        <div className="space-y-4">
-          <Link
-            href="#cta"
-            className="bold hover:text(--foreground) flex w-fit items-center space-x-4 self-end rounded-full border-1 border-stone-700/20 bg-gray-200/30 px-2 py-1"
-          >
-            <span className="relative flex size-3">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-(--dandara) opacity-75"></span>
-              <span className="relative inline-flex size-3 rounded-full bg-(--dandara)"></span>
-            </span>
-            <p className="font-mono text-sm whitespace-nowrap text-stone-700/70 lowercase">
-              Open to opportunities
-            </p>
-          </Link>
-          <div className="flex items-center gap-2 md:gap-4">
-            <p className="text-xl font-bold tracking-tighter md:text-6xl md:leading-16">
-              Product Design
-            </p>
-          </div>
-          <div className="flex items-center gap-2 md:gap-4">
-            <p className="text-xl font-bold tracking-tighter md:text-6xl md:leading-16">
-              Design Engineering
-            </p>
-          </div>
-          <div className="flex items-center gap-2 md:gap-4">
-            <p className="text-xl font-bold tracking-tighter md:text-6xl md:leading-16">
-              Web Design
-            </p>
-            <span className="rounded-full border-1 border-stone-700/20 px-2 py-0.5 font-mono text-sm whitespace-nowrap text-stone-700/70 lowercase">
-              part time
-            </span>
-          </div>
-          <div className="flex items-center gap-2 md:gap-4">
-            <p className="text-xl font-bold tracking-tighter md:text-6xl md:leading-16">
-              Speaking
-            </p>
-            <div className="flex items-center gap-1">
-              <span className="rounded-full border-1 border-stone-700/20 px-2 py-0.5 font-mono text-sm whitespace-nowrap text-stone-700/70 lowercase">
-                events
-              </span>
-              <span className="rounded-full border-1 border-stone-700/20 px-2 py-0.5 font-mono text-sm whitespace-nowrap text-stone-700/70 lowercase">
-                podcasts
-              </span>
             </div>
           </div>
         </div>
