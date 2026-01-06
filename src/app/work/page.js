@@ -76,7 +76,7 @@ export default function Work() {
 
       <article className="space-y-4 leading-7">
         <div className="justify-content col-span-2 flex-col items-center space-y-2 overflow-x-scroll rounded-md border-1 border-gray-700/20 p-4 px-2 md:overflow-hidden md:p-6 md:px-6">
-          <div className="flex gap-4">
+          <div className="grid grid-cols-2 md:flex md:gap-4">
             <div>
               <Image
                 src={"/work/app-store-1.png"}
@@ -184,7 +184,7 @@ export default function Work() {
           Side Projects
         </h4>
 
-        <div className="flex gap-6">
+        <div className="flex flex-col gap-6 md:flex-row">
           <article className="flex w-full flex-col justify-center space-y-4">
             <div className="justify-content flex h-120 flex-col items-center space-y-6 overflow-x-scroll rounded-md border-1 border-gray-700/20 p-4 px-2 md:overflow-hidden md:p-6 md:px-6">
               <Image
@@ -263,7 +263,7 @@ export default function Work() {
           About
         </h4>
 
-        <div className="flex gap-6">
+        <div className="flex flex-col gap-6 md:flex-row">
           <div className="w-full space-y-4">
             <p className="leading-7">
               My career started in programming. I worked as a{" "}

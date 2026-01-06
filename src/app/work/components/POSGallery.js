@@ -99,7 +99,7 @@ export default function POSGallery() {
 
       <Link
         href="https://www.stone.com.br/"
-        className="flex items-center justify-center rounded-md border-1 border-dashed border-gray-700/20 bg-gray-200/20 hover:border-solid"
+        className="flex min-h-40 items-center justify-center rounded-md border-1 border-dashed border-gray-700/20 bg-gray-200/20 hover:border-solid"
       >
         <span className="flex gap-1">
           <span className="inline-flex size-2 animate-bounce rounded-full bg-stone-700/70"></span>
