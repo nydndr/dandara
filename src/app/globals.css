@@ -109,3 +109,26 @@ body {
   transition: opacity 0.5s;
   animation: shimmer 1s ease-in infinite alternate;
 }
+
+.stone-pos {
+  width: 20%;
+  transition: width 2s;
+}
+
+.stone-app-icons {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.stone-display:hover {
+  transition: all 0.5s;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+}
+
+.stone-display:hover .stone-pos {
+  width: 35%;
+}
+
+.stone-display:hover .stone-app-icons {
+  opacity: 1;
+}
