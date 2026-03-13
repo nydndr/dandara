@@ -62,12 +62,6 @@ export default function RootLayout({ children }) {
             >
               Now
             </Link>
-            <Link
-              className="rounded-md px-4 py-2 whitespace-nowrap opacity-50 transition-all duration-300 ease-in-out hover:bg-(--dandara) hover:text-(--foreground) hover:opacity-100"
-              href="/work"
-            >
-              Work
-            </Link>
           </div>
         </nav>
         {children}

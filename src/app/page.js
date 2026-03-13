@@ -1,7 +1,5 @@
 import Link from "next/link";
 
-import SmallprojectList from "./projects/components/SmallProjectList";
-
 export default function Home() {
   return (
     <div className="mx-auto my-24 max-w-4xl space-y-24 font-sans">
@@ -99,38 +97,6 @@ export default function Home() {
                   .
                 </p>
               </div>
-            </div>
-
-            <div className="flex flex-col items-end justify-end md:flex-row md:items-center">
-              <Link
-                href="/work"
-                className="right-arrow rounded-md border-1 border-dashed border-stone-700/20 px-2 py-2 whitespace-nowrap text-stone-700/70 transition-all duration-300 ease-in-out hover:bg-(--dandara) hover:px-5 hover:text-(--foreground) hover:opacity-100"
-              >
-                Read more about my work
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        <div className="w-full space-y-6">
-          <div>
-            <div className="flex justify-between">
-              <h3 className="text-lg font-bold tracking-tight text-stone-700/30">
-                Projects
-              </h3>
-            </div>
-
-            <div className="space-y-3 py-2">
-              <SmallprojectList />
-            </div>
-
-            <div className="flex flex-col items-end justify-end md:flex-row md:items-center">
-              <Link
-                href="/projects"
-                className="right-arrow rounded-md px-2 py-2 whitespace-nowrap text-stone-700/70 transition-all duration-300 ease-in-out hover:bg-(--dandara) hover:px-5 hover:text-(--foreground) hover:opacity-100"
-              >
-                See all projects
-              </Link>
             </div>
           </div>
         </div>
