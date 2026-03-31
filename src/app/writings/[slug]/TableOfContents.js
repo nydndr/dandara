@@ -54,7 +54,7 @@ export function MobileTableOfContents({ headings }) {
               href={`#${id}`}
               onClick={() => setOpen(false)}
               className={`text-sm leading-snug transition-colors duration-150 ${
-                level > 1 ? 'pl-3' : ''
+                level === 2 ? 'pl-3' : level === 3 ? 'pl-6' : ''
               } ${
                 activeId === id
                   ? 'font-medium text-yellow-600'
@@ -83,7 +83,7 @@ export function DesktopTableOfContents({ headings }) {
           key={id}
           href={`#${id}`}
           className={`text-sm leading-snug transition-colors duration-150 ${
-            level > 1 ? 'pl-3' : ''
+            level === 2 ? 'pl-3' : level === 3 ? 'pl-6' : ''
           } ${
             activeId === id
               ? 'font-medium text-yellow-600'

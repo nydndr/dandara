@@ -141,21 +141,96 @@ body {
 /* Blog prose link colors */
 .blog-prose a {
   color: var(--dandara);
-  text-decoration: underline;
-  text-underline-offset: 2px;
+  text-decoration: none !important;
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.blog-prose a:hover {
+  background-color: var(--dandara);
+  color: #000;
 }
 
 .blog-prose a:visited {
-  color: #92400e;
+  color: var(--color-yellow-600);
+}
+
+.blog-prose a:visited:hover {
+  background-color: var(--dandara);
+  color: #000;
+}
+
+/* Blog prose heading spacing */
+.blog-prose h1 {
+  margin-top: 1.8em !important;
+}
+
+.blog-prose h2 {
+  margin-top: 1.5em !important;
+}
+
+/* Blog prose footnote references (inline superscripts) */
+.blog-prose sup a {
+  color: #007AFF !important;
+}
+
+.blog-prose sup a:hover {
+  background-color: #007AFF !important;
+  color: #fff !important;
+}
+
+/* Blog prose footnotes */
+.blog-prose .footnotes {
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  font-size: 0.875rem;
+  color: rgba(53, 53, 53, 0.5);
+}
+
+.blog-prose .footnotes ol {
+  padding-left: 1.25rem;
+  space-y: 0.5rem;
+}
+
+.blog-prose a[data-footnote-backref] {
+  color: rgba(53, 53, 53, 0.4);
+  font-size: 0.75rem;
+  margin-left: 0.25rem;
+}
+
+.blog-prose a[data-footnote-backref]:hover {
+  background-color: var(--dandara);
+  color: #000;
 }
 
 /* Blog prose image treatment */
 .blog-prose img {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 0.5rem;
-  box-shadow:
-    0 4px 24px rgba(53, 53, 53, 0.08),
-    0 1px 6px rgba(53, 53, 53, 0.04);
+  width: 100%;
+  margin: 0;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  transition: transform 0.15s ease;
+}
+
+.img-zoom-outer {
+  margin: 1.5rem 0 0.5rem;
+}
+
+.img-zoom-wrapper {
+  display: block;
+  overflow: hidden;
+  border-radius: 0.375rem;
+  border: 1px solid rgba(53, 53, 53, 0.2);
+  cursor: zoom-in;
+}
+
+.img-zoom-label {
+  text-align: center;
+  font-size: 1rem;
+  color: rgba(53, 53, 53, 0.35);
+  margin-top: 0.25rem;
+  font-family: var(--font-inconsolata);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }

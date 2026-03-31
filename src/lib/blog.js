@@ -1,5 +1,6 @@
 import { remark } from 'remark'
 import html from 'remark-html'
+import remarkGfm from 'remark-gfm'
 import matter from 'gray-matter'
 import fs from 'fs'
 import path from 'path'
@@ -66,6 +67,7 @@ export function getAllPosts() {
         title: data.title,
         tagline: data.tagline,
         date: data.date,
+        isoDate: data.date.replace(/\//g, '-'),
         formattedDate: formatDate(data.date),
         language: data.language,
         tags: parseTags(data.tags),
@@ -80,7 +82,7 @@ export async function getPost(slug) {
   const fileContent = fs.readFileSync(filePath, 'utf8')
   const { data, content } = matter(fileContent)
 
-  const processed = await remark().use(html).process(content)
+  const processed = await remark().use(remarkGfm).use(html, { allowDangerousHtml: true }).process(content)
   const contentHtml = addHeadingIds(processed.toString())
   const headings = extractHeadings(content)
 
@@ -89,6 +91,7 @@ export async function getPost(slug) {
     title: data.title,
     tagline: data.tagline,
     date: data.date,
+    isoDate: data.date.replace(/\//g, '-'),
     formattedDate: formatDate(data.date),
     language: data.language,
     tags: parseTags(data.tags),
@@ -98,8 +101,3 @@ export async function getPost(slug) {
   }
 }
 
-export function getRelatedPosts(currentSlug, tags) {
-  return getAllPosts()
-    .filter(p => p.slug !== currentSlug && p.tags.some(t => tags.includes(t)))
-    .slice(0, 3)
-}

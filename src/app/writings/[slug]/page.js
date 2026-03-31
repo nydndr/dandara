@@ -1,30 +1,66 @@
 import Link from 'next/link'
-import { getPost, getRelatedPosts, getAllPosts } from '@/lib/blog'
+import { getPost, getAllPosts } from '@/lib/blog'
 import {
   MobileTableOfContents,
   DesktopTableOfContents,
 } from './TableOfContents'
+import ArticleContent from './ArticleContent'
 
 export async function generateStaticParams() {
   return getAllPosts().map(post => ({ slug: post.slug }))
 }
 
+const SITE_URL = 'https://dandara.vercel.app'
+
 export async function generateMetadata({ params }) {
   const { slug } = await params
   const post = await getPost(slug)
+  const url = `${SITE_URL}/writings/${slug}`
+
   return {
     title: post.title,
     description: post.tagline,
+    authors: [{ name: 'Dandara', url: SITE_URL }],
+    keywords: post.tags,
+    alternates: { canonical: url },
+    openGraph: {
+      type: 'article',
+      url,
+      title: post.title,
+      description: post.tagline,
+      publishedTime: post.isoDate,
+      authors: ['Dandara'],
+      tags: post.tags,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.tagline,
+    },
   }
 }
 
 export default async function PostPage({ params }) {
   const { slug } = await params
   const post = await getPost(slug)
-  const related = getRelatedPosts(post.slug, post.tags)
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.title,
+    description: post.tagline,
+    datePublished: post.isoDate,
+    url: `${SITE_URL}/writings/${slug}`,
+    author: { '@type': 'Person', name: 'Dandara', url: SITE_URL },
+    keywords: post.tags.join(', '),
+  }
 
   return (
     <div className="mx-auto my-24 max-w-6xl font-sans">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Link
         href="/writings"
         className="inline-flex items-center gap-1 text-sm text-gray-700/60 transition-colors hover:text-gray-700"
@@ -56,45 +92,24 @@ export default async function PostPage({ params }) {
               {post.tagline}
             </p>
             <p className="font-mono text-sm text-gray-700/40">
-              Published on {post.formattedDate} by Dandara
+              Published on <time dateTime={post.isoDate}>{post.formattedDate}</time> by Dandara
             </p>
           </header>
 
-          <article
-            className="prose prose-a:underline prose-a:underline-offset-2 prose-em:text-gray-700/40 prose-h1:tracking-tight prose-headings:font-sans blog-prose font-work"
-            dangerouslySetInnerHTML={{ __html: post.contentHtml }}
-          />
+          <ArticleContent contentHtml={post.contentHtml} />
 
-          {/* Read next footer — replaces site footer on post pages */}
-          {related.length > 0 && (
-            <footer className="mt-24 border-t border-gray-700/10 pt-12">
-              <h2 className="mb-6 text-sm font-semibold uppercase tracking-widest text-gray-700/40">
-                Read next
-              </h2>
-              <div className="space-y-1">
-                {related.map(p => (
-                  <Link
-                    key={p.slug}
-                    href={`/writings/${p.slug}`}
-                    className="group flex items-baseline justify-between border-b border-gray-700/10 py-3 transition-all hover:border-gray-700/30"
-                  >
-                    <div className="space-y-0.5">
-                      <p className="font-medium tracking-tight">{p.title}</p>
-                      <p className="text-sm text-gray-700/60">{p.tagline}</p>
-                    </div>
-                    <span className="ml-4 shrink-0 font-mono text-sm text-gray-700/40">
-                      {p.formattedDate}
-                    </span>
-                  </Link>
-                ))}
-              </div>
-            </footer>
-          )}
+          <footer className="mt-24 border-t border-gray-700/10 pt-12">
+            <div className="flex gap-4 text-gray-700/70">
+              <Link href="mailto:nicolydndr@gmail.com" className="underline underline-offset-4 hover:bg-(--dandara)">Email</Link>
+              <Link href="https://www.linkedin.com/in/nicolydandara/" className="underline underline-offset-4 hover:bg-(--dandara)">LinkedIn</Link>
+              <Link href="https://x.com/amarelodandara" className="underline underline-offset-4 hover:bg-(--dandara)">Twitter</Link>
+            </div>
+          </footer>
         </div>
 
         {/* Desktop ToC sidebar — sticky, visible only at lg and above */}
         {post.isLong && (
-          <aside className="hidden w-48 shrink-0 lg:block sticky top-8 self-start">
+          <aside className="hidden w-64 shrink-0 lg:block sticky top-8 self-start">
             <DesktopTableOfContents headings={post.headings} />
           </aside>
         )}

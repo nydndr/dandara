@@ -42,6 +42,11 @@ export const metadata = {
   icons: {
     icon: "/favicon.ico",
   },
+  alternates: {
+    types: {
+      'application/rss+xml': 'https://dandara.vercel.app/writings/feed.xml',
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
