@@ -1,6 +1,6 @@
 import { getAllPosts } from '@/lib/blog'
 
-const SITE_URL = 'https://dandara.vercel.app'
+const SITE_URL = 'https://adandara.com'
 
 export async function GET() {
   const posts = getAllPosts()

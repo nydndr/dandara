@@ -21,6 +21,7 @@ const work = Work_Sans({
 });
 
 export const metadata = {
+  metadataBase: new URL("https://adandara.com"),
   title: {
     template: "%s | Dandara",
     default: "Dandara - Product Designer",
@@ -36,7 +37,7 @@ export const metadata = {
     "UX Designer",
     "Design Engineer",
   ],
-  authors: [{ name: "Dandara", url: "https://dandara.vercel.app" }],
+  authors: [{ name: "Dandara", url: "https://adandara.com" }],
   creator: "Dandara",
   publisher: "Dandara",
   icons: {
@@ -44,7 +45,7 @@ export const metadata = {
   },
   alternates: {
     types: {
-      'application/rss+xml': 'https://dandara.vercel.app/writings/feed.xml',
+      'application/rss+xml': 'https://adandara.com/writings/feed.xml',
     },
   },
 };

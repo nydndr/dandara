@@ -10,7 +10,7 @@ export async function generateStaticParams() {
   return getAllPosts().map(post => ({ slug: post.slug }))
 }
 
-const SITE_URL = 'https://dandara.vercel.app'
+const SITE_URL = 'https://adandara.com'
 
 export async function generateMetadata({ params }) {
   const { slug } = await params
