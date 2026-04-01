@@ -1,6 +1,8 @@
 import { remark } from 'remark'
-import html from 'remark-html'
 import remarkGfm from 'remark-gfm'
+import remarkRehype from 'remark-rehype'
+import rehypeRaw from 'rehype-raw'
+import rehypeStringify from 'rehype-stringify'
 import matter from 'gray-matter'
 import fs from 'fs'
 import path from 'path'
@@ -82,7 +84,12 @@ export async function getPost(slug) {
   const fileContent = fs.readFileSync(filePath, 'utf8')
   const { data, content } = matter(fileContent)
 
-  const processed = await remark().use(remarkGfm).use(html, { allowDangerousHtml: true }).process(content)
+  const processed = await remark()
+    .use(remarkGfm)
+    .use(remarkRehype, { allowDangerousHtml: true })
+    .use(rehypeRaw)
+    .use(rehypeStringify)
+    .process(content)
   const contentHtml = addHeadingIds(processed.toString())
   const headings = extractHeadings(content)
 
