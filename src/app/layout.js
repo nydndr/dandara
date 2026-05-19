@@ -45,7 +45,7 @@ export const metadata = {
   },
   alternates: {
     types: {
-      'application/rss+xml': 'https://adandara.com/writings/feed.xml',
+      "application/rss+xml": "https://adandara.com/writings/feed.xml",
     },
   },
 };
@@ -62,6 +62,12 @@ export default function RootLayout({ children }) {
             <div className="dandara-sun size-10 rounded-full"></div>
           </Link>
           <div className="flex gap-1">
+            <Link
+              className="rounded-md px-4 py-2 whitespace-nowrap opacity-50 transition-all duration-300 ease-in-out hover:bg-(--dandara) hover:text-(--foreground) hover:opacity-100"
+              href="/brag"
+            >
+              Brag
+            </Link>
             <Link
               className="rounded-md px-4 py-2 whitespace-nowrap opacity-50 transition-all duration-300 ease-in-out hover:bg-(--dandara) hover:text-(--foreground) hover:opacity-100"
               href="/writings"

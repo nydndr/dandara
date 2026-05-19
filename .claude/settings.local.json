@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node -e \":*)",
+      "Bash(npm install:*)",
+      "Bash(node -e ':*)",
+      "Bash(node --input-type=module)",
+      "Bash(npm run:*)",
+      "mcp__claude_ai_Vercel__deploy_to_vercel",
+      "Bash(git add:*)",
+      "Bash(git commit -m ':*)",
+      "Bash(git push:*)"
+    ]
+  }
+}

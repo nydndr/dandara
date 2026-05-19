@@ -7,10 +7,10 @@ export default function Home() {
       <header className="space-y-8">
         <div className="space-y-4">
           <h1 className="text-3xl font-bold tracking-tighter text-stone-700/20 md:text-6xl md:leading-16">
-            Dandara
+            Hey, I am Dandara!
           </h1>
           <h2 className="text-3xl font-bold tracking-tighter md:text-6xl md:leading-16">
-            I'm a brazilian product designer. Fluent in english, portuguese,
+            I'm a brazilian product designer, fluent in english, portuguese,
             design and code.
           </h2>
         </div>
@@ -41,6 +41,22 @@ export default function Home() {
       <section className="my-24 block md:my-12 md:flex md:justify-end">
         <div className="w-full space-y-2 md:w-1/2">
           <h3 className="text-sm font-semibold text-gray-700/50">Experience</h3>
+
+          <div className="space-y-2 rounded border-1 border-(--dandara) bg-(--dandara)/20 p-4">
+            <p className="font-semibold tracking-tight">
+              I am on the lookout for my next role!
+            </p>
+            <p className="font-work text-sm">
+              Grab my resumé, or better yet, watch me{" "}
+              <Link
+                href="/brag"
+                className="underline underline-offset-2 transition hover:bg-(--dandara)"
+              >
+                brag about what I can do
+              </Link>{" "}
+              for your team.
+            </p>
+          </div>
 
           <div>
             <div className="">
