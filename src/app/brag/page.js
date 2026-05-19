@@ -22,7 +22,7 @@ export default function BragPage() {
         </h1>
       </header>
 
-      <div className="grid grid-cols-3 gap-8">
+      <div className="space-y-8 md:grid md:grid-cols-3 md:gap-8">
         <div className="h-fit space-y-2 rounded border-1 border-(--dandara) bg-(--dandara)/20 p-4 text-sm">
           <p className="font-semibold tracking-tight">
             What is a Brag document?
@@ -41,7 +41,7 @@ export default function BragPage() {
 
         <div className="col-span-2 w-full">
           <div className="flex space-x-6">
-            <div className="rounded border-1 border-stone-200 p-6">
+            <div className="rounded border-1 border-stone-200 p-3 md:p-6">
               <Image
                 src="/profile.jpg"
                 alt="Dandara profile"
@@ -49,7 +49,7 @@ export default function BragPage() {
                 width={200}
               ></Image>
             </div>
-            <div className="rounded border-1 border-stone-200 p-6">
+            <div className="rounded border-1 border-stone-200 p-3 md:p-6">
               <Image
                 src="/talk.jpg"
                 alt="Dandara giving a talk on stage"
