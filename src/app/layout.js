@@ -1,4 +1,5 @@
 import Link from "next/link";
+import NavCircle from "./NavCircle";
 import { Manrope, Inconsolata, Work_Sans } from "next/font/google";
 import "./globals.css";
 
@@ -57,10 +58,7 @@ export default function RootLayout({ children }) {
         className={`${manrope.variable} ${inconsolata.variable} ${work.variable} mx-8 antialiased`}
       >
         <nav className="animation-fade-in flex items-center justify-between gap-6 py-8 font-sans text-sm font-medium">
-          {/* animate this */}
-          <Link href="/">
-            <div className="dandara-sun size-10 rounded-full"></div>
-          </Link>
+          <NavCircle />
           <div className="flex gap-1">
             <Link
               className="rounded-md px-4 py-2 whitespace-nowrap opacity-50 transition-all duration-300 ease-in-out hover:bg-(--dandara) hover:text-(--foreground) hover:opacity-100"

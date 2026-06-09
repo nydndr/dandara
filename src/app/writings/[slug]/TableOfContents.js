@@ -48,14 +48,12 @@ export function MobileTableOfContents({ headings }) {
       </button>
       {open && (
         <nav className="mt-3 flex flex-col gap-1.5 border-l-2 border-gray-700/10 pl-4">
-          {headings.map(({ id, text, level }) => (
+          {headings.map(({ id, text }) => (
             <a
               key={id}
               href={`#${id}`}
               onClick={() => setOpen(false)}
               className={`text-sm leading-snug transition-colors duration-150 ${
-                level === 2 ? 'pl-3' : level === 3 ? 'pl-6' : ''
-              } ${
                 activeId === id
                   ? 'font-medium text-yellow-600'
                   : 'text-gray-700/50 hover:text-gray-700'
@@ -78,13 +76,11 @@ export function DesktopTableOfContents({ headings }) {
       <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-gray-700/50">
         Contents
       </p>
-      {headings.map(({ id, text, level }) => (
+      {headings.map(({ id, text }) => (
         <a
           key={id}
           href={`#${id}`}
           className={`text-sm leading-snug transition-colors duration-150 ${
-            level === 2 ? 'pl-3' : level === 3 ? 'pl-6' : ''
-          } ${
             activeId === id
               ? 'font-medium text-yellow-600'
               : 'text-gray-700/60 hover:text-gray-700'

@@ -11,27 +11,27 @@ export default function Home() {
           </h1>
           <h2 className="text-3xl font-bold tracking-tighter md:text-6xl md:leading-16">
             I'm a brazilian product designer, fluent in english, portuguese,
-            design and code.
+            design and code
           </h2>
         </div>
         <div className="flex gap-4 text-gray-700/70">
           <Link
             href="https://www.linkedin.com/in/nicolydandara/"
-            className="underline underline-offset-4 hover:bg-(--dandara)"
+            className="underline decoration-gray-700/50 underline-offset-4 hover:bg-(--dandara)"
           >
             LinkedIn
           </Link>
 
           <Link
             href="https://x.com/amarelodandara"
-            className="underline underline-offset-4 hover:bg-(--dandara)"
+            className="underline decoration-gray-700/50 underline-offset-4 hover:bg-(--dandara)"
           >
             Twitter
           </Link>
 
           <Link
             href="https://github.com/nydndr"
-            className="underline underline-offset-4 hover:bg-(--dandara)"
+            className="underline decoration-gray-700/50 underline-offset-4 hover:bg-(--dandara)"
           >
             Github
           </Link>

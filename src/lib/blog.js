@@ -32,12 +32,12 @@ function addHeadingIds(htmlContent) {
 function extractHeadings(markdownContent) {
   return markdownContent
     .split('\n')
-    .filter(line => /^#{1,3} /.test(line))
+    .filter(line => /^# /.test(line))
     .map(line => {
-      const match = line.match(/^(#{1,3}) (.+)/)
+      const match = line.match(/^(#) (.+)/)
       if (!match) return null
       const text = match[2].trim()
-      return { level: match[1].length, text, id: slugify(text) }
+      return { level: 1, text, id: slugify(text) }
     })
     .filter(Boolean)
 }

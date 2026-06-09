@@ -234,3 +234,44 @@ body {
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
+
+/* Activates shimmer on the ToC/mobile progress circle when reading is complete */
+.reading-circle-complete::before {
+  opacity: 1;
+  animation: shimmer 1s ease-in infinite alternate;
+}
+
+/* Organic, hand-drawn stroke wobble for the sun circles */
+@keyframes sun-wobble {
+  0%   { border-radius: 50% 48% 52% 47% / 49% 51% 48% 52%; }
+  33%  { border-radius: 48% 52% 49% 51% / 52% 48% 51% 49%; }
+  66%  { border-radius: 51% 49% 48% 52% / 48% 52% 50% 50%; }
+  100% { border-radius: 50% 48% 52% 47% / 49% 51% 48% 52%; }
+}
+
+.sun-wobble {
+  animation: sun-wobble 5s ease-in-out infinite;
+}
+
+/* Navbar sun exit — bubble pop then disperse */
+@keyframes sun-pop-out {
+  0%   { opacity: 1; transform: scale(1); }
+  35%  { opacity: 1; transform: scale(1.22); }
+  100% { opacity: 0; transform: scale(1); }
+}
+
+.sun-pop-out {
+  animation: sun-pop-out 500ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  pointer-events: none;
+}
+
+/* ToC circle entrance — scale in from small with slight overshoot */
+@keyframes sun-pop-in {
+  0%   { opacity: 0; transform: scale(0.7); }
+  70%  { opacity: 1; transform: scale(1.08); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.sun-pop-in {
+  animation: sun-pop-in 250ms cubic-bezier(0.23, 1, 0.32, 1) both;
+}

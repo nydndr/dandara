@@ -5,6 +5,7 @@ import {
   DesktopTableOfContents,
 } from './TableOfContents'
 import ArticleContent from './ArticleContent'
+import ReadingProgressCircle from './ReadingProgressCircle'
 
 export async function generateStaticParams() {
   return getAllPosts().map(post => ({ slug: post.slug }))
@@ -61,13 +62,6 @@ export default async function PostPage({ params }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Link
-        href="/writings"
-        className="inline-flex items-center gap-1 text-sm text-gray-700/60 transition-colors hover:text-gray-700"
-      >
-        ← Back to writings
-      </Link>
-
       {/* Mobile ToC — collapsible drawer, visible only below lg breakpoint */}
       {post.isLong && (
         <div className="mt-8 lg:hidden">
@@ -75,24 +69,18 @@ export default async function PostPage({ params }) {
         </div>
       )}
 
-      <div
-        className={
-          post.isLong
-            ? 'mt-8 lg:mt-12 lg:flex lg:items-start lg:gap-16'
-            : 'mt-8 lg:mt-12'
-        }
-      >
+      <div className="mt-8 lg:mt-12 lg:flex lg:items-start lg:gap-16">
         {/* Main article column */}
-        <div className="min-w-0 flex-1">
+        <div id="article-content" className="min-w-0 flex-1">
           <header className="mb-12 space-y-4">
+            <p className="font-mono text-sm text-gray-700/40">
+              <time dateTime={post.isoDate}>{post.formattedDate}</time>
+            </p>
             <h1 className="text-3xl font-bold tracking-tighter text-stone-700 md:text-6xl md:leading-16">
               {post.title}
             </h1>
             <p className="text-xl font-medium text-gray-700/70 md:text-2xl">
               {post.tagline}
-            </p>
-            <p className="font-mono text-sm text-gray-700/40">
-              Published on <time dateTime={post.isoDate}>{post.formattedDate}</time> by Dandara
             </p>
           </header>
 
@@ -107,12 +95,16 @@ export default async function PostPage({ params }) {
           </footer>
         </div>
 
-        {/* Desktop ToC sidebar — sticky, visible only at lg and above */}
-        {post.isLong && (
-          <aside className="hidden w-64 shrink-0 lg:block sticky top-8 self-start">
-            <DesktopTableOfContents headings={post.headings} />
-          </aside>
-        )}
+        {/* Desktop sidebar — sticky, visible only at lg and above */}
+        <aside className="hidden w-64 shrink-0 lg:block sticky top-8 self-start">
+          <ReadingProgressCircle />
+          {post.isLong && (
+            <>
+              <div className="mb-6" />
+              <DesktopTableOfContents headings={post.headings} />
+            </>
+          )}
+        </aside>
       </div>
     </div>
   )
