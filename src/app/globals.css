@@ -159,6 +159,18 @@ body {
   color: #000;
 }
 
+/* Blog prose blockquote — no italic, manrope font, no quotes */
+.blog-prose blockquote {
+  font-style: normal;
+  font-family: var(--font-manrope);
+  quotes: none;
+}
+
+.blog-prose blockquote p::before,
+.blog-prose blockquote p::after {
+  content: none;
+}
+
 /* Blog prose heading spacing */
 .blog-prose h1 {
   margin-top: 1.8em !important;
@@ -180,8 +192,8 @@ body {
 
 /* Blog prose footnotes */
 .blog-prose .footnotes {
-  margin-top: 4rem;
-  padding-top: 1.5rem;
+  margin-top: 2rem;
+  padding-top: 1rem;
   font-size: 0.875rem;
   color: rgba(53, 53, 53, 0.5);
 }

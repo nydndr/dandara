@@ -30,16 +30,19 @@ function addHeadingIds(htmlContent) {
 }
 
 function extractHeadings(markdownContent) {
-  return markdownContent
+  const all = markdownContent
     .split('\n')
-    .filter(line => /^# /.test(line))
+    .filter(line => /^#{1,6} /.test(line))
     .map(line => {
-      const match = line.match(/^(#) (.+)/)
+      const match = line.match(/^(#{1,6}) (.+)/)
       if (!match) return null
       const text = match[2].trim()
-      return { level: 1, text, id: slugify(text) }
+      return { level: match[1].length, text, id: slugify(text) }
     })
     .filter(Boolean)
+  if (all.length === 0) return []
+  const topLevel = Math.min(...all.map(h => h.level))
+  return all.filter(h => h.level === topLevel)
 }
 
 function parseTags(tagsString) {
