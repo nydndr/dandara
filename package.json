@@ -12,6 +12,7 @@
     "@mdx-js/loader": "^3.1.1",
     "@mdx-js/react": "^3.1.1",
     "@next/mdx": "^16.0.5",
+    "@react-pdf/renderer": "^4.5.1",
     "@types/mdx": "^2.0.13",
     "gray-matter": "^4.0.3",
     "next": "^16.1.6",

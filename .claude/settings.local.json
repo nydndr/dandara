@@ -9,7 +9,12 @@
       "mcp__claude_ai_Vercel__deploy_to_vercel",
       "Bash(git add:*)",
       "Bash(git commit -m ':*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(npx skills *)",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\nicol\\\\Documents\\\\projects\\\\dandara\" -Force)",
+      "Bash(Select-Object Name, PSIsContainer)",
+      "Bash(Get-ChildItem *)",
+      "PowerShell(Rename-Item *)"
     ]
   }
 }

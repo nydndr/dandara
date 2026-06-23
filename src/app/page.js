@@ -47,7 +47,14 @@ export default function Home() {
               I am on the lookout for my next role!
             </p>
             <p className="font-work text-sm">
-              Grab my resumé, or better yet, watch me{" "}
+              Grab my{" "}
+              <Link
+                href="/resume"
+                className="underline underline-offset-2 transition hover:bg-(--dandara)"
+              >
+                resumé
+              </Link>
+              , or better yet, watch me{" "}
               <Link
                 href="/brag"
                 className="underline underline-offset-2 transition hover:bg-(--dandara)"
